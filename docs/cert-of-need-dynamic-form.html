@@ -1,0 +1,61 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/basic.css" />
+  <link rel="stylesheet" type="text/css" href="css/cert-of-need-dynamic_form.css" />
+  <style>
+  </style>
+
+  <script src="js/browser_util.js" type="text/javascript"></script>
+  <script src="js/simple_ajax.js" type="text/javascript"></script>
+  <script>
+    var GContext = {
+      accessToken: "AABBCCDDEEAA",
+      model: null,
+      isDirty: false,
+      onDirty: null
+    };
+  </script>
+  <script src="js/cert-of-need-dynamic-form.js" type="text/javascript"></script>
+</head>
+
+<body onload="onLoad()">
+  <div id="top_nav">FDA Project Certificate of Need <small>(Sample Edit)</small></div>
+  <div id="sect_left">
+    <div id="left_nav">
+      <h3>LEFT NAV</h3>
+      <ul class="leftnav">
+        <!--<li onclick="renderSimpleFormStaticValues('DFORM')">Simple form Static Val</li>-->
+        <!--<li onclick="clearForm('sample_form_1', EmptyDomainObj)">ClearForm</li>-->
+        
+        <li onclick="getCertOfNeed('sample_form_1', 'placeholder')">Clear Form</li><br />
+        <li onclick="getCertOfNeed('sample_form_1', '1004')">Fetch #1004</li>
+        <li onclick="getCertOfNeed('sample_form_1', '1011')">Fetch #1011</li>
+        <li onclick="getCertOfNeed('sample_form_1', '1019')">Fetch #1019</li>
+        <li onclick="getCertOfNeed('sample_form_1', '1023')">Fetch #1023</li>
+        <li onclick="getCertOfNeed('sample_form_1', '1086')">Fetch #1086</li>
+      </ul>
+      <hr />
+    </div>
+  </div>
+
+  <div id="rbody">
+    <div id="rbody_main">
+      <div class="formblock" id="DFORM">
+        <!-- Form will Dynamically render here -->
+      </div>
+      
+    </div>
+    <div id="left_2">
+      <div id="left_2_head">
+        Left_2_head fill in
+      </div>
+    </div>
+  </div>
+  <div id="page_footer">
+    Page Footer
+  </div>
+  
+  <div id="page_footer">Demonstrate Dynamically Generated From with Auto Validation and DOM update</div>
+  <div id="show_domain_obj">...</div>
+</body>
+</html>

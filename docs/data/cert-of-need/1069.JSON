@@ -1,0 +1,45 @@
+{
+    "acknowledgement_date": "3/22/2000", 
+    "application": {
+        "received_date": "3/8/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "8/28/2002", 
+    "assigned_construction_start_date": "8/27/2002", 
+    "con_project_number": "1069", 
+    "current_operator": {
+        "address_line1": "621 Tenth St", 
+        "city": "Niagara Falls", 
+        "name": "Niagara Falls Memorial Medical Center Inc", 
+        "operating_certificate_number": "3102000H", 
+        "state": "NY", 
+        "zip_code": "14302"
+    }, 
+    "director_action": "Contingent Approval", 
+    "director_action_date": "8/28/2000", 
+    "facility_id": "4447", 
+    "facility_name": "Niagara Falls Memorial Medical Center at Niagara Falls Memorial Medical Center Summit Park Mall Clinic", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "3/22/2000", 
+    "main_site": {
+        "facility_identifier": "4447", 
+        "facility_name": "Niagara Falls Memorial Medical Center at Niagara Falls Memorial Medical Center Summit Park Mall Clinic"
+    }, 
+    "project": {
+        "description": "Certify MRI services at the 6934 Williams Road, Niagara Falls, Extension Clinic", 
+        "status": "Project Complete", 
+        "status_date": "10/2/2000"
+    }, 
+    "project_site": {
+        "address_line1": "6934 Williams Road", 
+        "city": "Niagara Falls", 
+        "county_name": "NIAGARA", 
+        "state": "NY", 
+        "zip_code": "14304"
+    }, 
+    "region": "Western", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "1000"
+}

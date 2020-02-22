@@ -1,0 +1,35 @@
+{
+    "acknowledgement_date": "8/15/2001", 
+    "application": {
+        "received_date": "3/15/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1078", 
+    "facility_name": "Med Span Multi-Services, Inc.", 
+    "facility_type": "Diagnostic And Treatment Center", 
+    "initial_review_date": "3/28/2000", 
+    "main_site": {
+        "facility_name": "Med Span Multi-Services, Inc."
+    }, 
+    "project": {
+        "description": "Establish and construct a diagnostic and treatment center at 248 Roebling Street, Brooklyn", 
+        "status": "Withdrawn", 
+        "status_date": "8/15/2001"
+    }, 
+    "project_site": {
+        "address_line1": "248 Roebling Street", 
+        "city": "Brooklyn", 
+        "county_name": "KINGS", 
+        "state": "NY", 
+        "zip_code": "11211"
+    }, 
+    "proposed_operator": {
+        "name": "Med Span Multi-Services, Inc.", 
+        "operating_certificate_number": "99999999"
+    }, 
+    "region": "New York City", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Establishment and Construction", 
+    "total_project_cost": "302000"
+}

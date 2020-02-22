@@ -1,0 +1,46 @@
+{
+    "acknowledgement_date": "2/4/2000", 
+    "actual_construction_completion_date": "10/25/2001", 
+    "application": {
+        "received_date": "2/4/2000", 
+        "received_month": "2", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1029", 
+    "council": {
+        "action_1": "Contingent Approval", 
+        "action_2": "Contingent Approval", 
+        "date_1": "6/6/2000", 
+        "date_2": "7/28/2000", 
+        "name_1": "Establishment Committee", 
+        "name_2": "Public Health Council"
+    }, 
+    "director_action": "PHC Contingent Approval", 
+    "director_action_date": "8/9/2000", 
+    "facility_name": "Arden Hill Life Care Center at Newburgh, Inc.", 
+    "facility_type": "Residential Health Care Facility", 
+    "initial_review_date": "2/4/2000", 
+    "main_site": {
+        "facility_name": "Arden Hill Life Care Center at Newburgh, Inc."
+    }, 
+    "project": {
+        "description": "Establish new operator of Sylcox Health Facilities", 
+        "status": "Project Complete", 
+        "status_date": "10/25/2001"
+    }, 
+    "project_site": {
+        "address_line1": "56 Meadow Hill Road", 
+        "city": "Newburgh", 
+        "county_name": "ORANGE", 
+        "state": "NY", 
+        "zip_code": "12550"
+    }, 
+    "proposed_operator": {
+        "name": "Arden Hill Life Care Center at Newburgh, Inc.", 
+        "operating_certificate_number": "99999999"
+    }, 
+    "region": "Hudson Valley", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Establishment - New Facility or Agency", 
+    "total_project_cost": "0"
+}

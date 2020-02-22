@@ -1,0 +1,35 @@
+{
+    "acknowledgement_date": "3/7/2000", 
+    "application": {
+        "received_date": "1/26/2000", 
+        "received_month": "1", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1042", 
+    "facility_name": "Americare Certified Special Services, Inc.", 
+    "facility_type": "Certified Home Health Agency", 
+    "initial_review_date": "2/29/2000", 
+    "main_site": {
+        "facility_name": "Americare Certified Special Services, Inc."
+    }, 
+    "project": {
+        "description": "Establish Americare's Westbury subunit", 
+        "status": "Withdrawn", 
+        "status_date": "4/6/2000"
+    }, 
+    "project_site": {
+        "address_line1": "171 Kings Highway", 
+        "city": "Brooklyn", 
+        "county_name": "NASSAU", 
+        "state": "NY", 
+        "zip_code": "11223-1023"
+    }, 
+    "proposed_operator": {
+        "name": "Americare Certified Special Services, Inc.", 
+        "operating_certificate_number": "99999999"
+    }, 
+    "region": "Long Island", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Establishment - New Facility or Agency", 
+    "total_project_cost": "0"
+}

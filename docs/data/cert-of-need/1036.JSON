@@ -1,0 +1,40 @@
+{
+    "acknowledgement_date": "2/22/2000", 
+    "actual_construction_completion_date": "11/8/2000", 
+    "application": {
+        "received_date": "2/10/2000", 
+        "received_month": "2", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "6/9/2002", 
+    "assigned_construction_start_date": "6/8/2002", 
+    "con_project_number": "1036", 
+    "current_operator": {
+        "name": "New York City Health and Hospital Corporation", 
+        "operating_certificate_number": "7001009H"
+    }, 
+    "director_action": "Approval", 
+    "director_action_date": "6/9/2000", 
+    "facility_name": "Coney Island Hospital", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "2/22/2000", 
+    "main_site": {
+        "facility_name": "Coney Island Hospital"
+    }, 
+    "project": {
+        "description": "Certify a part-time clinic as a full-time primary care extension clinic at 2508 Flatlands Avenue, Brooklyn", 
+        "status": "Project Complete", 
+        "status_date": "11/8/2000"
+    }, 
+    "project_site": {
+        "address_line1": "3508 Flatlands Avenue", 
+        "city": "Brooklyn", 
+        "county_name": "KINGS", 
+        "state": "NY", 
+        "zip_code": "11234"
+    }, 
+    "region": "New York City", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "1000"
+}

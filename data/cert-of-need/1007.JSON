@@ -1,0 +1,43 @@
+{
+    "acknowledgement_date": "2/8/2000", 
+    "actual_construction_completion_date": "7/21/2000", 
+    "actual_construction_start_date": "12/10/1999", 
+    "application": {
+        "received_date": "1/5/2000", 
+        "received_month": "1", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "4/12/2002", 
+    "assigned_construction_start_date": "4/11/2002", 
+    "con_project_number": "1007", 
+    "current_operator": {
+        "name": "United Health Services Hospitals, Inc.", 
+        "operating_certificate_number": "0303001H"
+    }, 
+    "director_action": "Contingent Approval", 
+    "director_action_date": "4/12/2000", 
+    "facility_id": "58", 
+    "facility_name": "United Health Services Hospitals, Inc. - Wilson Hospital Division", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "2/8/2000", 
+    "main_site": {
+        "facility_identifier": "58", 
+        "facility_name": "United Health Services Hospitals, Inc. - Wilson Hospital Division"
+    }, 
+    "project": {
+        "description": "Acquire third CT scanner", 
+        "status": "Project Complete", 
+        "status_date": "7/21/2000"
+    }, 
+    "project_site": {
+        "address_line1": "33-57 Harrison Street", 
+        "city": "Johnson City", 
+        "county_name": "BROOME", 
+        "state": "NY", 
+        "zip_code": "13790"
+    }, 
+    "region": "NY-Penn", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "1174000"
+}

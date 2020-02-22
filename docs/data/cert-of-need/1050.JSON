@@ -1,0 +1,35 @@
+{
+    "acknowledgement_date": "6/9/2000", 
+    "application": {
+        "received_date": "2/23/2000", 
+        "received_month": "2", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1050", 
+    "facility_name": "Hollis Park Diagnostic and Treatment Center, Inc.", 
+    "facility_type": "Diagnostic And Treatment Center", 
+    "initial_review_date": "3/1/2000", 
+    "main_site": {
+        "facility_name": "Hollis Park Diagnostic and Treatment Center, Inc."
+    }, 
+    "project": {
+        "description": "Establish and construct a diagnostic and treatment center at 166-01/03 Jamaica Avenue, Jamaica", 
+        "status": "Withdrawn", 
+        "status_date": "6/9/2000"
+    }, 
+    "project_site": {
+        "address_line1": "166-01/03 Jamaica Avenue", 
+        "city": "Jamaica", 
+        "county_name": "QUEENS", 
+        "state": "NY", 
+        "zip_code": "114325240"
+    }, 
+    "proposed_operator": {
+        "name": "Hollis Park Diagnostic and Treatment Center, Inc.", 
+        "operating_certificate_number": "99999999"
+    }, 
+    "region": "New York City", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Establishment and Construction", 
+    "total_project_cost": "201000"
+}

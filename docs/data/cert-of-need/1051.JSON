@@ -1,0 +1,35 @@
+{
+    "acknowledgement_date": "3/1/2000", 
+    "application": {
+        "received_date": "2/24/2000", 
+        "received_month": "2", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1051", 
+    "facility_name": "Mid-Queens Medical Center, LLC", 
+    "facility_type": "Diagnostic And Treatment Center", 
+    "initial_review_date": "3/1/2000", 
+    "main_site": {
+        "facility_name": "Mid-Queens Medical Center, LLC"
+    }, 
+    "project": {
+        "description": "Establish and construct a diagnostic and treatment center at 138-48 Elder Avenue, Flushing and certify an extension clinic at 139-19 Franklin Avenue, Flushing", 
+        "status": "Withdrawn", 
+        "status_date": "5/2/2000"
+    }, 
+    "project_site": {
+        "address_line1": "138-48 Elder Avenue", 
+        "city": "Flushing", 
+        "county_name": "QUEENS", 
+        "state": "NY", 
+        "zip_code": "11355"
+    }, 
+    "proposed_operator": {
+        "name": "Mid-Queens Medical Center", 
+        "operating_certificate_number": "99999999"
+    }, 
+    "region": "New York City", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Establishment and Construction", 
+    "total_project_cost": "97000"
+}

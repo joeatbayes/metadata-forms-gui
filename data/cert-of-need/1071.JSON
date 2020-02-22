@@ -1,0 +1,35 @@
+{
+    "acknowledgement_date": "12/12/2000", 
+    "application": {
+        "received_date": "2/8/2000", 
+        "received_month": "2", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1071", 
+    "facility_name": "57th Street Vision Associates, LLC", 
+    "facility_type": "Diagnostic And Treatment Center", 
+    "initial_review_date": "12/8/2000", 
+    "main_site": {
+        "facility_name": "57th Street Vision Associates, LLC"
+    }, 
+    "project": {
+        "description": "Establish and construct a diagnostic and treatment center providing laser vision correction services", 
+        "status": "Withdrawn", 
+        "status_date": "12/12/2000"
+    }, 
+    "project_site": {
+        "address_line1": "115 East 57th Street - 16th Floor", 
+        "city": "New York", 
+        "county_name": "NEW YORK", 
+        "state": "NY", 
+        "zip_code": "10022"
+    }, 
+    "proposed_operator": {
+        "name": "57th Street Vision Associates, LLC", 
+        "operating_certificate_number": "99999999"
+    }, 
+    "region": "New York City", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Establishment and Construction", 
+    "total_project_cost": "186000"
+}

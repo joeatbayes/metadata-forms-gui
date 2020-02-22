@@ -1,0 +1,47 @@
+{
+    "acknowledgement_date": "2/8/2000", 
+    "actual_construction_completion_date": "7/12/2002", 
+    "actual_construction_start_date": "8/25/2001", 
+    "application": {
+        "received_date": "1/6/2000", 
+        "received_month": "1", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "8/24/2002", 
+    "assigned_construction_start_date": "8/23/2002", 
+    "con_project_number": "1005", 
+    "current_operator": {
+        "address_line1": "1600 Hayes St Suite 300", 
+        "city": "Nashville", 
+        "name": "Applied Medical Research", 
+        "operating_certificate_number": "5151205R", 
+        "state": "TN", 
+        "zip_code": "10314"
+    }, 
+    "director_action": "Contingent Approval", 
+    "director_action_date": "8/24/2000", 
+    "facility_id": "7247", 
+    "facility_name": "Stonybrook Dialysis Clinic", 
+    "facility_type": "Diagnostic And Treatment Center", 
+    "initial_review_date": "2/7/2000", 
+    "main_site": {
+        "facility_identifier": "7247", 
+        "facility_name": "Stonybrook Dialysis Clinic"
+    }, 
+    "project": {
+        "description": "Increase chronic renal dialysis capacity by 12 stations and undertake requisite renovation", 
+        "status": "Project Complete", 
+        "status_date": "7/12/2002"
+    }, 
+    "project_site": {
+        "address_line1": "26 Research Way", 
+        "city": "East Setauket", 
+        "county_name": "SUFFOLK", 
+        "state": "NY", 
+        "zip_code": "11733"
+    }, 
+    "region": "Long Island", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "292000"
+}

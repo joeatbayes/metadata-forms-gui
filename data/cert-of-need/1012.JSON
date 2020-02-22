@@ -1,0 +1,39 @@
+{
+    "acknowledgement_date": "2/11/2000", 
+    "application": {
+        "received_date": "1/14/2000", 
+        "received_month": "1", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "4/3/2002", 
+    "assigned_construction_start_date": "4/2/2002", 
+    "con_project_number": "1012", 
+    "current_operator": {
+        "name": "Margaretville Memorial Hospital", 
+        "operating_certificate_number": "99999999"
+    }, 
+    "director_action": "Approval", 
+    "director_action_date": "4/3/2000", 
+    "facility_name": "Margaretville Memorial Hospital", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "2/8/2000", 
+    "main_site": {
+        "facility_name": "Margaretville Memorial Hospital"
+    }, 
+    "project": {
+        "description": "Certify facility as 25 bed critical access hospital (CAH) to include a 10 bed swing bed program", 
+        "status": "Project Complete", 
+        "status_date": "5/8/2000"
+    }, 
+    "project_site": {
+        "address_line1": "Route 28, P.O. Box 200", 
+        "city": "Margaretville", 
+        "county_name": "DELAWARE", 
+        "state": "NY", 
+        "zip_code": "12455"
+    }, 
+    "region": "Northeast", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "0"
+}

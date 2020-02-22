@@ -1,0 +1,43 @@
+{
+    "acknowledgement_date": "3/28/2000", 
+    "application": {
+        "received_date": "3/17/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1082", 
+    "council": {
+        "action_1": "Approval", 
+        "action_2": "Deferral", 
+        "date_1": "9/12/2000", 
+        "date_2": "9/22/2000", 
+        "name_1": "Establishment Committee", 
+        "name_2": "Public Health Council"
+    }, 
+    "facility_name": "Comprehensive Care Center, LLC", 
+    "facility_type": "Diagnostic And Treatment Center", 
+    "initial_review_date": "3/28/2000", 
+    "main_site": {
+        "facility_name": "Comprehensive Care Center, LLC"
+    }, 
+    "project": {
+        "description": "Establish and construct a diagnostic and treatment center at 196 Graham Avenue, Brooklyn", 
+        "status": "Withdrawn", 
+        "status_date": "3/28/2000"
+    }, 
+    "project_site": {
+        "address_line1": "196 Graham Avenue", 
+        "city": "Brooklyn", 
+        "county_name": "KINGS", 
+        "state": "NY", 
+        "zip_code": "11206"
+    }, 
+    "proposed_operator": {
+        "name": "Comprehensive Care Center, LLC", 
+        "operating_certificate_number": "99999999"
+    }, 
+    "region": "New York City", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Establishment and Construction", 
+    "total_project_cost": "78000"
+}

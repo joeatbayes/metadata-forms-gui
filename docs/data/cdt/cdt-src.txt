@@ -1,0 +1,461 @@
+cdtCode	 description	 category	 hpmsCategory
+D0120 periodic oral evaluation Diagnostic Preventive - Oral Exam
+D0140 limited oral evaluation - problem focused Diagnostic Comprehensive - Diagnostic
+D0145 oral evaluation for a patient under three years of age and counseling with primary caregiver Diagnostic Comprehensive - Diagnostic
+D0150 comprehensive oral evaluation - new or established patient Diagnostic Preventive - Oral Exam
+D0160 detailed and extensive oral evaluation - problem-focused, by report Diagnostic Comprehensive - Diagnostic
+D0170 re-evaluation, limited, problem focused Diagnostic Comprehensive - Diagnostic
+D0171 re-evaluation, post-operative visit Diagnostic Comprehensive - Diagnostic
+D0180 comprehensive periodontal evaluation - new or established patient Diagnostic Comprehensive - Diagnostic
+D0210 intraoral - complete series of radiographic images Diagnostic Comprehensive - Diagnostic
+D0220 intraoral - periapical first radiographic image Diagnostic Comprehensive - Diagnostic
+D0230 intraoral - periapical each additional radiographic image Diagnostic Comprehensive - Diagnostic
+D0240 intraoral - occlusal radiographic image Diagnostic Comprehensive - Diagnostic
+D0250 extraoral - 2D projection radiographic image created using a stationary radiation source and detector Diagnostic Comprehensive - Diagnostic
+D0251 extra-oral posterior dental radiographic image Diagnostic Comprehensive - Diagnostic
+D0270 bitewing - single radiographic image Diagnostic Preventive - X-rays
+D0272 bitewings - two radiographic images Diagnostic Preventive - X-rays
+D0273 bitewings - three radiographic images Diagnostic Preventive - X-rays
+D0274 bitewings - four radiographic images Diagnostic Preventive - X-rays
+D0277 vertical bitewings - 7 to 8 radiographic images Diagnostic Preventive - X-rays
+D0330 panoramic radiographic image Diagnostic Comprehensive - Diagnostic
+D0350 2D Oral/facial photographic images obtained intraorally or extraorally Diagnostic Comprehensive - Diagnostic
+D0351 3D photographic image Diagnostic Comprehensive - Diagnostic
+D0411 HbA1C in-office point of service testing Diagnostic Comprehensive - Diagnostic
+D0415 collection of microorganisms for culture and sensitivity Diagnostic Comprehensive - Diagnostic
+D0416 viral culture Diagnostic Comprehensive - Diagnostic
+D0417 collection and preparation of saliva sample for laboratory diagnostic testing Diagnostic Comprehensive - Diagnostic
+D0418 analysis of saliva sample Diagnostic Comprehensive - Diagnostic
+D0422 collection and preparation of genetic sample material for laboratory analysis and report Diagnostic Comprehensive - Diagnostic
+D0423 genetic test for susceptibility to diseases-specimen analysis Diagnostic Comprehensive - Diagnostic
+D0425 Caries susceptibility tests Diagnostic Comprehensive - Diagnostic
+D0431 adjunctive pre-diagnostic test that aids in detection of mucosal abnormalities including premalignant and malignant lesi Diagnostic Comprehensive - Diagnostic
+D0460 pulp vitality tests Diagnostic Comprehensive - Diagnostic
+D0470 diagnostic casts Diagnostic Comprehensive - Diagnostic
+D0472 Accession of tissue, gross examination Diagnostic Comprehensive - Diagnostic
+D0473 Accession of tissue, gross and microscopic exam Diagnostic Comprehensive - Diagnostic
+D0474 Accession of tissue, gross and microscopic exam (surgical) Diagnostic Comprehensive - Diagnostic
+D0475 Decalcification procedure Diagnostic Comprehensive - Diagnostic
+D0476 Special stains for microorganisms Diagnostic Comprehensive - Diagnostic
+D0477 Special stains, not for microorganisms Diagnostic Comprehensive - Diagnostic
+D0478 Immunohistochemical stains Diagnostic Comprehensive - Diagnostic
+D0479 Tissue in-situ hybridization, including interpretation Diagnostic Comprehensive - Diagnostic
+D0480 Processing and interpretation of cytologic smears Diagnostic Comprehensive - Diagnostic
+D0481 Electron microscopy Diagnostic Comprehensive - Diagnostic
+D0482 Direct immunofluorescence Diagnostic Comprehensive - Diagnostic
+D0483 Indirect immunofluorescence Diagnostic Comprehensive - Diagnostic
+D0484 Consultation on slides prepared elsewhere Diagnostic Comprehensive - Diagnostic
+D0485 Consultation, including preparation of slides from biopsy material supplied by referring source Diagnostic Comprehensive - Diagnostic
+D0486 Accession of exfoliative cytological smears, microscopic examination, preparation and transmission of written report Diagnostic Comprehensive - Diagnostic
+D0502 Other oral pathology procedures, by report Diagnostic Comprehensive - Diagnostic
+D0600 non-ionizing diagnostic procedure Diagnostic Comprehensive - Diagnostic
+D0601 caries risk assessment and documentation, with a finding of low risk Diagnostic Comprehensive - Diagnostic
+D0602 caries risk assessment and documentation, with a finding of moderate risk Diagnostic Comprehensive - Diagnostic
+D0603 caries risk assessment and documentation, with a finding of high risk Diagnostic Comprehensive - Diagnostic
+D0999 Unspecified diagnostic procedure, by report Diagnostic Comprehensive - Diagnostic
+D1110 prophylaxis (cleaning) - adult Preventive Preventive - Prophylaxis (cleanings)
+D1120 prophylaxis (cleaning) - child Preventive Preventive - Prophylaxis (cleanings)
+D1206 topical application of fluoride varnish Preventive Preventive - Fluoride Treatment 
+CDT Code Procedure Description Category Description HPMS Filing Category
+D1208 Topical application of fluoride - excluding varnish Preventive Preventive - Fluoride Treatment
+D1310 nutritional counseling for control of dental disease Preventive Comprehensive - Non-Routine
+D1330 oral hygiene instructions Preventive Comprehensive - Non-Routine
+D1351 sealant - per tooth Preventive Comprehensive - Restorative
+D1352 preventive resin restoration - permanent tooth Preventive Comprehensive - Restorative
+D1353 sealant repair - per tooth Preventive Comprehensive - Restorative
+D1354 interim caries arresting medicament application - per tooth Preventive Comprehensive - Restorative
+D1510 space maintainer - fixed - unilateral Preventive Comprehensive - Restorative
+D1516 space maintainer – fixed – bilateral, maxillary Preventive Comprehensive - Restorative
+D1517 space maintainer – fixed – bilateral, mandibular Preventive Comprehensive - Restorative
+D1520 space maintainer - removable - unilateral Preventive Comprehensive - Restorative
+D1526 space maintainer – removable – bilateral, maxillary Preventive Comprehensive - Restorative
+D1527 space maintainer – removable – bilateral, mandibular Preventive Comprehensive - Restorative
+D1550 recement or re-bond of space maintainer Preventive Comprehensive - Restorative
+D1555 removal of fixed space maintainer Preventive Comprehensive - Restorative
+D1575 distal shoe space maintainer - fixed unilateral Preventive Comprehensive - Restorative
+D2140 amalgam - one surface, primary or permanent Restorative Comprehensive - Restorative
+D2150 amalgam - two surfaces, primary or permanent Restorative Comprehensive - Restorative
+D2160 amalgam - three surfaces, primary or permanent Restorative Comprehensive - Restorative
+D2161 amalgam - four or more surfaces, primary or permanent Restorative Comprehensive - Restorative
+D2330 resin-based composite - one surface, anterior Restorative Comprehensive - Restorative
+D2331 resin-based composite - two surfaces, anterior Restorative Comprehensive - Restorative
+D2332 resin-based composite - three surfaces, anterior Restorative Comprehensive - Restorative
+D2335 resin-based composite - four or more surfaces or involving incisal angle (anterior) Restorative Comprehensive - Restorative
+D2390 resin-based composite crown, anterior Restorative Comprehensive - Restorative
+D2391 resin-based composite - one surface, posterior Restorative Comprehensive - Restorative
+D2392 resin-based composite - two surfaces, posterior Restorative Comprehensive - Restorative
+D2393 resin-based composite - three surfaces, posterior Restorative Comprehensive - Restorative
+D2394 resin-based composite - four or more surfaces, posterior Restorative Comprehensive - Restorative
+D2410 gold foil - one surface Restorative Comprehensive - Restorative
+D2420 gold foil - two surfaces Restorative Comprehensive - Restorative
+D2430 gold foil - three surfaces Restorative Comprehensive - Restorative
+D2510 inlay - metallic - one surface Restorative Comprehensive - Restorative
+D2520 inlay - metallic - two surfaces Restorative Comprehensive - Restorative
+D2530 inlay - metallic - three or more surfaces Restorative Comprehensive - Restorative
+D2542 onlay metallic, two surfaces Restorative Comprehensive - Restorative
+D2543 onlay-metallic-three surfaces Restorative Comprehensive - Restorative
+D2544 onlay-metallic-four or more surfaces Restorative Comprehensive - Restorative
+D2610 inlay - porcelain/ceramic - one surface Restorative Comprehensive - Restorative
+D2620 inlay - porcelain/ceramic - two surfaces Restorative Comprehensive - Restorative
+D2630 inlay - porcelain/ceramic - three or more surfaces Restorative Comprehensive - Restorative
+D2642 onlay - porcelain/ceramic - two surfaces Restorative Comprehensive - Restorative
+D2643 onlay - porcelain/ceramic - three surfaces Restorative Comprehensive - Restorative
+D2644 onlay - porcelain/ceramic - four or more surfaces Restorative Comprehensive - Restorative
+D2650 inlay - composite/resin - one surface Restorative Comprehensive - Restorative
+D2651 inlay - composite/resin - two surfaces Restorative Comprehensive - Restorative
+D2652 inlay - composite/resin - three or more surfaces Restorative Comprehensive - Restorative
+D2662 onlay - composite/resin - two surfaces Restorative Comprehensive - Restorative
+D2663 onlay - composite/resin - three surfaces Restorative Comprehensive - Restorative
+D2664 onlay - composite/resin - four or more surfaces Restorative Comprehensive - Restorative
+D2710 crown,resin-based composite (indirect) Restorative Comprehensive - Restorative
+D2712 crown - 3/4 resin-based composite (indirect) Restorative Comprehensive - Restorative
+D2720 crown - resin with high noble metal Restorative Comprehensive - Restorative
+D2721 crown - resin with predominantly base metal Restorative Comprehensive - Restorative
+D2722 crown - resin with noble metal Restorative Comprehensive - Restorative
+D2740 crown - porcelain/ceramic substrate Restorative Comprehensive - Restorative
+D2750 crown - porcelain fused to high noble metal Restorative Comprehensive - Restorative 
+CDT Code Procedure Description Category Description HPMS Filing Category
+D2751 crown - porcelain fused to predominantly base metal Restorative Comprehensive - Restorative
+D2752 crown - porcelain fused to noble metal Restorative Comprehensive - Restorative
+D2780 crown, 3/4 cast high noble metal Restorative Comprehensive - Restorative
+D2781 crown, 3/4 cast predominately base metal Restorative Comprehensive - Restorative
+D2782 crown, 3/4 cast noble metal Restorative Comprehensive - Restorative
+D2783 crown, 3/4 porcelain/ceramic Restorative Comprehensive - Restorative
+D2790 crown - full cast high noble metal Restorative Comprehensive - Restorative
+D2791 crown - full cast predominantly base metal Restorative Comprehensive - Restorative
+D2792 crown - full cast noble metal Restorative Comprehensive - Restorative
+D2794 crown - titanium Restorative Comprehensive - Restorative
+D2799 provisional crown - further treatment or completion of diagnosis necessary prior to final impression Restorative Comprehensive - Restorative
+D2910 recement or re-bond inlay, onlay, veneer or partial coverage restoration Restorative Comprehensive - Restorative
+D2915 recement or re-bond cast indirectlty fabricated or prefabricated post and core Restorative Comprehensive - Restorative
+D2920 recement or re-bond crown Restorative Comprehensive - Restorative
+D2921 reattachment of tooth fragment, incisal edge or cusp Restorative Comprehensive - Restorative
+D2930 prefabricated stainless steel crown - primary tooth Restorative Comprehensive - Restorative
+D2931 prefabricated stainless steel crown - permanent tooth Restorative Comprehensive - Restorative
+D2932 prefabricated resin crown Restorative Comprehensive - Restorative
+D2933 prefabricated stainless steel crown with resin window Restorative Comprehensive - Restorative
+D2934 prefabricated esthetic coated stainless steel crown - primary tooth Restorative Comprehensive - Restorative
+D2940 protective restoration Restorative Comprehensive - Restorative
+D2941 interim therapeutic restoration-primary dentition Restorative Comprehensive - Restorative
+D2950 Core buildup, including any pins when required Restorative Comprehensive - Restorative
+D2951 pin retention - per tooth, in addition to restoration Restorative Comprehensive - Restorative
+D2952 cast post and core in addition to crown Restorative Comprehensive - Restorative
+D2953 each additional indirectly fabricated post, same tooth Restorative Comprehensive - Restorative
+D2954 prefabricated post and core in addition to crown Restorative Comprehensive - Restorative
+D2955 Post removal (not in conjunction with endodontic therapy) Restorative Comprehensive - Restorative
+D2957 each additional prefabricated post, same tooth Restorative Comprehensive - Restorative
+D2962 labial veneer (porcelain laminate) - laboratory Restorative Comprehensive - Restorative
+D2971 Additional procedures to construct new crown under partial denture framework Restorative Comprehensive - Restorative
+D2975 coping Restorative Comprehensive - Restorative
+D2980 crown repair necessitated by restorative material failure Restorative Comprehensive - Restorative
+D2981 inlay repair necessitated by restorative material failure Restorative Comprehensive - Restorative
+D2982 onlay repair necessitated by restorative material failure Restorative Comprehensive - Restorative
+D2999 Unspecified restorative procedure, by report Restorative Comprehensive - Restorative
+D3110 pulp cap - direct (excluding final restoration) Endodontics Comprehensive - Endodontics
+D3120 pulp cap - indirect (excluding final restoration) Endodontics Comprehensive - Endodontics
+D3220 therapeutic pulpotomy (excluding final restoration) Endodontics Comprehensive - Endodontics
+D3221 pulpal debridement, primary and permanent teeth Endodontics Comprehensive - Endodontics
+D3222 partial pulpotomy for apexogenesis - permanent tooth with incomplete root development Endodontics Comprehensive - Endodontics
+D3230 pulpal therapy (resorbable filling) - anterior, primary tooth (excluding final restoration) Endodontics Comprehensive - Endodontics
+D3240 pulpal therapy (resorbable filling) - posterior, primary tooth (excluding final restoration) Endodontics Comprehensive - Endodontics
+D3310 endodontic therapy, anterior tooth (excluding final restoration) Endodontics Comprehensive - Endodontics
+D3320 endodontic therapy, premolar tooth (excluding final restoration) Endodontics Comprehensive - Endodontics
+D3330 endodontic therapy, molar (excluding final restoration) Endodontics Comprehensive - Endodontics
+D3331 treatment of root canal obstruction, non-surgical access Endodontics Comprehensive - Endodontics
+D3332 incomplete endodontic therapy; inoperable, unrestorable or fractured tooth Endodontics Comprehensive - Endodontics
+D3333 internal tooth repair of performation defects Endodontics Comprehensive - Endodontics
+D3346 retreatment of previous root canal therapy - anterior Endodontics Comprehensive - Endodontics
+D3347 retreatment of previous root canal therapy - premolar Endodontics Comprehensive - Endodontics
+D3348 retreatment of previous root canal therapy - molar Endodontics Comprehensive - Endodontics
+D3351 Apexification/recalcification-initial visit (apical closure/calcific repair of perforations, root resorption, etc Endodontics Comprehensive - Endodontics
+D3352 Apexification/recalcification/pulpal regeneration - interim medication replacement Endodontics Comprehensive - Endodontics
+D3353 apexification/recalcification - final visit (includes completed root Endodontics Comprehensive - Endodontics
+D3355 Pupal regeneration-initial visit Endodontics Comprehensive - Endodontics
+D3356 Pulpal regeneration-interim medicament replacement Endodontics Comprehensive - Endodontics 
+CDT Code Procedure Description Category Description HPMS Filing Category
+D3357 Pulpal regeneration-completion of treatment Endodontics Comprehensive - Endodontics
+D3410 Apicoectomy - anterior Endodontics Comprehensive - Endodontics
+D3421 Apicoectomy - premolar (first root) Endodontics Comprehensive - Endodontics
+D3425 Apicoectomy - molar (first root) Endodontics Comprehensive - Endodontics
+D3426 Apicoectomy (each additional root) Endodontics Comprehensive - Endodontics
+D3427 periradicular surgery without apicoectomy Endodontics Comprehensive - Endodontics
+D3430 retrograde filling - per root Endodontics Comprehensive - Endodontics
+D3450 root amputation - per root Endodontics Comprehensive - Endodontics
+D3460 Endodontic endosseous implant Endodontics Comprehensive - Endodontics
+D3470 intentional reimplantation (including necessary splinting) Endodontics Comprehensive - Endodontics
+D3910 Surgical procedure for isolation of tooth with rubber dam Endodontics Comprehensive - Endodontics
+D3920 hemisection (including any root removal), not including root canal therapy Endodontics Comprehensive - Endodontics
+D3950 Canal preparation and fitting of preformed dowel or post Endodontics Comprehensive - Endodontics
+D3999 Unspecified endodontic procedure, by report Endodontics Comprehensive - Endodontics
+D4210 gingivectomy or gingivoplasty - four or more contiguous teeth or tooth bounded spaces per quadrant Periodontics Comprehensive - Periodontics
+D4211 gingivectomy or gingivoplasty - one to three contiguous teeth or tooth bounded spaces per quadrant Periodontics Comprehensive - Periodontics
+D4230 anatomical crown exposure - four or more contiguous teeth or tooth bounded spaces per quadrant Periodontics Comprehensive - Periodontics
+D4231 anatomical crown exposure - one to three teeth or tooth bounded spaces per quadrant Periodontics Comprehensive - Periodontics
+D4240 gingival flap procedure, including root planning - four or more contiguous teeth or tooth bounded spaces per quadrant Periodontics Comprehensive - Periodontics
+D4241 gingival flap procedure - including root planing -one to three contiguous teeth or tooth bounded spaces per quadrant Periodontics Comprehensive - Periodontics
+D4245 apically positioned flap Periodontics Comprehensive - Periodontics
+D4249 clinical crown lengthening - hard tissue Periodontics Comprehensive - Periodontics
+D4260 osseous surgery (including flap entry and closure) - four or more contiguous teeth or tooth bounded spaces per quadrant Periodontics Comprehensive - Periodontics
+D4261 osseous surgery (including flap entry and closure) - one to three contiguous teeth or tooth bounded spaces per quadrant Periodontics Comprehensive - Periodontics
+D4263 Bone replacement graft - first site in quadrant Periodontics Comprehensive - Periodontics
+D4264 Bone replacement graft - each additional site in quadrant Periodontics Comprehensive - Periodontics
+D4265 biologic materials to aid in soft and osseous tissue regeneration Periodontics Comprehensive - Periodontics
+D4266 guided tissue regeneration - resorbable barrier, per site Periodontics Comprehensive - Periodontics
+D4267 guided tissue regeneration - nonresorbable barrier, per site (Includes membrane removal) Periodontics Comprehensive - Periodontics
+D4268 surgical revision procedure, per tooth Periodontics Comprehensive - Periodontics
+D4270 pedicle soft tissue graft procedure Periodontics Comprehensive - Periodontics
+D4273 autogenous connective tissue graft procedure, per first tooth, implant or endentulous tooth position in graft Periodontics Comprehensive - Periodontics
+D4274 distal or proximal wedge procedure (when not performed in conjunction with surgical procedures in the same anatomical ar Periodontics Comprehensive - Periodontics
+D4275 non-autogenous connective tissue graft (including recipient site and donor material) first tooth implant Periodontics Comprehensive - Periodontics
+D4276 combined connective tissue and double pedicle graft, per tooth Periodontics Comprehensive - Periodontics
+D4277 free soft tissue graft procedure each additional contiguous tooth, implant or edentulous tooth Periodontics Comprehensive - Periodontics
+D4283 autogenous connective tissue graft procedure - each additional contiguous tooth, implant or edentulous tooth Periodontics Comprehensive - Periodontics
+D4285 non-autogenous connective tissue graft procedure - each additional contiguous tooth, implant or edentulous tooth Periodontics Comprehensive - Periodontics
+D4320 provisional splinting - intracoronal Periodontics Comprehensive - Periodontics
+D4321 provisional splinting - extracoronal Periodontics Comprehensive - Periodontics
+D4341 periodontal scaling and root planing - four or more teeth per quadrant Periodontics Comprehensive - Periodontics
+D4342 periodontal scaling and root planing - one - three teeth, per quadrant Periodontics Comprehensive - Periodontics
+D4346 scaling in presence of generalized moderate or severe gingival inflammation Periodontics Comprehensive - Periodontics
+D4355 full mouth debridement to enable comprehensive evaluation and diagnosis on a subsequent visit Periodontics Comprehensive - Periodontics
+D4381 localized delivery of antimicrobial agents via a controlled release vehicle into diseased crevicular tissue, per tooth Periodontics Comprehensive - Periodontics
+D4910 periodontal maintenance Periodontics Comprehensive - Periodontics
+D4920 unscheduled dressing change (by someone other than treating dentist or their staff) Periodontics Comprehensive - Periodontics
+D4999 Unspecified periodontal procedure, by report Periodontics Comprehensive - Periodontics
+D5110 complete denture - maxillary Prosthodontics, removable Comprehensive - Prosthodontics
+D5120 complete denture - mandibular Prosthodontics, removable Comprehensive - Prosthodontics
+D5130 immediate denture - maxillary Prosthodontics, removable Comprehensive - Prosthodontics
+D5140 immediate denture - mandibular Prosthodontics, removable Comprehensive - Prosthodontics
+D5211 maxillary partial denture - resin base (including retentive/clasping materials, rests and teeth) Prosthodontics, removable Comprehensive - Prosthodontics
+D5212 mandibular partial denture - resin base (including retentive/clasping materials, rests and teeth) Prosthodontics, removable Comprehensive - Prosthodontics
+D5213 maxillary partial denture - cast metal framework with resin denture bases (including any conventional clasps, rests and Prosthodontics, removable Comprehensive - Prosthodontics
+D5214 mandibular partial denture - cast metal framework with resin denture bases (including any conventional clasps, rests and Prosthodontics, removable Comprehensive - Prosthodontics
+D5221 immediate maxillary partial denture - resin base Prosthodontics, removable Comprehensive - Prosthodontics 
+CDT Code Procedure Description Category Description HPMS Filing Category
+D5222 immediate mandibular partial denture - resin base Prosthodontics, removable Comprehensive - Prosthodontics
+D5223 immediate maxillary partial denture - cast metal framework with resin denture bases Prosthodontics, removable Comprehensive - Prosthodontics
+D5224 immediate mandibular partial denture-cast metal framework with resin denture bases Prosthodontics, removable Comprehensive - Prosthodontics
+D5225 maxillary partial denture - flexible base (including any clasps, rests and teeth) Prosthodontics, removable Comprehensive - Prosthodontics
+D5226 mandibular partial denture - flexible base (including any clasps, rests and teeth) Prosthodontics, removable Comprehensive - Prosthodontics
+D5282 removable unilateral partial denture – one piece cast metal (including clasps and teeth), maxillary Prosthodontics, removable Comprehensive - Prosthodontics
+D5283 removable unilateral partial denture – one piece cast metal (including clasps and teeth), mandibular Prosthodontics, removable Comprehensive - Prosthodontics
+D5410 adjust complete denture - maxillary Prosthodontics, removable Comprehensive - Prosthodontics
+D5411 adjust complete denture - mandibular Prosthodontics, removable Comprehensive - Prosthodontics
+D5421 adjust partial denture - maxillary Prosthodontics, removable Comprehensive - Prosthodontics
+D5422 adjust partial denture - mandibular Prosthodontics, removable Comprehensive - Prosthodontics
+D5511 repair broken complete denture base - mandibular Prosthodontics, removable Comprehensive - Prosthodontics
+D5512 repair broken complete denture base - maxillary Prosthodontics, removable Comprehensive - Prosthodontics
+D5520 replace missing or broken teeth - complete denture (each tooth) Prosthodontics, removable Comprehensive - Prosthodontics
+D5611 repair resin partial denture base - mandibular Prosthodontics, removable Comprehensive - Prosthodontics
+D5612 repair resin partial denture base - maxillary Prosthodontics, removable Comprehensive - Prosthodontics
+D5621 repair cast partial denture base - mandibular Prosthodontics, removable Comprehensive - Prosthodontics
+D5622 repair cast partial denture base - maxillary Prosthodontics, removable Comprehensive - Prosthodontics
+D5630 repair or replace broken retentive clasping materials - per tooth Prosthodontics, removable Comprehensive - Prosthodontics
+D5640 replace broken teeth - per tooth Prosthodontics, removable Comprehensive - Prosthodontics
+D5650 add tooth to existing partial denture Prosthodontics, removable Comprehensive - Prosthodontics
+D5660 add clasp to existing partial denture - per tooth Prosthodontics, removable Comprehensive - Prosthodontics
+D5670 replace all teeth and acrylic on cast metal framework (maxillary) Prosthodontics, removable Comprehensive - Prosthodontics
+D5671 replace all teeth and acrylic on cast metal framework (mandibular) Prosthodontics, removable Comprehensive - Prosthodontics
+D5710 rebase complete maxillary denture Prosthodontics, removable Comprehensive - Prosthodontics
+D5711 rebase complete mandibular denture Prosthodontics, removable Comprehensive - Prosthodontics
+D5720 rebase maxillary partial denture Prosthodontics, removable Comprehensive - Prosthodontics
+D5721 rebase mandibular partial denture Prosthodontics, removable Comprehensive - Prosthodontics
+D5730 reline complete maxillary denture (chairside) Prosthodontics, removable Comprehensive - Prosthodontics
+D5731 reline complete mandibular denture (chairside) Prosthodontics, removable Comprehensive - Prosthodontics
+D5740 reline maxillary partial denture (chairside) Prosthodontics, removable Comprehensive - Prosthodontics
+D5741 reline mandibular partial denture (chairside) Prosthodontics, removable Comprehensive - Prosthodontics
+D5750 reline complete maxillary denture (laboratory) Prosthodontics, removable Comprehensive - Prosthodontics
+D5751 reline complete mandibular denture (laboratory) Prosthodontics, removable Comprehensive - Prosthodontics
+D5760 reline maxillary partial denture (laboratory) Prosthodontics, removable Comprehensive - Prosthodontics
+D5761 reline mandibular partial denture (laboratory) Prosthodontics, removable Comprehensive - Prosthodontics
+D5810 interim complete denture (maxillary) Prosthodontics, removable Comprehensive - Prosthodontics
+D5811 interim complete denture (mandibular) Prosthodontics, removable Comprehensive - Prosthodontics
+D5820 interim partial denture (maxillary) Prosthodontics, removable Comprehensive - Prosthodontics
+D5821 interim partial denture (mandibular) Prosthodontics, removable Comprehensive - Prosthodontics
+D5850 tissue conditioning, maxillary Prosthodontics, removable Comprehensive - Prosthodontics
+D5851 tissue conditioning, mandibular Prosthodontics, removable Comprehensive - Prosthodontics
+D5862 Precision attachment, by report Prosthodontics, removable Comprehensive - Prosthodontics
+D5863 Overdenture-complete maxillary Prosthodontics, removable Comprehensive - Prosthodontics
+D5864 Overdenture-partial maxillary Prosthodontics, removable Comprehensive - Prosthodontics
+D5865 Overdenture - complete mandibular Prosthodontics, removable Comprehensive - Prosthodontics
+D5866 Overdenture-partial mandibular Prosthodontics, removable Comprehensive - Prosthodontics
+D5867 Replacement of replaceable part of semi-precision attachment Prosthodontics, removable Comprehensive - Prosthodontics
+D5875 Modification of removable prosthesis following implant surgery Prosthodontics, removable Comprehensive - Prosthodontics
+D5899 Unspecified removable prosthodontic procedure, by report Prosthodontics, removable Comprehensive - Prosthodontics
+D5992 Adjust maxillofacial prosthetic appliance, by report Prosthodontics, removable Comprehensive - Prosthodontics
+D5993 Maintenance and cleaning of a maxillofacial prosthesis (extra or intraoral) other than required adjustments. Prosthodontics, removable Comprehensive - Prosthodontics
+D6205 pontic - indirect resin based composite Prosthodontics, fixed Comprehensive - Prosthodontics
+D6210 pontic - cast high noble metal Prosthodontics, fixed Comprehensive - Prosthodontics
+D6211 pontic - cast predominantly base metal Prosthodontics, fixed Comprehensive - Prosthodontics
+D6212 pontic - cast noble metal Prosthodontics, fixed Comprehensive - Prosthodontics
+D6214 pontic - titanium Prosthodontics, fixed Comprehensive - Prosthodontics 
+CDT Code Procedure Description Category Description HPMS Filing Category
+D6240 pontic - porcelain fused to high noble metal Prosthodontics, fixed Comprehensive - Prosthodontics
+D6241 pontic - porcelain fused to predominantly base metal Prosthodontics, fixed Comprehensive - Prosthodontics
+D6242 pontic - porcelain fused to noble metal Prosthodontics, fixed Comprehensive - Prosthodontics
+D6245 pontic-porcelain/ceramic Prosthodontics, fixed Comprehensive - Prosthodontics
+D6250 pontic - resin with high noble metal Prosthodontics, fixed Comprehensive - Prosthodontics
+D6251 pontic - resin with predominantly base metal Prosthodontics, fixed Comprehensive - Prosthodontics
+D6252 pontic - resin with noble metal Prosthodontics, fixed Comprehensive - Prosthodontics
+D6253 provisional pontic - further treatment or completion of diagnosis necessary prior to final impression Prosthodontics, fixed Comprehensive - Prosthodontics
+D6545 retainer - cast metal for resin bonded fixed prosthesis Prosthodontics, fixed Comprehensive - Prosthodontics
+D6548 retainer-porcelain/ceramic for resin bonded fixed prosthesis Prosthodontics, fixed Comprehensive - Prosthodontics
+D6549 resin retainer - for resin bonded fixed prosthesis Prosthodontics, fixed Comprehensive - Prosthodontics
+D6600 retainer inlay-porcelain/ceramic, two surfaces Prosthodontics, fixed Comprehensive - Prosthodontics
+D6601 retainer inlay - porcelain/ceramic, three or more surfaces Prosthodontics, fixed Comprehensive - Prosthodontics
+D6602 retainer inlay - cast high noble metal, two surfaces Prosthodontics, fixed Comprehensive - Prosthodontics
+D6603 retainer inlay - cast high noble metal, three or more surfaces Prosthodontics, fixed Comprehensive - Prosthodontics
+D6604 retainer inlay - cast predominantly base metal, two surfaces Prosthodontics, fixed Comprehensive - Prosthodontics
+D6605 retainer inlay - cast predominantly base metal, three or more surfaces Prosthodontics, fixed Comprehensive - Prosthodontics
+D6606 retainer inlay - cast noble metal, two surfaces Prosthodontics, fixed Comprehensive - Prosthodontics
+D6607 retainer inlay - cast noble metal, three or more surfaces Prosthodontics, fixed Comprehensive - Prosthodontics
+D6608 retainer onlay - porcelain/ceramic, two surfaces Prosthodontics, fixed Comprehensive - Prosthodontics
+D6609 retainer onlay - porcelain/ceramic, three or more surfaces Prosthodontics, fixed Comprehensive - Prosthodontics
+D6610 retainer onlay - cast high noble metal, two surfaces Prosthodontics, fixed Comprehensive - Prosthodontics
+D6611 retainer onlay - cast high noble metal, three or more surfaces Prosthodontics, fixed Comprehensive - Prosthodontics
+D6612 retainer onlay - cast predominantly base metal, two surfaces Prosthodontics, fixed Comprehensive - Prosthodontics
+D6613 retainer onlay - cast predominantly base metal, three or more surfaces Prosthodontics, fixed Comprehensive - Prosthodontics
+D6614 retainer onlay - cast noble metal, two surfaces Prosthodontics, fixed Comprehensive - Prosthodontics
+D6615 retainer onlay - cast noble metal, three or more surfaces Prosthodontics, fixed Comprehensive - Prosthodontics
+D6624 retainer inlay - titanium Prosthodontics, fixed Comprehensive - Prosthodontics
+D6634 retainer onlay - titanium Prosthodontics, fixed Comprehensive - Prosthodontics
+D6710 retainer crown - indirect resin based composite (not to be used as a temporary or provisional crown) Prosthodontics, fixed Comprehensive - Prosthodontics
+D6720 retainer crown - resin with high noble metal Prosthodontics, fixed Comprehensive - Prosthodontics
+D6721 retainer crown - resin with predominantly base metal Prosthodontics, fixed Comprehensive - Prosthodontics
+D6722 retainer crown - resin with noble metal Prosthodontics, fixed Comprehensive - Prosthodontics
+D6740 retainer crown-porcelain/ceramic Prosthodontics, fixed Comprehensive - Prosthodontics
+D6750 retainer crown - porcelain fused to high noble metal Prosthodontics, fixed Comprehensive - Prosthodontics
+D6751 retainer crown - porcelain fused to predominantly base metal Prosthodontics, fixed Comprehensive - Prosthodontics
+D6752 retainer crown - porcelain fused to noble metal Prosthodontics, fixed Comprehensive - Prosthodontics
+D6780 retainer crown - 3/4 cast high noble metal Prosthodontics, fixed Comprehensive - Prosthodontics
+D6781 retainer crown-3/4 cast predominately based metal Prosthodontics, fixed Comprehensive - Prosthodontics
+D6782 retainer crown-3/4 cast noble metal Prosthodontics, fixed Comprehensive - Prosthodontics
+D6783 retainer crown-3/4 porcelain/ceramic Prosthodontics, fixed Comprehensive - Prosthodontics
+D6790 retainer crown - full cast high noble metal Prosthodontics, fixed Comprehensive - Prosthodontics
+D6791 retainer crown - full cast predominantly base metal Prosthodontics, fixed Comprehensive - Prosthodontics
+D6792 retainer crown - full cast noble metal Prosthodontics, fixed Comprehensive - Prosthodontics
+D6793 provisional retainer crown-further treatment or completion of diagnosis necessary prior to final impression Prosthodontics, fixed Comprehensive - Prosthodontics
+D6794 retainer crown - titanium Prosthodontics, fixed Comprehensive - Prosthodontics
+D6920 Connector bar Prosthodontics, fixed Comprehensive - Prosthodontics
+D6930 recement or re-bond fixed partial denture Prosthodontics, fixed Comprehensive - Prosthodontics
+D6940 Stress breaker Prosthodontics, fixed Comprehensive - Prosthodontics
+D6950 Precision attachment Prosthodontics, fixed Comprehensive - Prosthodontics
+D6980 Fixed partial denture repair Prosthodontics, fixed Comprehensive - Prosthodontics
+D6999 Fixed prosthodontic procedure Prosthodontics, fixed Comprehensive - Prosthodontics
+D7111 extraction, coronal remnants - primary tooth Oral Surgery Comprehensive - Prosthodontics
+D7140 extraction, erupted tooth or exposed root (elevation and/or forceps removal) Oral Surgery Comprehensive - Prosthodontics
+D7210 surgical removal of erupted tooth req removal of bone,sectioning of tooth and including elevation of mucoperiosteal flap Oral Surgery Comprehensive - Prosthodontics
+D7220 removal of impacted tooth - soft tissue Oral Surgery Comprehensive - Prosthodontics
+D7230 removal of impacted tooth - partially bony Oral Surgery Comprehensive - Prosthodontics 
+
+CDT Code Procedure Description Category Description HPMS Filing Category
+D7240 removal of impacted tooth - completely bony Oral Surgery Comprehensive - Prosthodontics
+D7241 removal of impacted tooth - completely bony, with unusual surgical Oral Surgery Comprehensive - Prosthodontics
+D7250 surgical removal of residual tooth roots (cutting procedure) Oral Surgery Comprehensive - Prosthodontics
+D7251 Coronectomy-intentional partial tooth removal is performed when a neurovascular complication is likely if the entire impacted tooth Oral Surgery Comprehensive - Prosthodontics
+D7260 oroantral fistula closure Oral Surgery Comprehensive - Prosthodontics
+D7261 primary closure of a sinus perforation Oral Surgery Comprehensive - Prosthodontics
+D7270 tooth reimplantation and/or stabilization of accidentally evulsed or displaced tooth Oral Surgery Comprehensive - Prosthodontics
+D7272 tooth transplantation (includes reimplantation from one site to another and splinting and/or stabilization) Oral Surgery Comprehensive - Prosthodontics
+D7280 surgical access of an unerupted tooth Oral Surgery Comprehensive - Prosthodontics
+D7282 mobilization of erupted or malpositioned tooth to aid eruption Oral Surgery Comprehensive - Prosthodontics
+D7283 placement of device to facilitate eruption of impacted tooth Oral Surgery Comprehensive - Prosthodontics
+D7285 incisional biopsy of oral tissue - hard (bone, tooth) Oral Surgery Comprehensive - Prosthodontics
+D7286 incisional biopsy of oral tissue - soft (all others) Oral Surgery Comprehensive - Prosthodontics
+D7287 exfolliative cytological sample collection Oral Surgery Comprehensive - Prosthodontics
+D7288 brush biopsy - transepithelial sample collection Oral Surgery Comprehensive - Prosthodontics
+D7290 Surgical repositioning of teeth Oral Surgery Comprehensive - Prosthodontics
+D7291 Transseptal fiberotomy, by report Oral Surgery Comprehensive - Prosthodontics
+D7292 Surgical placement of temporary anchorage device [screw retained plate] requiring flap; includes device removal Oral Surgery Comprehensive - Prosthodontics
+D7293 Surgical placement of temporary anchorage device requiring flap; includes device removal Oral Surgery Comprehensive - Prosthodontics
+D7294 Surgical placement of temporary anchorage device without flap; includes device removal Oral Surgery Comprehensive - Prosthodontics
+D7295 Harvest of bone for use in autogenous grafting procedure Oral Surgery Comprehensive - Prosthodontics
+D7310 alveoloplasty in conjunction with extractions - four or more teeth or tooth spaces, per quadrant Oral Surgery Comprehensive - Prosthodontics
+D7311 alveoplasty in conjunction with extraction - one to three teeth or tooth spaces, per quadrant Oral Surgery Comprehensive - Prosthodontics
+D7320 alveoloplasty not in conjunction with extractions - four or more teeth or tooth spaces, per quadrant Oral Surgery Comprehensive - Prosthodontics
+D7321 alveoplasty not in conjunction with extraction - one to three teeth or tooth spaces, per quadrant Oral Surgery Comprehensive - Prosthodontics
+D7340 vestibuloplasty - ridge extension (secondary epithelialization) Oral Surgery Comprehensive - Prosthodontics
+D7350 vestibuloplasty - ridge extension (including soft tissue grafts, muscle reattachment, revision of soft tissue attachment Oral Surgery Comprehensive - Prosthodontics
+D7410 excision of benign lesion up to 1.25 cm Oral Surgery Comprehensive - Prosthodontics
+D7411 excision of benign lesion greater than 1.25 cm Oral Surgery Comprehensive - Prosthodontics
+D7412 excision of benign lesion, complicated Oral Surgery Comprehensive - Prosthodontics
+D7413 Excision of malignant lesion up to 1.25 cm Oral Surgery Comprehensive - Prosthodontics
+D7414 Excision of malignant lesion greater than 1.25 cm Oral Surgery Comprehensive - Prosthodontics
+D7415 Excision of malignant lesion, complicated Oral Surgery Comprehensive - Prosthodontics
+D7440 Excision of malignant tumor – lesion diameter up to 1.25 cm Oral Surgery Comprehensive - Prosthodontics
+D7441 Excision of malignant tumor - lesion diameter greater than 1.25cm Oral Surgery Comprehensive - Prosthodontics
+D7450 removal of benign odontogenic cyst or tumor - lesion diameter up to 1.25 cm Oral Surgery Comprehensive - Prosthodontics
+D7451 removal of benign odontogenic cyst or tumor - lesion diameter greater than 1.25 cm Oral Surgery Comprehensive - Prosthodontics
+D7460 removal of benign nonodontogenic cyst or tumor - lesion diameter up to 1.25 cm Oral Surgery Comprehensive - Prosthodontics
+D7461 removal of benign nonodontogenic cyst or tumor - lesion diameter greater than 1.25 cm Oral Surgery Comprehensive - Prosthodontics
+D7465 Destruction of lesion(s) by physical or chemical method, by report Oral Surgery Comprehensive - Prosthodontics
+D7471 Removal of exostosis - per site Oral Surgery Comprehensive - Prosthodontics
+D7472 removal of torus palatinus Oral Surgery Comprehensive - Prosthodontics
+D7473 removal of torus mandibularis Oral Surgery Comprehensive - Prosthodontics
+D7485 Surgical reduction of osseous tuberosity Oral Surgery Comprehensive - Prosthodontics
+D7490 Radical resection of mandible with bone graft Oral Surgery Comprehensive - Prosthodontics
+D7510 incision and drainage of abscess - intraoral soft tissue Oral Surgery Comprehensive - Prosthodontics
+D7511 incicion and drainage of abscess - intraoral soft tissue - complicated (includes drainage of multiple fascial spaces) Oral Surgery Comprehensive - Prosthodontics
+D7520 incision and drainage of abscess - extraoral soft tissue Oral Surgery Comprehensive - Prosthodontics
+D7521 incision and drainage of abscess - extraoral soft tissue - complicated (includes drainage of multiple fascial spaces) Oral Surgery Comprehensive - Prosthodontics
+D7530 removal of foreign body from mucosa, skin, or subcutaneous alveolar tissue Oral Surgery Comprehensive - Prosthodontics
+D7540 removal of reaction-producing foreign bodies - musculoskeletal system Oral Surgery Comprehensive - Prosthodontics
+D7550 partial ostectomy/sequestrectomy for removal of non-vital bone Oral Surgery Comprehensive - Prosthodontics
+D7560 maxillary sinusotomy for removal of tooth fragment or foreign body Oral Surgery Comprehensive - Prosthodontics
+D7881 occlusal orthotic device adjustment Oral Surgery Comprehensive - Prosthodontics
+D7953 Bone replacement graft for ridge preservation - per site Oral Surgery Comprehensive - Prosthodontics
+D7960 frenulectomy (frenectomy or frenotomy) - separate procedure not incidental to another procedure Oral Surgery Comprehensive - Prosthodontics
+D7963 frenuloplasty Oral Surgery Comprehensive - Prosthodontics 
+CDT Code Procedure Description Category Description HPMS Filing Category
+D7970 excision of hyperplastic tissue - per arch Oral Surgery Comprehensive - Prosthodontics
+D7971 excision of pericoronal gingiva Oral Surgery Comprehensive - Prosthodontics
+D7972 surgical reduction of fibrous tuberosity Oral Surgery Comprehensive - Prosthodontics
+D7997 appliance removal (not by dentist who placed appliance), includes removal of archbar Oral Surgery Comprehensive - Prosthodontics
+D7999 Unspecified oral surgery procedure, by report Oral Surgery Comprehensive - Prosthodontics
+D8050 interceptive orthodontic treatment of the primary dentition Orthodontics Comprehensive - Non-Routine
+D8060 interceptive orthodontic treatment of the transitional dentition Orthodontics Comprehensive - Non-Routine
+D8070 comprehensive orthodontic treatment of the transitional dentition Orthodontics Comprehensive - Non-Routine
+D8080 comprehensive orthodontic treatment of the adolescent dentition Orthodontics Comprehensive - Non-Routine
+D8090 comprehensive orthodontic treatment of the adult dentition Orthodontics Comprehensive - Non-Routine
+D8660 pre-orthodontic treatment examination to monitor growth and development Orthodontics Comprehensive - Non-Routine
+D8670 periodic orthodontic treatment visit Orthodontics Comprehensive - Non-Routine
+D8680 orthodontic retention (removal of appliances, construction and placement of retainer(s)) Orthodontics Comprehensive - Non-Routine
+D8681 removable orthodontic retainer adjustment Orthodontics Comprehensive - Non-Routine
+D8693 re-cement rebonding of fixed retainers Orthodontics Comprehensive - Non-Routine
+D8999 unspecified orthodontic procedure, by report Orthodontics Comprehensive - Non-Routine
+D9110 palliative (emergency) treatment of dental pain - minor procedure Adjunctive Comprehensive - Non-Routine
+D9120 fixed partial denture sectioning Adjunctive Comprehensive - Non-Routine
+D9210 local anesthesia not in conjunction with operative or surgical procedures Adjunctive Comprehensive - Non-Routine
+D9211 Regional block anesthesia Adjunctive Comprehensive - Non-Routine
+D9212 Trigeminal division block anesthesia Adjunctive Comprehensive - Non-Routine
+D9215 local anesthesia in conjunction with operative or surgical procedures Adjunctive Comprehensive - Non-Routine
+D9219 evaluation for deep sedation or general anesthesia Adjunctive Comprehensive - Non-Routine
+D9222 Deep Sedation/General Anesthesia – First 15 Minutes Adjunctive Comprehensive - Non-Routine
+D9223 deep sedation/general anesthesia-each subsequent 15 minute increment Adjunctive Comprehensive - Non-Routine
+D9230 inhalation of nitrous oxide/anxiolysis analgesia Adjunctive Comprehensive - Non-Routine
+D9239 Intravenous Moderate (conscious) Sedation/Analgesia – First 15 Minutes Adjunctive Comprehensive - Non-Routine
+D9243 intravenous moderate (conscious) sedation/analgesia-each subsequent 15 minute increment Adjunctive Comprehensive - Non-Routine
+D9248 non-intravenous conscious sedation. This includes non-iv minimal and moderate sedation. Adjunctive Comprehensive - Non-Routine
+D9310 consultation (diagnostic service provided by dentist or physician other than practitioner providing treatment) Adjunctive Comprehensive - Non-Routine
+D9311 consultation with a medical health care professional Adjunctive Comprehensive - Non-Routine
+D9410 House/extended care facility call Adjunctive Comprehensive - Non-Routine
+D9420 Hospital Call Adjunctive Comprehensive - Non-Routine
+D9430 Office visit for observation - no other services performed Adjunctive Comprehensive - Non-Routine
+D9440 Office visit after regularly scheduled hours Adjunctive Comprehensive - Non-Routine
+D9450 Case presentation, detailed and extensive treatment planning Adjunctive Comprehensive - Non-Routine
+D9610 therapeutic parenteral drug, single administration Adjunctive Comprehensive - Non-Routine
+D9612 therapeutic parenteral drugs, two or more administrations, different medications Adjunctive Comprehensive - Non-Routine
+D9630 other drugs and/or medicaments, by report Adjunctive Comprehensive - Non-Routine
+D9910 application of desensitizing medicament Adjunctive Comprehensive - Non-Routine
+D9911 application of desensitizing resin for cervical and/or root surface, per tooth Adjunctive Comprehensive - Non-Routine
+D9920 Behavior Management Adjunctive Comprehensive - Non-Routine
+D9930 Treatment of complications (post-surgical) - unusual circumstances, by report Adjunctive Comprehensive - Non-Routine
+D9942 repair and/or reline of occlusal guards Adjunctive Comprehensive - Non-Routine
+D9943 occlusal adjustment Adjunctive Comprehensive - Non-Routine
+D9944 occlusal guard – hard appliance, full arch Adjunctive Comprehensive - Non-Routine
+D9945 occlusal guard – soft appliance, full arch Adjunctive Comprehensive - Non-Routine
+D9946 occlusal guard – hard appliance, partial arch Adjunctive Comprehensive - Non-Routine
+D9950 occlusion analysis - mounted case Adjunctive Comprehensive - Non-Routine
+D9951 occlusal adjustment - limited Adjunctive Comprehensive - Non-Routine
+D9952 occlusal adjustment - complete Adjunctive Comprehensive - Non-Routine
+D9972 external bleaching-per arch-performed in office Adjunctive Comprehensive - Non-Routine
+D9999 Unspecified adjunctive procedure, by report Adjunctive Comprehensive - Non-Routine 

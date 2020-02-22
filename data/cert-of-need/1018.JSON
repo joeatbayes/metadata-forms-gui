@@ -1,0 +1,37 @@
+{
+    "acknowledgement_date": "8/21/2000", 
+    "actual_construction_completion_date": "4/26/2002", 
+    "application": {
+        "received_date": "1/19/2000", 
+        "received_month": "1", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "3/6/2003", 
+    "assigned_construction_start_date": "3/5/2003", 
+    "con_project_number": "1018", 
+    "current_operator": {
+        "name": "State University of New York", 
+        "operating_certificate_number": "5151001H"
+    }, 
+    "director_action": "Contingent Approval", 
+    "director_action_date": "3/6/2001", 
+    "facility_name": "University Hospital", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "2/9/2000", 
+    "main_site": {
+        "facility_name": "University Hospital"
+    }, 
+    "project": {
+        "description": "Certify a primary care and pediatrics extension clinic at 492 Montauk Highway, East Moriches", 
+        "status": "Project Complete", 
+        "status_date": "4/26/2002"
+    }, 
+    "project_site": {
+        "county_name": "SUFFOLK", 
+        "state": "NY"
+    }, 
+    "region": "Long Island", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "135000"
+}

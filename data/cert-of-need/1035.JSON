@@ -1,0 +1,37 @@
+{
+    "acknowledgement_date": "2/18/2000", 
+    "actual_construction_completion_date": "6/26/2000", 
+    "application": {
+        "received_date": "2/8/2000", 
+        "received_month": "2", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "5/24/2002", 
+    "assigned_construction_start_date": "5/23/2002", 
+    "con_project_number": "1035", 
+    "current_operator": {
+        "name": "Tri-County Family Medicine Program, Inc.", 
+        "operating_certificate_number": "2527200R"
+    }, 
+    "director_action": "Contingent Approval", 
+    "director_action_date": "5/24/2000", 
+    "facility_name": "Tri-County Family Medicine", 
+    "facility_type": "Diagnostic And Treatment Center", 
+    "initial_review_date": "2/18/2000", 
+    "main_site": {
+        "facility_name": "Tri-County Family Medicine"
+    }, 
+    "project": {
+        "description": "Certify a primary care extension clinic at 5989 Big Tree Road, Lakeville", 
+        "status": "Project Complete", 
+        "status_date": "6/26/2000"
+    }, 
+    "project_site": {
+        "county_name": "LIVINGSTON", 
+        "state": "NY"
+    }, 
+    "region": "Finger Lakes", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "73000"
+}

@@ -1,0 +1,34 @@
+{
+    "application": {
+        "received_date": "3/23/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1089", 
+    "current_operator": {
+        "name": "Union Plaza Nursing Home, Inc.", 
+        "operating_certificate_number": "7003393N"
+    }, 
+    "facility_name": "Union Plaza Nursing Home", 
+    "facility_type": "Residential Health Care Facility", 
+    "initial_review_date": "4/4/2000", 
+    "main_site": {
+        "facility_name": "Union Plaza Nursing Home"
+    }, 
+    "project": {
+        "description": "Certify an off-site ADHCP with a program capacity of 100 at 130-30 31st Avenue, Flushing. Revised and Updated 3/30/09: Certify and construct a 40 slot on-site ADHCP. Revised:  August 2, 2010 -- per Office of Long Term Care Directive", 
+        "status": "Withdrawn", 
+        "status_date": "10/11/2012"
+    }, 
+    "project_site": {
+        "address_line1": "130-30 31st Avenue", 
+        "city": "Flushing", 
+        "county_name": "QUEENS", 
+        "state": "NY", 
+        "zip_code": "11354"
+    }, 
+    "region": "New York City", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "5087000"
+}

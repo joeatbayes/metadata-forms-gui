@@ -1,0 +1,37 @@
+{
+    "acknowledgement_date": "3/24/2000", 
+    "application": {
+        "received_date": "3/7/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1072", 
+    "current_operator": {
+        "name": "Nassau County Medical Center", 
+        "operating_certificate_number": "2950002H"
+    }, 
+    "facility_id": "528", 
+    "facility_name": "Nassau County Medical Center", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "3/23/2000", 
+    "main_site": {
+        "facility_identifier": "528", 
+        "facility_name": "Nassau County Medical Center"
+    }, 
+    "project": {
+        "description": "Convert 25 medical/surgical beds to 25 psychiatric beds; undertake requisite renovations/revised 6/7/00-certify 8 psychiatric beds; decertify 21 medical/surgical beds", 
+        "status": "Withdrawn", 
+        "status_date": "3/24/2000"
+    }, 
+    "project_site": {
+        "address_line1": "2201 Hempstead Turnpike", 
+        "city": "East Meadow", 
+        "county_name": "NASSAU", 
+        "state": "NY", 
+        "zip_code": "11554"
+    }, 
+    "region": "Long Island", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Construction - Physical", 
+    "total_project_cost": "446000"
+}

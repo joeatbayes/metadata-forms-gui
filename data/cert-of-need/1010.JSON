@@ -1,0 +1,45 @@
+{
+    "acknowledgement_date": "3/10/2000", 
+    "actual_construction_completion_date": "5/1/2001", 
+    "application": {
+        "received_date": "1/7/2000", 
+        "received_month": "1", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1010", 
+    "council": {
+        "action_1": "Contingent Approval", 
+        "action_2": "Contingent Approval", 
+        "date_1": "10/31/2000", 
+        "date_2": "11/17/2000", 
+        "name_1": "Establishment Committee", 
+        "name_2": "Public Health Council"
+    }, 
+    "director_action": "PHC Contingent Approval", 
+    "director_action_date": "12/27/2000", 
+    "facility_name": "Huntington Hills Center for Health and Rehabilitation", 
+    "facility_type": "Residential Health Care Facility", 
+    "initial_review_date": "3/10/2000", 
+    "main_site": {
+        "facility_name": "Huntington Hills Center for Health and Rehabilitation"
+    }, 
+    "project": {
+        "description": "Transfer ownership of all stock", 
+        "status": "Project Complete", 
+        "status_date": "12/16/2013"
+    }, 
+    "project_site": {
+        "address_line1": "400 South Service Road", 
+        "city": "Melville", 
+        "county_name": "SUFFOLK", 
+        "state": "NY", 
+        "zip_code": "11747"
+    }, 
+    "proposed_operator": {
+        "operating_certificate_number": "5153309N"
+    }, 
+    "region": "Long Island", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Establishment - New Facility or Agency", 
+    "total_project_cost": "0"
+}

@@ -1,0 +1,42 @@
+{
+    "acknowledgement_date": "2/9/2000", 
+    "actual_construction_completion_date": "3/25/2002", 
+    "application": {
+        "received_date": "1/25/2000", 
+        "received_month": "1", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "6/14/2002", 
+    "assigned_construction_start_date": "5/14/2002", 
+    "con_project_number": "1020", 
+    "current_operator": {
+        "name": "Ira Davenport Memorial Hospital, Inc.", 
+        "operating_certificate_number": "5022000H"
+    }, 
+    "director_action": "Contingent Approval", 
+    "director_action_date": "6/14/2000", 
+    "facility_id": "873", 
+    "facility_name": "Ira Davenport Memorial Hospital, Inc.", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "2/9/2000", 
+    "main_site": {
+        "facility_identifier": "873", 
+        "facility_name": "Ira Davenport Memorial Hospital, Inc."
+    }, 
+    "project": {
+        "description": "Certify magnetic resonance imaging service", 
+        "status": "Project Complete", 
+        "status_date": "3/25/2002"
+    }, 
+    "project_site": {
+        "address_line1": "7571 State Route 54", 
+        "city": "Bath", 
+        "county_name": "STEUBEN", 
+        "state": "NY", 
+        "zip_code": "14810"
+    }, 
+    "region": "Finger Lakes", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Construction - Physical", 
+    "total_project_cost": "6000"
+}

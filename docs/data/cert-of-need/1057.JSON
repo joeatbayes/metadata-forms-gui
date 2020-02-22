@@ -1,0 +1,45 @@
+{
+    "acknowledgement_date": "3/31/2000", 
+    "application": {
+        "received_date": "2/28/2000", 
+        "received_month": "2", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1057", 
+    "council": {
+        "action_1": "Contingent Approval", 
+        "action_2": "Contingent Approval", 
+        "date_1": "4/24/2001", 
+        "date_2": "5/18/2001", 
+        "name_1": "Establishment Committee", 
+        "name_2": "Public Health Council"
+    }, 
+    "director_action": "PHC Contingent Approval", 
+    "director_action_date": "6/4/2001", 
+    "facility_name": "Staten Island University Hospital", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "3/28/2000", 
+    "main_site": {
+        "facility_name": "Staten Island University Hospital"
+    }, 
+    "project": {
+        "description": "Purchase and re-establish Doctor's Hospital of Staten Island", 
+        "status": "Project Complete", 
+        "status_date": "8/2/2001"
+    }, 
+    "project_site": {
+        "address_line1": "1050 Targee Street", 
+        "city": "Staten Island", 
+        "county_name": "RICHMOND", 
+        "state": "NY", 
+        "zip_code": "10304"
+    }, 
+    "proposed_operator": {
+        "name": "Staten Island University Hospital", 
+        "operating_certificate_number": "99999999"
+    }, 
+    "region": "New York City", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Establishment - New Facility or Agency", 
+    "total_project_cost": "0"
+}

@@ -1,0 +1,47 @@
+{
+    "acknowledgement_date": "7/13/2000", 
+    "acs_letter_sent_date": "6/21/2002", 
+    "actual_construction_completion_date": "1/28/2003", 
+    "application": {
+        "received_date": "3/17/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1083", 
+    "council": {
+        "action_1": "Contingent Approval", 
+        "action_2": "Contingent Approval", 
+        "date_1": "7/10/2001", 
+        "date_2": "7/27/2001", 
+        "name_1": "Establishment Committee", 
+        "name_2": "Public Health Council"
+    }, 
+    "director_action": "Contingent Approval", 
+    "director_action_date": "8/22/2001", 
+    "facility_name": "Endoscopic Ambulatory Specialty Center of Bay Ridge, Inc.", 
+    "facility_type": "Diagnostic And Treatment Center", 
+    "initial_review_date": "7/12/2000", 
+    "main_site": {
+        "facility_name": "Endoscopic Ambulatory Specialty Center of Bay Ridge, Inc."
+    }, 
+    "project": {
+        "description": "Establish a single specialty freestanding ambulatory surgery center specializing in endoscopic procedures", 
+        "status": "Project Complete", 
+        "status_date": "1/28/2003"
+    }, 
+    "project_site": {
+        "address_line1": "7601 4th Avenue", 
+        "city": "Brooklyn", 
+        "county_name": "KINGS", 
+        "state": "NY", 
+        "zip_code": "11209"
+    }, 
+    "proposed_operator": {
+        "name": "Endoscopic Ambulatory Specialty Center of Bay Ridge, Inc.", 
+        "operating_certificate_number": "99999999"
+    }, 
+    "region": "New York City", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Establishment and Construction", 
+    "total_project_cost": "1000"
+}

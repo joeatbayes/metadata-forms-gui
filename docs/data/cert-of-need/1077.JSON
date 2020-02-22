@@ -1,0 +1,41 @@
+{
+    "acknowledgement_date": "3/27/2000", 
+    "application": {
+        "received_date": "3/14/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1077", 
+    "current_operator": {
+        "address_line1": "140 St Edward Street", 
+        "city": "Brooklyn", 
+        "name": "Atlantis Rehabilitation and Residential Health Care Facility LLC", 
+        "operating_certificate_number": "7001360N", 
+        "state": "NY", 
+        "zip_code": "11201"
+    }, 
+    "facility_id": "1405", 
+    "facility_name": "Greenpark Care Center", 
+    "facility_type": "Residential Health Care Facility", 
+    "initial_review_date": "3/27/2000", 
+    "main_site": {
+        "facility_identifier": "1405", 
+        "facility_name": "Greenpark Care Center"
+    }, 
+    "project": {
+        "description": "Certify an adult day health care program with a program capacity of 100, and undertake requisite renovations", 
+        "status": "Withdrawn", 
+        "status_date": "3/27/2000"
+    }, 
+    "project_site": {
+        "address_line1": "140 St. Edwards Street", 
+        "city": "Brooklyn", 
+        "county_name": "KINGS", 
+        "state": "NY", 
+        "zip_code": "11201"
+    }, 
+    "region": "New York City", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "2410000"
+}

@@ -1,0 +1,40 @@
+{
+    "acknowledgement_date": "3/7/2000", 
+    "actual_construction_completion_date": "10/25/2002", 
+    "actual_construction_start_date": "11/1/2000", 
+    "application": {
+        "received_date": "2/28/2000", 
+        "received_month": "2", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "9/13/2002", 
+    "assigned_construction_start_date": "9/12/2002", 
+    "con_project_number": "1058", 
+    "current_operator": {
+        "name": "Arnot Ogden Medical Center", 
+        "operating_certificate_number": "0701000H"
+    }, 
+    "director_action": "Contingent Approval", 
+    "director_action_date": "9/13/2000", 
+    "facility_name": "Arnot Ogden Medical Center", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "3/6/2000", 
+    "main_site": {
+        "facility_name": "Arnot Ogden Medical Center"
+    }, 
+    "project": {
+        "description": "Construct a medical office building to house a physical therapy extension clinic and clinical lab/diagnostic radiology services", 
+        "status": "Project Complete", 
+        "status_date": "10/25/2002"
+    }, 
+    "project_site": {
+        "address_line1": "Colonial Drive", 
+        "city": "Horseheads", 
+        "county_name": "CHEMUNG", 
+        "state": "NY"
+    }, 
+    "region": "Finger Lakes", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "8271000"
+}

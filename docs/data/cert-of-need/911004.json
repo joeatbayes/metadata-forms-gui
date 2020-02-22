@@ -1,0 +1,45 @@
+{
+    "acknowledgement_date": "2/8/2000", 
+    "application": {
+        "received_date": "1/4/2000", 
+        "received_month": "1", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "5/24/2002", 
+    "assigned_construction_start_date": "5/23/2002", 
+    "con_project_number": "1004", 
+    "current_operator": {
+        "address_line1": "125 Worth Street", 
+        "city": "New York", 
+        "name": "New York City Health and Hospital Corporation", 
+        "operating_certificate_number": "7002009H", 
+        "state": "NY", 
+        "zip_code": "10013"
+    }, 
+    "director_action": "Contingent Approval", 
+    "director_action_date": "5/24/2000", 
+    "facility_id": "1445", 
+    "facility_name": "Harlem Hospital Center", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "2/7/2000", 
+    "main_site": {
+        "facility_identifier": "1445", 
+        "facility_name": "Harlem Hospital Center"
+    }, 
+    "project": {
+        "description": "Replace roofs and repair masonry walls", 
+        "status": "Project Complete", 
+        "status_date": "5/30/2000"
+    }, 
+    "project_site": {
+        "address_line1": "506 Lenox Avenue", 
+        "city": "New York", 
+        "county_name": "NEW YORK", 
+        "state": "NY", 
+        "zip_code": "10037"
+    }, 
+    "region": "New York City", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "3858000"
+}

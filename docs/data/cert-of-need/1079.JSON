@@ -1,0 +1,43 @@
+{
+    "acknowledgement_date": "3/28/2000", 
+    "actual_construction_completion_date": "2/19/2002", 
+    "actual_construction_start_date": "3/14/2001", 
+    "application": {
+        "received_date": "3/17/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "10/20/2002", 
+    "assigned_construction_start_date": "10/19/2002", 
+    "con_project_number": "1079", 
+    "current_operator": {
+        "name": "University of Rochester, Inc.", 
+        "operating_certificate_number": "2701005H"
+    }, 
+    "director_action": "Contingent Approval", 
+    "director_action_date": "10/20/2000", 
+    "facility_id": "413", 
+    "facility_name": "Strong Memorial Hospital", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "3/27/2000", 
+    "main_site": {
+        "facility_identifier": "413", 
+        "facility_name": "Strong Memorial Hospital"
+    }, 
+    "project": {
+        "description": "Construct 12 operating rooms (amends and supercedes 992456)", 
+        "status": "Project Complete", 
+        "status_date": "2/19/2002"
+    }, 
+    "project_site": {
+        "address_line1": "601 Elmwood Avenue", 
+        "city": "Rochester", 
+        "county_name": "MONROE", 
+        "state": "NY", 
+        "zip_code": "14642"
+    }, 
+    "region": "Finger Lakes", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "8961000"
+}

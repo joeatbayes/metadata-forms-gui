@@ -1,0 +1,45 @@
+{
+    "acknowledgement_date": "2/8/2000", 
+    "application": {
+        "received_date": "2/3/2000", 
+        "received_month": "2", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1031", 
+    "council": {
+        "action_1": "Contingent Approval", 
+        "action_2": "Contingent Approval", 
+        "date_1": "6/6/2000", 
+        "date_2": "7/28/2000", 
+        "name_1": "Establishment Committee", 
+        "name_2": "Public Health Council"
+    }, 
+    "director_action": "PHC Contingent Approval", 
+    "director_action_date": "7/28/2000", 
+    "facility_name": "Wedgewood Health Care Center, LLC", 
+    "facility_type": "Residential Health Care Facility", 
+    "initial_review_date": "2/8/2000", 
+    "main_site": {
+        "facility_name": "Wedgewood Health Care Center, LLC"
+    }, 
+    "project": {
+        "description": "Purchase Amherst Health Care Center", 
+        "status": "Project Complete", 
+        "status_date": "9/8/2000"
+    }, 
+    "project_site": {
+        "address_line1": "4459 Bailey Avenue", 
+        "city": "Amherst", 
+        "county_name": "ERIE", 
+        "state": "NY", 
+        "zip_code": "14221"
+    }, 
+    "proposed_operator": {
+        "name": "Wedgewood Health Care Center", 
+        "operating_certificate_number": "99999999"
+    }, 
+    "region": "Western", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Establishment - New Facility or Agency", 
+    "total_project_cost": "0"
+}

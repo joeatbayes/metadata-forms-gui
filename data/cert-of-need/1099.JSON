@@ -1,0 +1,46 @@
+{
+    "acknowledgement_date": "4/20/2000", 
+    "actual_construction_completion_date": "4/11/2002", 
+    "application": {
+        "received_date": "4/3/2000", 
+        "received_month": "4", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "2/1/2001", 
+    "assigned_construction_start_date": "11/1/2000", 
+    "con_project_number": "1099", 
+    "current_operator": {
+        "address_line1": "622 West 168th Street", 
+        "city": "New York", 
+        "name": "The New York & Presbyterian Hospitals Inc", 
+        "operating_certificate_number": "7002054H", 
+        "state": "NY", 
+        "zip_code": "10032"
+    }, 
+    "director_action": "Contingent Approval", 
+    "director_action_date": "6/14/2000", 
+    "facility_id": "1458", 
+    "facility_name": "New York and Presbyterian Hospitals at New York Hospital Division", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "4/18/2000", 
+    "main_site": {
+        "facility_identifier": "1458", 
+        "facility_name": "New York and Presbyterian Hospitals at New York Hospital Division"
+    }, 
+    "project": {
+        "description": "Add a pediatric cardiac catheterization lab to include an electrophysiology lab", 
+        "status": "Project Complete", 
+        "status_date": "4/11/2002"
+    }, 
+    "project_site": {
+        "address_line1": "525 East 68th Street", 
+        "city": "New York", 
+        "county_name": "NEW YORK", 
+        "state": "NY", 
+        "zip_code": "10021"
+    }, 
+    "region": "New York City", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Construction - Physical", 
+    "total_project_cost": "1702000"
+}

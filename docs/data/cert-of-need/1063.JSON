@@ -1,0 +1,29 @@
+{
+    "application": {
+        "received_date": "3/1/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1063", 
+    "current_operator": {
+        "name": "Clifton Springs Hospital", 
+        "operating_certificate_number": "3421000H"
+    }, 
+    "facility_name": "Clifton Springs Hospital and Clinic", 
+    "facility_type": "Hospital", 
+    "main_site": {
+        "facility_name": "Clifton Springs Hospital and Clinic"
+    }, 
+    "project": {
+        "description": "Certify a behavioral health extension clinic in Geneva", 
+        "status": "Withdrawn", 
+        "status_date": "3/7/2000"
+    }, 
+    "project_site": {
+        "city": "Geneva", 
+        "county_name": "ONTARIO", 
+        "state": "NY"
+    }, 
+    "region": "Finger Lakes", 
+    "total_project_cost": "0"
+}

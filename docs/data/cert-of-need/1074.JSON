@@ -1,0 +1,57 @@
+{
+    "acknowledgement_date": "4/3/2000", 
+    "acs_letter_sent_date": "11/27/2001", 
+    "actual_construction_completion_date": "6/26/2002", 
+    "actual_construction_start_date": "1/28/2002", 
+    "application": {
+        "received_date": "3/9/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "7/1/2002", 
+    "assigned_construction_start_date": "10/1/2001", 
+    "con_project_number": "1074", 
+    "council": {
+        "action_1": "Contingent Approval", 
+        "action_2": "Contingent Approval", 
+        "action_3": "Contingent Approval", 
+        "action_4": "Contingent Approval", 
+        "date_1": "7/10/2001", 
+        "date_2": "10/17/2000", 
+        "date_3": "7/27/2001", 
+        "date_4": "10/27/2000", 
+        "name_1": "Establishment Committee", 
+        "name_2": "Establishment Committee", 
+        "name_3": "Public Health Council", 
+        "name_4": "Public Health Council"
+    }, 
+    "director_action": "Contingent Approval", 
+    "director_action_date": "8/22/2001", 
+    "facility_name": "Guthrie Same Day Surgery Center, Inc.", 
+    "facility_type": "Diagnostic And Treatment Center", 
+    "initial_review_date": "3/31/2000", 
+    "main_site": {
+        "facility_name": "Guthrie Same Day Surgery Center, Inc."
+    }, 
+    "phc_final_approval_letter_sent": "1/23/2002", 
+    "project": {
+        "description": "Establish and construct a freestanding ambulatory surgery center (amends and supercedes 981071)", 
+        "status": "Project Complete", 
+        "status_date": "6/26/2002"
+    }, 
+    "project_site": {
+        "address_line1": "31 Arnot Road", 
+        "city": "Big Flats", 
+        "county_name": "CHEMUNG", 
+        "state": "NY", 
+        "zip_code": "14814"
+    }, 
+    "proposed_operator": {
+        "name": "Guthrie Same Day Surgery Center", 
+        "operating_certificate_number": "99999999"
+    }, 
+    "region": "Finger Lakes", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Establishment and Construction", 
+    "total_project_cost": "1865000"
+}

@@ -1,0 +1,42 @@
+{
+    "acknowledgement_date": "3/3/2000", 
+    "actual_construction_completion_date": "10/5/2000", 
+    "application": {
+        "received_date": "2/25/2000", 
+        "received_month": "2", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "7/12/2002", 
+    "assigned_construction_start_date": "7/11/2002", 
+    "con_project_number": "1053", 
+    "current_operator": {
+        "name": "University of Rochester, Inc.", 
+        "operating_certificate_number": "2701005H"
+    }, 
+    "director_action": "Contingent Approval", 
+    "director_action_date": "7/12/2000", 
+    "facility_id": "413", 
+    "facility_name": "Strong Memorial Hospital", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "3/3/2000", 
+    "main_site": {
+        "facility_identifier": "413", 
+        "facility_name": "Strong Memorial Hospital"
+    }, 
+    "project": {
+        "description": "Purchase a fourth CT scanner", 
+        "status": "Project Complete", 
+        "status_date": "10/5/2000"
+    }, 
+    "project_site": {
+        "address_line1": "601 Elmwood Avenue", 
+        "city": "Rochester", 
+        "county_name": "MONROE", 
+        "state": "NY", 
+        "zip_code": "14642"
+    }, 
+    "region": "Finger Lakes", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "1351000"
+}

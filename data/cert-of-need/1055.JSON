@@ -1,0 +1,41 @@
+{
+    "acknowledgement_date": "3/3/2000", 
+    "actual_construction_completion_date": "12/4/2003", 
+    "actual_construction_start_date": "8/5/2002", 
+    "application": {
+        "received_date": "2/28/2000", 
+        "received_month": "2", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "1/1/2003", 
+    "assigned_construction_start_date": "8/14/2002", 
+    "con_project_number": "1055", 
+    "current_operator": {
+        "name": "IHS of New York, Inc.", 
+        "operating_certificate_number": "7000246R"
+    }, 
+    "director_action": "Contingent Approval", 
+    "director_action_date": "8/15/2000", 
+    "facility_name": "Queens Dialysis at South Flushing", 
+    "facility_type": "Diagnostic And Treatment Center", 
+    "initial_review_date": "3/3/2000", 
+    "main_site": {
+        "facility_name": "Queens Dialysis at South Flushing"
+    }, 
+    "project": {
+        "description": "Certify a 25 station chronic renal dialysis extension clinic at 159th Street at 72nd Avenue, Flushing", 
+        "status": "Project Complete", 
+        "status_date": "4/24/2004"
+    }, 
+    "project_site": {
+        "address_line1": "159th Street at 72nd Avenue", 
+        "city": "Flushing", 
+        "county_name": "QUEENS", 
+        "state": "NY", 
+        "zip_code": "11432"
+    }, 
+    "region": "New York City", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "2071000"
+}

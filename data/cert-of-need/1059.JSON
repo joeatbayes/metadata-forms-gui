@@ -1,0 +1,38 @@
+{
+    "acknowledgement_date": "3/16/2000", 
+    "application": {
+        "received_date": "2/28/2000", 
+        "received_month": "2", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "11/21/2002", 
+    "assigned_construction_start_date": "11/20/2002", 
+    "con_project_number": "1059", 
+    "current_operator": {
+        "name": "Clinical Associates for Rehabilitation and Evaluation, Inc.", 
+        "operating_certificate_number": "7002155R"
+    }, 
+    "director_action": "Approval", 
+    "director_action_date": "11/21/2000", 
+    "facility_name": "Clinical Associates for Rehabilitation and Evaluation, Inc.", 
+    "facility_type": "Diagnostic And Treatment Center", 
+    "initial_review_date": "3/8/2000", 
+    "main_site": {
+        "facility_name": "Clinical Associates for Rehabilitation and Evaluation, Inc."
+    }, 
+    "project": {
+        "description": "Certify a primary care extension clinic at 32 Broadway, New York", 
+        "status": "Withdrawn", 
+        "status_date": "11/28/2000"
+    }, 
+    "project_site": {
+        "address_line1": "32 Broadway", 
+        "city": "New York", 
+        "county_name": "NEW YORK", 
+        "state": "NY"
+    }, 
+    "region": "New York City", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "56000"
+}

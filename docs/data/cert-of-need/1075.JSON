@@ -1,0 +1,42 @@
+{
+    "acknowledgement_date": "3/24/2000", 
+    "actual_construction_completion_date": "1/3/2001", 
+    "application": {
+        "received_date": "3/10/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "5/24/2002", 
+    "assigned_construction_start_date": "5/23/2002", 
+    "con_project_number": "1075", 
+    "current_operator": {
+        "name": "Olean General Hospital, Inc.", 
+        "operating_certificate_number": "0401001H"
+    }, 
+    "director_action": "Contingent Approval", 
+    "director_action_date": "5/24/2000", 
+    "facility_id": "66", 
+    "facility_name": "Olean General Hospital at Olean General Hospital Main", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "3/23/2000", 
+    "main_site": {
+        "facility_identifier": "66", 
+        "facility_name": "Olean General Hospital at Olean General Hospital Main"
+    }, 
+    "project": {
+        "description": "Certify one (1) additional chronic renal dialysis station", 
+        "status": "Project Complete", 
+        "status_date": "1/3/2001"
+    }, 
+    "project_site": {
+        "address_line1": "515 Main Street", 
+        "city": "Olean", 
+        "county_name": "CATTARAUGUS", 
+        "state": "NY", 
+        "zip_code": "14760"
+    }, 
+    "region": "Western", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "30000"
+}

@@ -1,0 +1,26 @@
+<div id="operatorCertNumberCont" class="input_fieldvCont">
+<label class="input_fieldvLabel" for="operatorCertNumber" id="operatorCertNumberLabel">Cert #</label>
+<input id="operatorCertNumber" type="text" onchange="mformFieldChanged(this)" oninput="mformFieldInput(this)" dataobjid="1023" form_id="cert_need" label="Cert #" placeholder="Enter Certificate #" size="11" data_context="current_operator.operating_certificate_number" maxlength="11" class="input_fieldv" value="7003246R">
+<div class="fieldStatusMsg" id="operatorCertNumberStatus"></div>
+</div>
+
+https://www.hl7.org/fhir/json.html
+https://www.hl7.org/fhir/claim.html
+https://www.hl7.org/fhir/claim-definitions.html#Claim.insurance.preAuthRef
+https://www.hl7.org/fhir/claim-example-oral-contained.json.html
+https://www.deltadentalco.com/uploadedFiles/ProviderFeeSchedules/DDCO_Par_Provider_Documents/CDT%202017_Code%20on%20Dental%20Proc_Nomenclature%20online.pdf
+https://www.deltadentalco.com/uploadedFiles/ProviderFeeSchedules/DDCO_Par_Provider_Documents/CDT%202017_Code%20on%20Dental%20Proc_Nomenclature%20online.pdf
+http://hl7.org/fhir/2018Sep/claim-definitions.html#Claim.insurance
+https://www11.anthem.com/provider/nv/f5/s5/t1/pw_b130799.pdf?refer=ahpfooter
+https://www.ezclaim.com/manuals/premierbilling/index.html#!Documents/additionalclaimscreeninformation.htm
+https://www.in.gov/medicaid/files/claim%20submission%20and%20processing.pdf
+https://victims.ca.gov/docs/forms/providers/adaclaimform.pdf
+
+http://127.0.0.1:9831/dental-claim.html
+https://webdesign.tutsplus.com/tutorials/auto-formatting-input-value--cms-26745
+https://hashnode.com/post/really-responsive-tables-using-css3-flexbox-cijzbxd8n00pwvm53sl4l42cx
+
+ADA Guide to Dental Procedures Reported with Area of the Oral Cavity or Tooth Anatomy (or Both) https://www.ada.org/~/media/ADA/Publications/Files/CDTCode-AreaOfOralCavity_ToothTable_V1_PublicPosting.pdf?la=en
+online converter of JSON TO YAML https://www.json2yaml.com
+
+Regular Expressions Library http://regexlib.com/Search.aspx?k=phone&AspxAutoDetectCookieSupport=1

@@ -1,0 +1,35 @@
+{
+    "acknowledgement_date": "3/23/2000", 
+    "application": {
+        "received_date": "3/8/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1070", 
+    "current_operator": {
+        "name": "Doctors United, Inc.", 
+        "operating_certificate_number": "99999999"
+    }, 
+    "facility_name": "Doctors United, Inc.", 
+    "facility_type": "Diagnostic And Treatment Center", 
+    "initial_review_date": "3/22/2000", 
+    "main_site": {
+        "facility_name": "Doctors United, Inc."
+    }, 
+    "project": {
+        "description": "Certify part-time clinic service", 
+        "status": "Withdrawn", 
+        "status_date": "3/23/2000"
+    }, 
+    "project_site": {
+        "address_line1": "One Bridge Street", 
+        "city": "Ardsely", 
+        "county_name": "WESTCHESTER", 
+        "state": "NY", 
+        "zip_code": "10502"
+    }, 
+    "region": "Hudson Valley", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "30000"
+}

@@ -1,0 +1,55 @@
+{
+    "acknowledgement_date": "4/17/2000", 
+    "application": {
+        "received_date": "3/24/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1091", 
+    "council": {
+        "action_1": "Contingent Approval", 
+        "action_2": "Contingent Approval", 
+        "date_1": "10/17/2000", 
+        "date_2": "10/27/2000", 
+        "name_1": "Establishment Committee", 
+        "name_2": "Public Health Council"
+    }, 
+    "current_operator": {
+        "address_line1": "701 N Broadway", 
+        "city": "North Tarrytown", 
+        "name": "Phelps Memorial Hospital Association", 
+        "operating_certificate_number": "5932000H", 
+        "state": "NY", 
+        "zip_code": "10591"
+    }, 
+    "director_action": "PHC Contingent Approval", 
+    "director_action_date": "12/21/2000", 
+    "facility_id": "1129", 
+    "facility_name": "Phelps Memorial Hospital Association", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "4/14/2000", 
+    "main_site": {
+        "facility_identifier": "1129", 
+        "facility_name": "Phelps Memorial Hospital Association"
+    }, 
+    "project": {
+        "description": "Merge Donald R. Reed Speech and Hearing Center, Inc. into Phelps Memorial Hospital Association", 
+        "status": "Project Complete", 
+        "status_date": "3/1/2001"
+    }, 
+    "project_site": {
+        "address_line1": "701 North Broadway", 
+        "city": "North Tarrytown", 
+        "county_name": "WESTCHESTER", 
+        "state": "NY", 
+        "zip_code": "10591"
+    }, 
+    "proposed_operator": {
+        "name": "Phelps Memorial Hospital Association", 
+        "operating_certificate_number": "5932000H"
+    }, 
+    "region": "Hudson Valley", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Establishment - New Facility or Agency", 
+    "total_project_cost": "0"
+}

@@ -1,0 +1,41 @@
+{
+    "acknowledgement_date": "3/3/2000", 
+    "application": {
+        "received_date": "2/24/2000", 
+        "received_month": "2", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1052", 
+    "current_operator": {
+        "address_line1": "Driving Park Avenue    Box 111", 
+        "city": "Newark", 
+        "name": "Viahealth of Wayne", 
+        "operating_certificate_number": "5820000N", 
+        "state": "NY", 
+        "zip_code": "14513"
+    }, 
+    "facility_id": "1029", 
+    "facility_name": "Newark-Wayne Community Hospital Skilled Nursing Facility", 
+    "facility_type": "Residential Health Care Facility", 
+    "initial_review_date": "3/2/2000", 
+    "main_site": {
+        "facility_identifier": "1029", 
+        "facility_name": "Newark-Wayne Community Hospital Skilled Nursing Facility"
+    }, 
+    "project": {
+        "description": "Increase Adult Day Health Care Program capacity from 25 to 50", 
+        "status": "Withdrawn", 
+        "status_date": "3/3/2000"
+    }, 
+    "project_site": {
+        "address_line1": "Driving Park Avenue", 
+        "city": "Newark", 
+        "county_name": "WAYNE", 
+        "state": "NY", 
+        "zip_code": "14513"
+    }, 
+    "region": "Finger Lakes", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "970000"
+}

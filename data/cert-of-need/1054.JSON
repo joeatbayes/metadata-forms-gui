@@ -1,0 +1,46 @@
+{
+    "acknowledgement_date": "3/17/2000", 
+    "actual_construction_completion_date": "8/9/2000", 
+    "application": {
+        "received_date": "2/25/2000", 
+        "received_month": "2", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "5/24/2002", 
+    "assigned_construction_start_date": "5/23/2002", 
+    "con_project_number": "1054", 
+    "current_operator": {
+        "address_line1": "100 Beekman Street", 
+        "city": "Plattsburgh", 
+        "name": "Champlain Valley Physicians Hospital Medical Center Inc", 
+        "operating_certificate_number": "0901001H", 
+        "state": "NY", 
+        "zip_code": "12901"
+    }, 
+    "director_action": "Contingent Approval", 
+    "director_action_date": "5/24/2000", 
+    "facility_id": "7284", 
+    "facility_name": "Champlain Valley Physicians Hospital Medical Center at CVPH Diagnostic Center", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "3/3/2000", 
+    "main_site": {
+        "facility_identifier": "7284", 
+        "facility_name": "Champlain Valley Physicians Hospital Medical Center at CVPH Diagnostic Center"
+    }, 
+    "project": {
+        "description": "Certify CT scanning service at 89 Plaza Boulevard, Plattsburgh Extension Clinic", 
+        "status": "Project Complete", 
+        "status_date": "8/9/2000"
+    }, 
+    "project_site": {
+        "address_line1": "75 Plaza Boulevard", 
+        "city": "Plattsburgh", 
+        "county_name": "CLINTON", 
+        "state": "NY", 
+        "zip_code": "12901"
+    }, 
+    "region": "Northeast", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "61000"
+}

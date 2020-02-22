@@ -1,0 +1,42 @@
+{
+    "acknowledgement_date": "2/18/2000", 
+    "actual_construction_completion_date": "10/27/2000", 
+    "application": {
+        "received_date": "2/3/2000", 
+        "received_month": "2", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "2/1/2001", 
+    "assigned_construction_start_date": "12/1/2000", 
+    "con_project_number": "1030", 
+    "current_operator": {
+        "name": "Southside Hospital, Inc.", 
+        "operating_certificate_number": "5154000H"
+    }, 
+    "director_action": "Contingent Approval", 
+    "director_action_date": "6/14/2000", 
+    "facility_id": "924", 
+    "facility_name": "Southside Hospital", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "2/17/2000", 
+    "main_site": {
+        "facility_identifier": "924", 
+        "facility_name": "Southside Hospital"
+    }, 
+    "project": {
+        "description": "Increase psychiatric beds from 40 to 45, with requisite renovations", 
+        "status": "Project Complete", 
+        "status_date": "11/1/2000"
+    }, 
+    "project_site": {
+        "address_line1": "301 East Main Street", 
+        "city": "Bay Shore", 
+        "county_name": "SUFFOLK", 
+        "state": "NY", 
+        "zip_code": "11706"
+    }, 
+    "region": "Long Island", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Construction - Physical", 
+    "total_project_cost": "41000"
+}

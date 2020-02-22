@@ -1,0 +1,152 @@
+  body {
+      font-family: veranda, arial, sans-serif;
+      font-size: 12pt;
+  }
+
+  h1 {
+      font-size: 1.3em;
+      color: rebeccapurple;
+  }
+
+  li:hover {
+      text-decoration: underline;
+
+  }
+
+  a {
+      text-decoration: none;
+      color: auto;
+  }
+
+  #links {
+      display: inline-block;
+      min-width: 18em;
+      max-width: 100%;
+      vertical-align: top;
+      background-color: WhiteSmoke;
+      color: darkgrey;
+      font-size: 0.8em;
+      padding-left: 0em;
+  }
+
+  #form_div {
+      width: auto;
+      max-width: 100%;
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 0.1em;
+      background-color: #FAFAFA;
+      padding: 0px;
+      align-items: center;
+      border: none;
+  }
+
+  #simpleFormcont {
+      max-width: 100%;
+      border: solid darkred 1px;
+      padding: 1em;
+  }
+
+  #cert_needcont {
+      max-width: 50em;
+  }
+
+  /* this one was breaking our sizing on the browser due to 
+  long text not wrapping and the browser attempting to 
+  resize.   Fixed by disabling overflow */
+  #dataObjDiv {
+      display: block;
+      background-color: snow;
+      max-width: 95%;
+      overflow: hidden;
+      font-size: 0.7em;
+      word-wrap: break-word;
+      margin-top: 2em;
+  }
+
+  div.input_text_area {
+      display: block;
+  }
+
+  /* For larger screens we can add some spacing
+  to make the form pop a little more */
+  @media only screen and (min-width : 1025px) {
+      #links {
+          max-width: 30%;
+          padding-left: 1em;
+          margin-left: 1.2em;
+      }
+
+      #form_div {
+          xmax-width: 55%;
+          margin-left: 3em;
+          padding: 2em;
+          border: 2px outset #F1F1FF;
+      }
+
+      #simpleFormcont {
+          max-width: 40em;
+          border: solid darkred 1px;
+          padding: 1em;
+      }
+
+      #cert_needcont {
+          max-width: 50em;
+      }
+
+
+  }
+
+
+  /* Smartphones (landscape) ----------- */
+  @media only screen and (max-width : 680px) {
+      body {
+          font-size: 14pt;
+      }
+
+
+      #form_div {
+          max-width: auto;
+          xmax-width: 100%;
+          xoverflow: hidden;
+      }
+
+      #simpleFormcont {
+          xmax-width: 99%;
+          max-width: auto;
+          padding: 0px;
+          border: none;
+          margin: 0px;
+          overflow: none;
+      }
+
+      #cert_needcont {
+          padding: 0px;
+          margin: 0px;
+          border: none;
+          overflow: non;
+      }
+
+      dataObjDiv {
+          width: 98%;
+      }
+
+      .input_fieldCont,
+      .input_fieldvCont,
+      .input_fieldContainer,
+      .input_fieldvContainer,
+      .vert_radioCont {
+          xmargin-top: 0.1em;
+          xdisplay: inline-block;
+          xmargin-bottom: 0.95em;
+      }
+
+      .input_fieldLabel,
+      .input_fieldvLabel,
+      .vert_radioLabel,
+      .hor_radioLabel {
+          display: block;
+      }
+
+      /* Styles */
+  }

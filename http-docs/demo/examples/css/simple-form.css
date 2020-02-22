@@ -1,0 +1,76 @@
+body {
+    font-size: 14pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    font-size: 1.3em;
+}
+
+#links {
+    display: inline-block;
+    vertical-align: top;
+    background-color: rgb(18, 63, 131);
+    color: #DEDEDE;
+    font-size: 0.8em;
+    min-width: 14em;
+    max-width: 17em;
+    word-wrap: break-word;
+    padding: 2px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+#links li {
+    max-width: 95%;
+    list-style-type: none;
+    margin-bottom: 0.3em;
+}
+
+#links li:hover {
+    text-decoration: underline;
+}
+
+#links h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+    width: 100%;
+    color: #A1A1A1;
+    border-bottom: darkgrey solid 1px;
+}
+
+#links a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#form_div {
+    width: auto;
+    max-width: 98%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0.1em;
+    margin-top: 0em;
+    background-color: #FAFAFA;
+    padding: 0.5em;
+    border: 2px outset #F1F1FF;
+    align-items: center;
+}
+
+
+#dataObjDiv {
+    display: block;
+    background-color: smoke;
+    max-width: 95%;
+    overflow: hidden;
+    font-size: 0.7em;
+    word-wrap: break-word;
+    margin-top: 2em;
+}
+
+.input_fieldLabel,
+.input_fieldvLabel,
+.vert_radioLabel,
+.hor_radioLabel {
+    display: block;
+}

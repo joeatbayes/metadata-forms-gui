@@ -1,0 +1,35 @@
+{
+    "acknowledgement_date": "3/7/2000", 
+    "application": {
+        "received_date": "3/2/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1065", 
+    "current_operator": {
+        "name": "CGF Health System", 
+        "operating_certificate_number": "1401014H"
+    }, 
+    "facility_name": "Degraff Memorial Hospital", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "3/7/2000", 
+    "main_site": {
+        "facility_name": "Degraff Memorial Hospital"
+    }, 
+    "project": {
+        "description": "Certify 20 \"\"behavioral\"\" residential health care facility beds; renovate the third floor of the hospital to accommodate unit (amends and supercedes 942833)", 
+        "status": "Withdrawn", 
+        "status_date": "3/8/2000"
+    }, 
+    "project_site": {
+        "address_line1": "445 Tremont Street", 
+        "city": "North Tonawanda", 
+        "county_name": "NIAGARA", 
+        "state": "NY", 
+        "zip_code": "14120"
+    }, 
+    "region": "Western", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Construction - Physical", 
+    "total_project_cost": "5073000"
+}

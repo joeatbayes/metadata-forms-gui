@@ -1,0 +1,40 @@
+{
+    "acknowledgement_date": "4/19/2000", 
+    "actual_construction_completion_date": "12/22/2000", 
+    "application": {
+        "received_date": "3/30/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "9/29/2002", 
+    "assigned_construction_start_date": "9/28/2002", 
+    "con_project_number": "1096", 
+    "current_operator": {
+        "name": "Auburn Memorial Hospital", 
+        "operating_certificate_number": "0501000H"
+    }, 
+    "director_action": "Contingent Approval", 
+    "director_action_date": "9/29/2000", 
+    "facility_name": "Auburn Memorial Hospital", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "4/17/2000", 
+    "main_site": {
+        "facility_name": "Auburn Memorial Hospital"
+    }, 
+    "project": {
+        "description": "Certify a primary care extension clinic at 797 West Genesee Street, Skaneateles", 
+        "status": "Project Complete", 
+        "status_date": "12/22/2000"
+    }, 
+    "project_site": {
+        "address_line1": "797 West Genesee Street", 
+        "city": "Skaneateles", 
+        "county_name": "CAYUGA", 
+        "state": "NY", 
+        "zip_code": "13152"
+    }, 
+    "region": "Central", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "316000"
+}

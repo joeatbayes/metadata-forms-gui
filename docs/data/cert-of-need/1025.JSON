@@ -1,0 +1,35 @@
+{
+    "acknowledgement_date": "2/17/2000", 
+    "application": {
+        "received_date": "1/18/2000", 
+        "received_month": "1", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1025", 
+    "current_operator": {
+        "name": "Bellevue Maternity Hospital, Inc.", 
+        "operating_certificate_number": "4652000H"
+    }, 
+    "facility_name": "Bellevue Woman's Hospital", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "2/6/2000", 
+    "main_site": {
+        "facility_name": "Bellevue Woman's Hospital"
+    }, 
+    "project": {
+        "description": "Certify an ambulatory surgery center extension clinic located at 1201 Troy-Schenectady Road, Schenectady", 
+        "status": "Withdrawn", 
+        "status_date": "6/28/2000"
+    }, 
+    "project_site": {
+        "address_line1": "1201 Troy-Schenectady Road", 
+        "city": "Latham", 
+        "county_name": "SCHENECTADY", 
+        "state": "NY", 
+        "zip_code": "12110"
+    }, 
+    "region": "Northeast", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Construction - Physical", 
+    "total_project_cost": "1000"
+}

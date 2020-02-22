@@ -1,0 +1,41 @@
+{
+    "acknowledgement_date": "2/18/2000", 
+    "application": {
+        "received_date": "2/4/2000", 
+        "received_month": "2", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1033", 
+    "current_operator": {
+        "address_line1": "946 East 211th Street", 
+        "city": "Bronx", 
+        "name": "Regeis Care Center,LLC", 
+        "operating_certificate_number": "7000356N", 
+        "state": "NY", 
+        "zip_code": "10469"
+    }, 
+    "facility_id": "1242", 
+    "facility_name": "Rofay Nursing Home", 
+    "facility_type": "Residential Health Care Facility", 
+    "initial_review_date": "2/17/2000", 
+    "main_site": {
+        "facility_identifier": "1242", 
+        "facility_name": "Rofay Nursing Home"
+    }, 
+    "project": {
+        "description": "Certify an adult day health care program with a program capacity of 100; undertake requisite renovations", 
+        "status": "Withdrawn", 
+        "status_date": "2/18/2000"
+    }, 
+    "project_site": {
+        "address_line1": "946 East 211th Street", 
+        "city": "Bronx", 
+        "county_name": "BRONX", 
+        "state": "NY", 
+        "zip_code": "10469"
+    }, 
+    "region": "New York City", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "730000"
+}

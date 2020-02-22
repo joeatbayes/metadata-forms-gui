@@ -1,0 +1,43 @@
+{
+    "acknowledgement_date": "3/24/2000", 
+    "actual_construction_completion_date": "2/6/2003", 
+    "application": {
+        "received_date": "1/7/2000", 
+        "received_month": "1", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1043", 
+    "council": {
+        "action_1": "Contingent Approval", 
+        "action_2": "Contingent Approval", 
+        "date_1": "2/20/2001", 
+        "date_2": "3/16/2001", 
+        "name_1": "Establishment Committee", 
+        "name_2": "Public Health Council"
+    }, 
+    "director_action": "PHC Contingent Approval", 
+    "director_action_date": "3/30/2001", 
+    "facility_name": "Extended Nursing Personnel CHHA, LLC", 
+    "facility_type": "Certified Home Health Agency", 
+    "initial_review_date": "3/23/2000", 
+    "main_site": {
+        "facility_name": "Extended Nursing Personnel CHHA, LLC"
+    }, 
+    "project": {
+        "description": "Transfer membership interest from Sandra Tenzer to Michael Melnicke", 
+        "status": "Project Complete", 
+        "status_date": "2/6/2003"
+    }, 
+    "project_site": {
+        "county_name": "NASSAU", 
+        "state": "NY"
+    }, 
+    "proposed_operator": {
+        "name": "Extended Nursing Personnel CHHA, LLC", 
+        "operating_certificate_number": "99999999"
+    }, 
+    "region": "Long Island", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Establishment - New Facility or Agency", 
+    "total_project_cost": "0"
+}

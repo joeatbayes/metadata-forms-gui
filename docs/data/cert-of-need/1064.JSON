@@ -1,0 +1,45 @@
+{
+    "acknowledgement_date": "3/22/2000", 
+    "application": {
+        "received_date": "3/2/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "8/29/2002", 
+    "assigned_construction_start_date": "8/28/2002", 
+    "con_project_number": "1064", 
+    "current_operator": {
+        "address_line1": "111 East 210th Street", 
+        "city": "Bronx", 
+        "name": "Montefiore Health System, Inc", 
+        "operating_certificate_number": "7000006H", 
+        "state": "NY", 
+        "zip_code": "10467"
+    }, 
+    "director_action": "Approval", 
+    "director_action_date": "8/29/2000", 
+    "facility_id": "1169", 
+    "facility_name": "Montefiore Medical Center at Henry and Lucy Moses Division", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "3/21/2000", 
+    "main_site": {
+        "facility_identifier": "1169", 
+        "facility_name": "Montefiore Medical Center at Henry and Lucy Moses Division"
+    }, 
+    "project": {
+        "description": "Renovate and expand emergency department", 
+        "status": "Permission to Start Construction Granted", 
+        "status_date": "8/31/2000"
+    }, 
+    "project_site": {
+        "address_line1": "111 East 210th Street", 
+        "city": "Bronx", 
+        "county_name": "BRONX", 
+        "state": "NY", 
+        "zip_code": "10467"
+    }, 
+    "region": "New York City", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "3958000"
+}

@@ -1,0 +1,40 @@
+{
+    "acknowledgement_date": "3/22/2000", 
+    "actual_construction_completion_date": "5/24/2000", 
+    "application": {
+        "received_date": "3/6/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "5/24/2002", 
+    "assigned_construction_start_date": "5/23/2002", 
+    "con_project_number": "1067", 
+    "current_operator": {
+        "name": "Edward John Noble Hospital of Gouverneur", 
+        "operating_certificate_number": "4423000H"
+    }, 
+    "director_action": "Approval", 
+    "director_action_date": "5/24/2000", 
+    "facility_name": "Edward John Noble Hospital of Gouverneur", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "3/22/2000", 
+    "main_site": {
+        "facility_name": "Edward John Noble Hospital of Gouverneur"
+    }, 
+    "project": {
+        "description": "Certify a primary care extension clinic located at 2924 County Route 17, Dekalb Junction", 
+        "status": "Project Complete", 
+        "status_date": "5/24/2000"
+    }, 
+    "project_site": {
+        "address_line1": "2924 Country Route 17", 
+        "city": "Dekalb Junction", 
+        "county_name": "JEFFERSON", 
+        "state": "NY", 
+        "zip_code": "13630"
+    }, 
+    "region": "Central", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "1000"
+}

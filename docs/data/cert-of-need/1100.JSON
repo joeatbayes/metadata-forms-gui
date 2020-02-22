@@ -1,0 +1,41 @@
+{
+    "acknowledgement_date": "4/19/2000", 
+    "application": {
+        "received_date": "4/3/2000", 
+        "received_month": "4", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1100", 
+    "current_operator": {
+        "address_line1": "111 East 210th Street", 
+        "city": "Bronx", 
+        "name": "Montefiore Health System, Inc", 
+        "operating_certificate_number": "7000005H", 
+        "state": "NY", 
+        "zip_code": "10467"
+    }, 
+    "facility_id": "1168", 
+    "facility_name": "Our Lady of Mercy Medical Center", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "4/18/2000", 
+    "main_site": {
+        "facility_identifier": "1168", 
+        "facility_name": "Our Lady of Mercy Medical Center"
+    }, 
+    "project": {
+        "description": "Certify bone marrow transplantation services", 
+        "status": "Withdrawn", 
+        "status_date": "4/19/2000"
+    }, 
+    "project_site": {
+        "address_line1": "600 East 233rd Street", 
+        "city": "Bronx", 
+        "county_name": "BRONX", 
+        "state": "NY", 
+        "zip_code": "10466"
+    }, 
+    "region": "New York City", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Construction - Physical", 
+    "total_project_cost": "1000"
+}

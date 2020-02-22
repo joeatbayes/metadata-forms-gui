@@ -1,0 +1,45 @@
+{
+    "acknowledgement_date": "", 
+    "application": {
+        "received_date": "", 
+        "received_month": "", 
+        "received_year": ""
+    }, 
+    "assigned_construction_completion_date": "", 
+    "assigned_construction_start_date": "", 
+    "con_project_number": "-9999", 
+    "current_operator": {
+        "address_line1": "", 
+        "city": "", 
+        "name": "", 
+        "operating_certificate_number": "-9999Z", 
+        "state": "", 
+        "zip_code": ""
+    }, 
+    "director_action": "", 
+    "director_action_date": "", 
+    "facility_id": "", 
+    "facility_name": "", 
+    "facility_type": "", 
+    "initial_review_date": "", 
+    "main_site": {
+        "facility_identifier": "", 
+        "facility_name": ""
+    }, 
+    "project": {
+        "description": "", 
+        "status": "", 
+        "status_date": ""
+    }, 
+    "project_site": {
+        "address_line1": "", 
+        "city": "", 
+        "county_name": "", 
+        "state": "", 
+        "zip_code": ""
+    }, 
+    "region": "", 
+    "review_level": "", 
+    "submission_type_s": "", 
+    "total_project_cost": ""
+}

@@ -1,0 +1,45 @@
+{
+    "acknowledgement_date": "4/5/2000", 
+    "application": {
+        "received_date": "1/18/2000", 
+        "received_month": "1", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1015", 
+    "council": {
+        "action_1": "Disapproval", 
+        "action_2": "Disapproval", 
+        "date_1": "1/21/2005", 
+        "date_2": "1/25/2005", 
+        "name_1": "Establishment Committee", 
+        "name_2": "Public Health Council"
+    }, 
+    "director_action": "Disapproval", 
+    "director_action_date": "1/25/2005", 
+    "facility_name": "Urban Strategies Nursing Home Corporation", 
+    "facility_type": "Residential Health Care Facility", 
+    "initial_review_date": "4/5/2000", 
+    "main_site": {
+        "facility_name": "Urban Strategies Nursing Home Corporation"
+    }, 
+    "project": {
+        "description": "Establish and construct a 200 bed residential health care facility (amends and supercedes 910759)", 
+        "status": "Disapproval Finalized", 
+        "status_date": "4/5/2000"
+    }, 
+    "project_site": {
+        "address_line1": "46 Christopher Avenue", 
+        "city": "Brooklyn", 
+        "county_name": "KINGS", 
+        "state": "NY", 
+        "zip_code": "11233"
+    }, 
+    "proposed_operator": {
+        "name": "Urban Strategies Nursing Home Corporation", 
+        "operating_certificate_number": "99999999"
+    }, 
+    "region": "New York City", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Establishment and Construction", 
+    "total_project_cost": "29369115"
+}

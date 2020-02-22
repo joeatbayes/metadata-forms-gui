@@ -1,0 +1,39 @@
+{
+    "acknowledgement_date": "4/10/2000", 
+    "application": {
+        "received_date": "3/17/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "9/24/2003", 
+    "assigned_construction_start_date": "8/24/2003", 
+    "con_project_number": "1080", 
+    "current_operator": {
+        "name": "Vassar Brothers Hospital, Inc.", 
+        "operating_certificate_number": "1302001H"
+    }, 
+    "director_action": "Contingent Approval", 
+    "director_action_date": "9/24/2001", 
+    "facility_name": "Vassar Brothers Hospital", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "3/27/2000", 
+    "main_site": {
+        "facility_name": "Vassar Brothers Hospital"
+    }, 
+    "project": {
+        "description": "Certify a primary care extension clinic at 34 Livingston Street, Poughkeepsie", 
+        "status": "Project Complete", 
+        "status_date": "11/27/2001"
+    }, 
+    "project_site": {
+        "address_line1": "1 Columbia Street", 
+        "city": "Poughkeepsie", 
+        "county_name": "DUTCHESS", 
+        "state": "NY", 
+        "zip_code": "12601"
+    }, 
+    "region": "Hudson Valley", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "1000"
+}

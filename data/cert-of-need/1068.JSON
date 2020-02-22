@@ -1,0 +1,46 @@
+{
+    "acknowledgement_date": "3/7/2000", 
+    "actual_construction_completion_date": "9/1/2000", 
+    "application": {
+        "received_date": "3/6/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1068", 
+    "council": {
+        "action_1": "Contingent Approval", 
+        "action_2": "Contingent Approval", 
+        "date_1": "6/6/2000", 
+        "date_2": "7/28/2000", 
+        "name_1": "Establishment Committee", 
+        "name_2": "Public Health Council"
+    }, 
+    "director_action": "PHC Contingent Approval", 
+    "director_action_date": "7/31/2000", 
+    "facility_name": "Hallmark Nursing Centre, Inc.", 
+    "facility_type": "Residential Health Care Facility", 
+    "initial_review_date": "3/7/2000", 
+    "main_site": {
+        "facility_name": "Hallmark Nursing Centre, Inc."
+    }, 
+    "project": {
+        "description": "Establish new operator of New Paltz Nursing Home", 
+        "status": "Project Complete", 
+        "status_date": "9/1/2000"
+    }, 
+    "project_site": {
+        "address_line1": "1 Jansen Road", 
+        "city": "New Paltz", 
+        "county_name": "ULSTER", 
+        "state": "NY", 
+        "zip_code": "12561"
+    }, 
+    "proposed_operator": {
+        "name": "Hallmark Nursing Centre, Inc.", 
+        "operating_certificate_number": "99999999"
+    }, 
+    "region": "Hudson Valley", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Establishment - New Facility or Agency", 
+    "total_project_cost": "0"
+}

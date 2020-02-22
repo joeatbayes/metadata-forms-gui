@@ -1,0 +1,35 @@
+{
+    "acknowledgement_date": "2/10/2000", 
+    "application": {
+        "received_date": "1/24/2000", 
+        "received_month": "1", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1019", 
+    "facility_name": "Comprehensive Health Services", 
+    "facility_type": "Diagnostic And Treatment Center", 
+    "initial_review_date": "2/9/2000", 
+    "main_site": {
+        "facility_name": "Comprehensive Health Services"
+    }, 
+    "project": {
+        "description": "Establish and construct a diagnostic and treatment center located at 3500 Nostrand Avenue, Brooklyn", 
+        "status": "Withdrawn", 
+        "status_date": "2/10/2000"
+    }, 
+    "project_site": {
+        "address_line1": "3500 Nostrand Avenue", 
+        "city": "Brooklyn", 
+        "county_name": "KINGS", 
+        "state": "NY", 
+        "zip_code": "11229"
+    }, 
+    "proposed_operator": {
+        "name": "Comprehensive Health Services", 
+        "operating_certificate_number": "99999999"
+    }, 
+    "region": "New York City", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Establishment and Construction", 
+    "total_project_cost": "630000"
+}

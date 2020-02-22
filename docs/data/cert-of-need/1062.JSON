@@ -1,0 +1,29 @@
+{
+    "application": {
+        "received_date": "2/14/2000", 
+        "received_month": "2", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1062", 
+    "current_operator": {
+        "name": "Health Diagnostic and Treatment Centers", 
+        "operating_certificate_number": "99999999"
+    }, 
+    "facility_name": "Long Island Diagnostic and Treatment Center Management", 
+    "facility_type": "Diagnostic And Treatment Center", 
+    "main_site": {
+        "facility_name": "Long Island Diagnostic and Treatment Center Management"
+    }, 
+    "project": {
+        "description": "Establish and construct a diagnostic and treatment center at 2780 Middle Country Road, Suite 140, Lake Grove (amends and supercedes 992368)", 
+        "status": "Withdrawn", 
+        "status_date": "3/1/2000"
+    }, 
+    "project_site": {
+        "address_line1": "2780 Middle Country Road, Suite 140", 
+        "city": "Lake Grove", 
+        "state": "NY", 
+        "zip_code": "11755"
+    }, 
+    "total_project_cost": "0"
+}

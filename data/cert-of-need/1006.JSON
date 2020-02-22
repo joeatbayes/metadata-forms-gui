@@ -1,0 +1,40 @@
+{
+    "acknowledgement_date": "2/8/2000", 
+    "actual_construction_completion_date": "5/1/2000", 
+    "application": {
+        "received_date": "1/5/2000", 
+        "received_month": "1", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "5/1/2002", 
+    "assigned_construction_start_date": "4/30/2002", 
+    "con_project_number": "1006", 
+    "current_operator": {
+        "name": "Dialysis Clinic Incorporated d/b/a  Applied Medical Research, Inc.", 
+        "operating_certificate_number": "3301213R"
+    }, 
+    "director_action": "Approval", 
+    "director_action_date": "5/1/2000", 
+    "facility_name": "University Dialysis Center", 
+    "facility_type": "Diagnostic And Treatment Center", 
+    "initial_review_date": "2/8/2000", 
+    "main_site": {
+        "facility_name": "University Dialysis Center"
+    }, 
+    "project": {
+        "description": "Increase chronic renal dialysis capacity by three (3) stations", 
+        "status": "Project Complete", 
+        "status_date": "5/1/2000"
+    }, 
+    "project_site": {
+        "address_line1": "Oswego Plaza - 140 State Route 104", 
+        "city": "Oswego", 
+        "county_name": "OSWEGO", 
+        "state": "NY", 
+        "zip_code": "13126"
+    }, 
+    "region": "Central", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "14000"
+}

@@ -1,0 +1,46 @@
+{
+    "acknowledgement_date": "3/31/2000", 
+    "acs_letter_sent_date": "7/22/2002", 
+    "actual_construction_completion_date": "10/11/2002", 
+    "application": {
+        "received_date": "3/17/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "2/2/2003", 
+    "assigned_construction_start_date": "2/1/2003", 
+    "con_project_number": "1084", 
+    "current_operator": {
+        "address_line1": "201 Manor Place", 
+        "city": "Greenport", 
+        "name": "Peconic Health Corporation", 
+        "operating_certificate_number": "5127000H", 
+        "state": "NY", 
+        "zip_code": "11944"
+    }, 
+    "director_action": "Contingent Approval", 
+    "director_action_date": "2/2/2001", 
+    "facility_id": "3442", 
+    "facility_name": "Eastern Long Island Hospital at Alcohol Rehabilitation Extension Clinic", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "3/28/2000", 
+    "main_site": {
+        "facility_identifier": "3442", 
+        "facility_name": "Eastern Long Island Hospital at Alcohol Rehabilitation Extension Clinic"
+    }, 
+    "project": {
+        "description": "Relocate 7555 Main Road, Mattituck Alcohol Extension Clinic to 814 Harrison Avenue, Riverhead", 
+        "status": "Project Complete", 
+        "status_date": "10/11/2002"
+    }, 
+    "project_site": {
+        "address_line1": "814 Harrison Avenue", 
+        "city": "Riverhead", 
+        "county_name": "SUFFOLK", 
+        "state": "NY"
+    }, 
+    "region": "Long Island", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "56000"
+}

@@ -1,0 +1,42 @@
+{
+    "acknowledgement_date": "2/8/2000", 
+    "actual_construction_completion_date": "12/31/2000", 
+    "application": {
+        "received_date": "1/6/2000", 
+        "received_month": "1", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "4/24/2002", 
+    "assigned_construction_start_date": "4/23/2002", 
+    "con_project_number": "1009", 
+    "current_operator": {
+        "name": "Nassau County Medical Center", 
+        "operating_certificate_number": "2950002H"
+    }, 
+    "director_action": "Approval", 
+    "director_action_date": "4/24/2000", 
+    "facility_id": "528", 
+    "facility_name": "Nassau County Medical Center", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "2/8/2000", 
+    "main_site": {
+        "facility_identifier": "528", 
+        "facility_name": "Nassau County Medical Center"
+    }, 
+    "project": {
+        "description": "Acquire/replace accounting and financing computer system", 
+        "status": "Project Complete", 
+        "status_date": "12/31/2000"
+    }, 
+    "project_site": {
+        "address_line1": "2201 Hempstead Turnpike", 
+        "city": "East Meadow", 
+        "county_name": "NASSAU", 
+        "state": "NY", 
+        "zip_code": "11554"
+    }, 
+    "region": "Long Island", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "9913000"
+}

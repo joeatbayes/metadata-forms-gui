@@ -1,0 +1,84 @@
+<html>
+
+    <head>
+        <meta description="Simple Meta Data Forms Demo">
+        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="mforms/css/meta-forms.css"/>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script async src="mforms/js/browser_util.js" type="text/javascript"></script>
+        <script async src="mforms/js/simple_ajax.js" type="text/javascript"></script>
+        <script async src="mforms/js/mforms.js" type="text/javascript"></script>
+        <script async src="mforms/js/mforms_parse.js" type="text/javascript"></script>
+        <style>
+    
+    </style>
+    </head>
+
+    <body onLoad="display_form('form_div', 'demo/examples/forms/simple-form',
+        null, GTX)">
+        <a href="/"><img src="/img/frigate-forms-logo.png" style="z-index:3; top:-2px;
+  right: 1px; margin: 1em; position: absolute;" width="65px" ></img></a>
+        <h1>Frigate Forms <small><small>- Meta Data Forms Demonstration</small></small></h1>
+        <div id="form_div"></div>
+        <div id="links">
+            <h3>Certificate of Need</h3>
+            <li><a href="demo/cert-of-need/index.html">Cert Of Need Page</a></li>
+            <li onclick="display_form('form_div',
+                'demo/cert-of-need/forms/cneed', '1037', GTX)">
+                Cert #1037
+            </li>
+
+            <li onclick="display_form('form_div',
+                'demo/cert-of-need/forms/cneed' , '1011', GTX )">
+                Cert #1011</li>
+            <li onclick="display_form('form_div',
+                'demo/cert-of-need/forms/cneed' , '1019', GTX )">
+                Cert #1019</li>
+            <li onclick="display_form('form_div',
+                'demo/cert-of-need/forms/cneed' , '1023', GTX )">
+                Cert #1023</li>
+            <li onclick="display_form('form_div',
+                'demo/cert-of-need/forms/cneed' , '1086', GTX )">
+                Cert #1086</li>
+
+            <h3>Dental</h3>
+            <li><a href="https://claims.frigateforms.com">Dental Claim
+                    Sample</a></li>
+            <li><a href="https://provider.frigateforms.com">Provider</a></li>
+
+            <h3>Tutorial</h3>
+            <li><a href="demo/examples/simple-form.html"
+                    target="tutorial">Simple Form page</a></li>
+
+            <li onclick="display_form('form_div',
+                'demo/examples/forms/simple-form' , null, GTX )">
+                Simple Form Here</li>
+
+            <li onclick="display_form('form_div',
+                'demo/examples/forms/field-validator-regex' , null, GTX
+                )">
+                RegEx based field validator</li>
+
+            <h3>Experiemental</h3>
+            <li onclick="display_form('form_div',
+                'demo/examples/forms/field-validator-regex-multiple'
+                , null, GTX )">
+                Multi RegEx field validator</li>
+
+            <h3>Documentation</h3>
+            <li><a
+                    href="https://github.com/joeatbayes/metadata-forms-gui"
+                    target="docs">Read ME</a></li>
+            <li><a
+                    href="https://github.com/joeatbayes/metadata-forms-gui/blob/master/documentation/programmers-guide.md"
+                    target="docs">Programmers Guide &amp; Syntax
+                    Tutorial</a></li>
+            <li><a
+                    href="https://github.com/joeatbayes/metadata-forms-gui/blob/master/LICENSE"
+                    target="docs">License</a>
+            </li>
+
+         
+        </div>
+    </body>
+</html>

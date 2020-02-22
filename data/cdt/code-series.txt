@@ -1,0 +1,13 @@
+Cat	Desc	beginRange	EndRange
+I.	Diagnostic	D0100	D0999
+II.	Preventive	D1000	D1999
+III.	Restorative	D2000	D2999
+IV.	Endodontics	D3000	D3999
+V.	Peridontics	D4000	D4999
+VI.	Prosthodontics, removable	D5000	D5899
+VII.	Maxillofacial Prosthetics	D5900	D5999
+VIII.	Implant Services	D6000	D6999
+IX.	Prosthodontics, fixed	D6200	D6999
+X.	Oral & Maxillofacial Surgery	D7000	D7999
+XI.	Orthodontics	D8000-	D8999
+XII.	Adjunctive General Services	D9000	D9999

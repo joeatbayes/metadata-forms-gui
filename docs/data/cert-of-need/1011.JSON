@@ -1,0 +1,41 @@
+{
+    "acknowledgement_date": "2/16/2000", 
+    "application": {
+        "received_date": "1/11/2000", 
+        "received_month": "1", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1011", 
+    "current_operator": {
+        "address_line1": "140 Beach 114th Street", 
+        "city": "Rockaway Park", 
+        "name": "Promenade Nursing Home Inc", 
+        "operating_certificate_number": "7003386N", 
+        "state": "NY", 
+        "zip_code": "11694"
+    }, 
+    "facility_id": "1690", 
+    "facility_name": "Promenade Nursing Home", 
+    "facility_type": "Residential Health Care Facility", 
+    "initial_review_date": "2/8/2000", 
+    "main_site": {
+        "facility_identifier": "1690", 
+        "facility_name": "Promenade Nursing Home"
+    }, 
+    "project": {
+        "description": "Certify an adult day health care program with a program capacity of 100,  Revised and Updated  March 30, 2009, certify and construct a 50 slot adult day health care program located in a new building adjacent to the facility", 
+        "status": "Withdrawn", 
+        "status_date": "2/16/2000"
+    }, 
+    "project_site": {
+        "address_line1": "140 Beach 114th Street", 
+        "city": "Rockaway Park", 
+        "county_name": "QUEENS", 
+        "state": "NY", 
+        "zip_code": "11694"
+    }, 
+    "region": "New York City", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "2973000"
+}

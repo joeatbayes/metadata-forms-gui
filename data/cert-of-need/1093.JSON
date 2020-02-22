@@ -1,0 +1,45 @@
+{
+    "acknowledgement_date": "5/31/2000", 
+    "application": {
+        "received_date": "3/29/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "5/1/2006", 
+    "assigned_construction_start_date": "5/1/2004", 
+    "con_project_number": "1093", 
+    "current_operator": {
+        "address_line1": "3550 Lexington Avenue", 
+        "city": "Mohegan Lake", 
+        "name": "Treetops Rehabilitation and Care Center, LLC", 
+        "operating_certificate_number": "5968301N", 
+        "state": "NY", 
+        "zip_code": "10547"
+    }, 
+    "director_action": "Contingent Approval", 
+    "director_action_date": "2/15/2001", 
+    "facility_id": "1150", 
+    "facility_name": "Treetops at Mohegan Lake", 
+    "facility_type": "Residential Health Care Facility", 
+    "initial_review_date": "5/31/2000", 
+    "main_site": {
+        "facility_identifier": "1150", 
+        "facility_name": "Treetops at Mohegan Lake"
+    }, 
+    "project": {
+        "description": "Renovate and expand the facility to include the replacement of the 86 bed Chandler Care Center", 
+        "status": "Withdrawn", 
+        "status_date": "2/20/2001"
+    }, 
+    "project_site": {
+        "address_line1": "3550 Lexington Avenue", 
+        "city": "Mohegan Lake", 
+        "county_name": "WESTCHESTER", 
+        "state": "NY", 
+        "zip_code": "10547"
+    }, 
+    "region": "Hudson Valley", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Construction - Physical", 
+    "total_project_cost": "1093000"
+}

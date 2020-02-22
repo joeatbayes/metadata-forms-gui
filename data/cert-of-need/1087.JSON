@@ -1,0 +1,45 @@
+{
+    "acknowledgement_date": "4/7/2000", 
+    "application": {
+        "received_date": "3/23/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "6/9/2002", 
+    "assigned_construction_start_date": "6/8/2002", 
+    "con_project_number": "1087", 
+    "current_operator": {
+        "address_line1": "3095 Harlem Road", 
+        "city": "Cheektowaga", 
+        "name": "Buffalo Ambulatory Services Inc", 
+        "operating_certificate_number": "1455201R", 
+        "state": "NY", 
+        "zip_code": "14225"
+    }, 
+    "director_action": "Contingent Approval", 
+    "director_action_date": "6/9/2000", 
+    "facility_id": "4214", 
+    "facility_name": "Buffalo Ambulatory Surgery Center", 
+    "facility_type": "Diagnostic And Treatment Center", 
+    "initial_review_date": "4/4/2000", 
+    "main_site": {
+        "facility_identifier": "4214", 
+        "facility_name": "Buffalo Ambulatory Surgery Center"
+    }, 
+    "project": {
+        "description": "Certify lithotripsy service", 
+        "status": "Project Complete", 
+        "status_date": "8/2/2000"
+    }, 
+    "project_site": {
+        "address_line1": "3095 Harlem Road", 
+        "city": "Cheektowaga", 
+        "county_name": "ERIE", 
+        "state": "NY", 
+        "zip_code": "14225"
+    }, 
+    "region": "Western", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "513000"
+}

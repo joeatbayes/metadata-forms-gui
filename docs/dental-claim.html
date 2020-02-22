@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <meta description="Dental Claim Submission screen created using Metadata driven forms. ">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="google-site-verification" content="myFdbACBjfzL70PhkK5FOMVF7syP7K9EE8iwF-AEL8A" />
+    <link rel="stylesheet" type="text/css" href="css/demo-page-layout.css" />
+    <link rel="stylesheet" type="text/css" href="css/meta-forms.css" />
+    <link rel="stylesheet" type="text/css" href="css/adaform.css" />
+    <style>
+        .h3 {
+            text-decoration: none;
+        }
+    </style>
+    <script async src="js/browser_util.js" type="text/javascript"></script>
+    <script async src="js/simple_ajax.js" type="text/javascript"></script>
+    <!--<script src="js/basic_widgets.js" type="text/javascript"></script>-->
+    <script async src="js/mforms.js" type="text/javascript"></script>
+    <script async src="js/mforms_parse.js" type="text/javascript"></script>
+</head>
+
+<body onLoad="display_form('mbody', 'data/forms/dental/claim/dental-claim',  null, GTX)">
+    <div id="top_nav">
+        <h1>Sample Dental Claims Submission</h1>
+    </div>
+    <div id="page-vmid">
+        <div id="lbody">
+            <li>
+                <a href="index.html">Other Samples</a>
+            </li>
+
+            <h3>Dental Forms</h3>
+            <li onclick="display_form('mbody', 'data/forms/dental/claim/dental-claim',  null, GTX)">
+                Empty claim
+            </li>
+
+            <!--<li onclick="display_list_form('mbody', 'data/forms/cert-of-need/list-certs' , 'delim_parser'
+        , 'data/cert-of-need/index.txt' , '^' , GTX)">
+        List Certs</li><br />-->
+            <h3>Docs</h3>
+            <li><a href="https://github.com/joeatbayes/metadata-forms-gui" target="docs">Read ME</a></li>
+            <li><a href="https://joeatbayes.github.io/metadata-forms-gui/documentation/programmers-guide.md" target="docs">Programmers Guide &amp; Syntax Tutorial</a></li>
+            <li><a href="https://github.com/joeatbayes/metadata-forms-gui/blob/master/LICENSE" target="docs">License</a>
+            </li>
+            <h3>tools</h3>
+            <!--<li><a href="#" onclick="renderCurrentTree()">Show Full Tree</a></li>-->
+        </div>
+        <div id="mbody">
+
+            <!--<h3 onclick="display_form('mbody', 'data/forms/dental/claim/dental-claim',  null, GTX)">
+        Render Dental Claim Form by clicking on Render Claim to Left </h3>-->
+
+        </div>
+        <!--mbody-->
+
+    </div>
+    <div id="page_footer">MForms - Meta Data Forms Demonstration<br />
+        <small><small><small>
+          By Joseph Ellsworth CTO <a
+            href="https://www.linkedin.com/in/joe-ellsworth-68222/"></a></small></small>
+        </small>
+    </div>
+    <div id="dataObjDivBottom"></div>
+</body>
+
+</html>

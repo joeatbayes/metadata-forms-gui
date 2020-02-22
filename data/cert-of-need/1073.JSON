@@ -1,0 +1,47 @@
+{
+    "acknowledgement_date": "4/25/2000", 
+    "application": {
+        "received_date": "3/7/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1073", 
+    "current_operator": {
+        "address_line1": "140 Beach 114th Street", 
+        "city": "Rockaway Park", 
+        "name": "Promenade Nursing Home Inc", 
+        "operating_certificate_number": "7003386N", 
+        "state": "NY", 
+        "zip_code": "11694"
+    }, 
+    "director_action": "PHC Contingent Approval", 
+    "director_action_date": "10/26/2000", 
+    "facility_id": "1690", 
+    "facility_name": "Promenade Nursing Home", 
+    "facility_type": "Residential Health Care Facility", 
+    "initial_review_date": "4/25/2000", 
+    "main_site": {
+        "facility_identifier": "1690", 
+        "facility_name": "Promenade Nursing Home"
+    }, 
+    "project": {
+        "description": "Transfer stock from Rebecca Fogel to four (4) new shareholders", 
+        "status": "Project Complete", 
+        "status_date": "8/1/2001"
+    }, 
+    "project_site": {
+        "address_line1": "140 Beach 114th Street", 
+        "city": "Rockaway Park", 
+        "county_name": "QUEENS", 
+        "state": "NY", 
+        "zip_code": "11694"
+    }, 
+    "proposed_operator": {
+        "name": "Promenade Nursing Home, Inc.", 
+        "operating_certificate_number": "7003386N"
+    }, 
+    "region": "New York City", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Establishment - New Facility or Agency", 
+    "total_project_cost": "0"
+}

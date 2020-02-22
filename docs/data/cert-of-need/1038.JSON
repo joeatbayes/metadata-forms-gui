@@ -1,0 +1,45 @@
+{
+    "acknowledgement_date": "3/21/2000", 
+    "application": {
+        "received_date": "2/14/2000", 
+        "received_month": "2", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1038", 
+    "council": {
+        "action_1": "Contingent Approval", 
+        "action_2": "Contingent Approval", 
+        "date_1": "10/31/2000", 
+        "date_2": "11/17/2000", 
+        "name_1": "Establishment Committee", 
+        "name_2": "Public Health Council"
+    }, 
+    "director_action": "PHC Contingent Approval", 
+    "director_action_date": "12/27/2000", 
+    "facility_name": "Everest Dialysis Services, Inc.", 
+    "facility_type": "Diagnostic And Treatment Center", 
+    "initial_review_date": "3/20/2000", 
+    "main_site": {
+        "facility_name": "Everest Dialysis Services, Inc."
+    }, 
+    "project": {
+        "description": "Establish new operator of Western New York Artificial Kidney Center", 
+        "status": "Project Superceded", 
+        "status_date": "1/5/2001"
+    }, 
+    "project_site": {
+        "address_line1": "237 Linwood Drive", 
+        "city": "Buffalo", 
+        "county_name": "ERIE", 
+        "state": "NY", 
+        "zip_code": "14209"
+    }, 
+    "proposed_operator": {
+        "name": "Everest Dialysis Services, Inc.", 
+        "operating_certificate_number": "99999999"
+    }, 
+    "region": "Western", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Establishment - New Facility or Agency", 
+    "total_project_cost": "0"
+}

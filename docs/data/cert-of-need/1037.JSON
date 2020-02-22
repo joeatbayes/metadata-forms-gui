@@ -1,0 +1,37 @@
+{
+    "acknowledgement_date": "2/23/2000", 
+    "application": {
+        "received_date": "2/10/2000", 
+        "received_month": "2", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1037", 
+    "current_operator": {
+        "name": "The Hebrew Home for the Aged at Riverdale", 
+        "operating_certificate_number": "7000909L"
+    }, 
+    "director_action": "Disapproval", 
+    "director_action_date": "5/13/2004", 
+    "facility_name": "Hebrew Home for the Aged at Riverdale d/b/a Elderserve LTHHCP", 
+    "facility_type": "Long Term Home Health Care Program", 
+    "initial_review_date": "2/22/2000", 
+    "main_site": {
+        "facility_name": "Hebrew Home for the Aged at Riverdale d/b/a Elderserve LTHHCP"
+    }, 
+    "project": {
+        "description": "Increase capacity of New York County Long Term Home Health Care Program by 50 registrants", 
+        "status": "Disapproval Finalized", 
+        "status_date": "2/23/2000"
+    }, 
+    "project_site": {
+        "address_line1": "3260 Henry Hudson Parkway", 
+        "city": "New York", 
+        "county_name": "BRONX", 
+        "state": "NY", 
+        "zip_code": "10463"
+    }, 
+    "region": "New York City", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Construction - Physical", 
+    "total_project_cost": "0"
+}

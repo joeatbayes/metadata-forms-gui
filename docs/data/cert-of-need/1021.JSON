@@ -1,0 +1,40 @@
+{
+    "acknowledgement_date": "2/11/2000", 
+    "actual_construction_completion_date": "10/10/2000", 
+    "application": {
+        "received_date": "1/25/2000", 
+        "received_month": "1", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "7/12/2002", 
+    "assigned_construction_start_date": "7/11/2002", 
+    "con_project_number": "1021", 
+    "current_operator": {
+        "name": "Niagara Falls Memorial Medical Center, Inc.", 
+        "operating_certificate_number": "3102000H"
+    }, 
+    "director_action": "Approval", 
+    "director_action_date": "7/12/2000", 
+    "facility_name": "Niagara Falls Memorial Medical Center", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "2/9/2000", 
+    "main_site": {
+        "facility_name": "Niagara Falls Memorial Medical Center"
+    }, 
+    "project": {
+        "description": "Certify extension clinics at 241 Church Street, Youngstown and 620 Tenth Street, Niagara Falls currently operated as part-time sites", 
+        "status": "Project Complete", 
+        "status_date": "10/2/2000"
+    }, 
+    "project_site": {
+        "address_line1": "241 Church Street", 
+        "city": "Youngstown", 
+        "county_name": "NIAGARA", 
+        "state": "NY", 
+        "zip_code": "14171"
+    }, 
+    "region": "Western", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "1000"
+}

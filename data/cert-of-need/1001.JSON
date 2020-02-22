@@ -1,0 +1,45 @@
+{
+    "acknowledgement_date": "1/31/2000", 
+    "application": {
+        "received_date": "1/27/2000", 
+        "received_month": "1", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1001", 
+    "council": {
+        "action_1": "Contingent Approval", 
+        "action_2": "Contingent Approval", 
+        "date_1": "4/18/2000", 
+        "date_2": "5/12/2000", 
+        "name_1": "Establishment Committee", 
+        "name_2": "Public Health Council"
+    }, 
+    "director_action": "PHC Contingent Approval", 
+    "director_action_date": "5/25/2000", 
+    "facility_name": "Warrensburg Health Center", 
+    "facility_type": "Diagnostic And Treatment Center", 
+    "initial_review_date": "1/31/2000", 
+    "main_site": {
+        "facility_name": "Warrensburg Health Center"
+    }, 
+    "project": {
+        "description": "Establish Hudson Headwaters Health Network as the new operator of Health Center at Northcare", 
+        "status": "Project Complete", 
+        "status_date": "3/5/2001"
+    }, 
+    "project_site": {
+        "address_line1": "100 Broad Street", 
+        "city": "Glens Falls", 
+        "county_name": "WARREN", 
+        "state": "NY", 
+        "zip_code": "12801"
+    }, 
+    "proposed_operator": {
+        "name": "Hudson Headwaters Health Network, Inc.", 
+        "operating_certificate_number": "5660200R"
+    }, 
+    "region": "Northeast", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Establishment - New Facility or Agency", 
+    "total_project_cost": "0"
+}

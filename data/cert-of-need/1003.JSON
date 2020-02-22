@@ -1,0 +1,48 @@
+{
+    "acknowledgement_date": "2/11/2000", 
+    "actual_construction_completion_date": "8/1/2005", 
+    "application": {
+        "received_date": "1/3/2000", 
+        "received_month": "1", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "8/12/2006", 
+    "con_project_number": "1003", 
+    "council": {
+        "action_1": "Contingent Approval", 
+        "action_2": "Contingent Approval", 
+        "date_1": "7/30/2004", 
+        "date_2": "7/30/2004", 
+        "name_1": "Establishment Committee", 
+        "name_2": "Public Health Council"
+    }, 
+    "director_action": "PHC Contingent Approval", 
+    "director_action_date": "8/12/2004", 
+    "facility_name": "Hudson Valley Dialysis Center, Inc.", 
+    "facility_type": "Diagnostic And Treatment Center", 
+    "initial_review_date": "2/9/2000", 
+    "main_site": {
+        "facility_name": "Hudson Valley Dialysis Center, Inc."
+    }, 
+    "phc_final_approval_letter_sent": "4/12/2005", 
+    "project": {
+        "description": "Establish Liberty RC, Incorporated as the new operator", 
+        "status": "Project Complete", 
+        "status_date": "8/10/2005"
+    }, 
+    "project_site": {
+        "address_line1": "155 White Plains Road, Suite 107", 
+        "city": "Tarrytown", 
+        "county_name": "WESTCHESTER", 
+        "state": "NY", 
+        "zip_code": "10591"
+    }, 
+    "proposed_operator": {
+        "name": "Liberty RC, Inc.", 
+        "operating_certificate_number": "99999999"
+    }, 
+    "region": "Hudson Valley", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Establishment - New Facility or Agency", 
+    "total_project_cost": "0"
+}

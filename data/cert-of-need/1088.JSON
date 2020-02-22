@@ -1,0 +1,41 @@
+{
+    "acknowledgement_date": "4/4/2000", 
+    "application": {
+        "received_date": "3/23/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1088", 
+    "current_operator": {
+        "address_line1": "102-01 66th Road", 
+        "city": "Forest Hills", 
+        "name": "Forest Hills Hospital", 
+        "operating_certificate_number": "7003013H", 
+        "state": "NY", 
+        "zip_code": "11375"
+    }, 
+    "facility_id": "1638", 
+    "facility_name": "North Shore University Hospital at Forest Hills", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "4/4/2000", 
+    "main_site": {
+        "facility_identifier": "1638", 
+        "facility_name": "North Shore University Hospital at Forest Hills"
+    }, 
+    "project": {
+        "description": "Certify part-time clinic service", 
+        "status": "Withdrawn", 
+        "status_date": "4/4/2000"
+    }, 
+    "project_site": {
+        "address_line1": "102-01 66th Road", 
+        "city": "Forest Hills", 
+        "county_name": "QUEENS", 
+        "state": "NY", 
+        "zip_code": "11375"
+    }, 
+    "region": "New York City", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "1000"
+}

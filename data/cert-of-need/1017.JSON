@@ -1,0 +1,47 @@
+{
+    "acknowledgement_date": "2/11/2000", 
+    "actual_construction_completion_date": "7/23/2001", 
+    "actual_construction_start_date": "6/23/2000", 
+    "application": {
+        "received_date": "1/19/2000", 
+        "received_month": "1", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "4/24/2002", 
+    "assigned_construction_start_date": "4/23/2002", 
+    "con_project_number": "1017", 
+    "current_operator": {
+        "address_line1": "622 West 168th Street", 
+        "city": "New York", 
+        "name": "The New York & Presbyterian Hospitals Inc", 
+        "operating_certificate_number": "7002054H", 
+        "state": "NY", 
+        "zip_code": "10032"
+    }, 
+    "director_action": "Contingent Approval", 
+    "director_action_date": "4/24/2000", 
+    "facility_id": "1464", 
+    "facility_name": "New York and Presbyterian Hospitals at Presbyterian Hospital Division", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "2/9/2000", 
+    "main_site": {
+        "facility_identifier": "1464", 
+        "facility_name": "New York and Presbyterian Hospitals at Presbyterian Hospital Division"
+    }, 
+    "project": {
+        "description": "Relocate ambulatory oncology unit and undertake requisite renovations", 
+        "status": "Project Complete", 
+        "status_date": "7/23/2001"
+    }, 
+    "project_site": {
+        "address_line1": "622 West 168th Street", 
+        "city": "New York", 
+        "county_name": "NEW YORK", 
+        "state": "NY", 
+        "zip_code": "10032"
+    }, 
+    "region": "New York City", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "7382000"
+}

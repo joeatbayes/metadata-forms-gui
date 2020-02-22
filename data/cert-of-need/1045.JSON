@@ -1,0 +1,41 @@
+{
+    "acknowledgement_date": "3/1/2000", 
+    "application": {
+        "received_date": "2/16/2000", 
+        "received_month": "2", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1045", 
+    "current_operator": {
+        "address_line1": "22-41 New Haven Avenue", 
+        "city": "Far Rockaway", 
+        "name": "New Surfside Nursing Home, LLC", 
+        "operating_certificate_number": "7003373N", 
+        "state": "NY", 
+        "zip_code": "11691"
+    }, 
+    "facility_id": "3948", 
+    "facility_name": "New Surfside Nursing Home", 
+    "facility_type": "Residential Health Care Facility", 
+    "initial_review_date": "3/1/2000", 
+    "main_site": {
+        "facility_identifier": "3948", 
+        "facility_name": "New Surfside Nursing Home"
+    }, 
+    "project": {
+        "description": "Certify a 24-bed ventilator dependent service and undertake requisite renovations/revised 2/8/01- reduce unit size to 18 beds", 
+        "status": "Withdrawn", 
+        "status_date": "3/1/2000"
+    }, 
+    "project_site": {
+        "address_line1": "22-41 New Haven Avenue", 
+        "city": "Far Rockaway", 
+        "county_name": "QUEENS", 
+        "state": "NY", 
+        "zip_code": "11691"
+    }, 
+    "region": "New York City", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "855000"
+}

@@ -1,0 +1,27 @@
+{
+    "application": {
+        "received_date": "3/17/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1081", 
+    "current_operator": {
+        "name": "Chaps Community Health Center, Inc.", 
+        "operating_certificate_number": "7001279R"
+    }, 
+    "facility_name": "Chaps Community Health Center, Inc.", 
+    "facility_type": "Diagnostic And Treatment Center", 
+    "main_site": {
+        "facility_name": "Chaps Community Health Center, Inc."
+    }, 
+    "project": {
+        "status": "Withdrawn", 
+        "status_date": "3/20/2000"
+    }, 
+    "project_site": {
+        "county_name": "KINGS", 
+        "state": "NY"
+    }, 
+    "region": "New York City", 
+    "total_project_cost": "0"
+}

@@ -1,0 +1,693 @@
+.inputFrm {
+    width: auto;
+    height: auto;
+    xfont-family: Verdana, Vivaldi, 'Vladimir Script';
+    background-color: transparent;
+    xfont-size: 0.8em;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.inputFrmHead {
+    width: 99.5%;
+    font: 600;
+    font-size: 1.2em;
+    margin: 0px;
+    color: #424242;
+    padding: 0.1em;
+    display: block;
+}
+
+input,
+select {
+    border: 1px solid dimgrey;
+    border-radius: 1px;
+}
+
+input.input_text {
+    min-width: 50px;
+    xfont-size: 0.9em;
+    max-width: 98%;
+}
+
+textarea.input_text {
+    min-width: 50px;
+    max-width: 95%;
+    xfont-size: 0.9em;
+    ;
+    outline-color: silver;
+    resize: none;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    /* For IE and modern versions of Chrome */
+    -moz-box-sizing: border-box;
+    /* For Firefox                          */
+    -webkit-box-sizing: border-box;
+}
+
+input.next_button {
+    xfont-size: 0.9em;
+    border-radius: 2px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    height: 8pt;
+    width: 18pt;
+    margin-left: 5px;
+}
+
+#ErrMessage {
+    display: none;
+}
+
+.fieldStatusMsg {
+    color: red;
+    display: none;
+    display: block;
+}
+
+img.sampleImage {
+    width: 100%;
+}
+
+.input_fieldCont,
+.input_fieldvCont,
+.input_fieldContainer,
+.input_fieldvContainer,
+.vert_radioCont {
+    margin-top: 0.1em;
+    margin-bottom: 0.4em;
+    display: inline-block;
+    flex-wrap: wrap;
+    align-items: left;
+    text-align: left;
+    align-content: left;
+}
+
+.vert_radioCont {
+    flex-direction: row;
+}
+
+.input_fieldvCont,
+.input_fieldvContainer {
+    display: block;
+}
+
+.input_fieldLabel,
+.input_fieldvLabel,
+.vert_radioLabel,
+.hor_radioLabel {
+    text-align: left;
+    vertical-align: top;
+    color: #070707;
+    padding-left: 0.05em;
+    margin: 0px;
+    padding-right: 0.09em;
+    margin-right: 0.1em;
+}
+
+div .input_fieldLabel,
+div .input_fieldvLabel,
+div .vert_radioLabel,
+div .hor_radioLabel {
+    display: inline-block;
+    width: 90%;
+}
+
+input.input_field,
+.input_fieldv,
+select.input_field,
+fieldset.hor_radio,
+fieldset.vert_radio,
+fieldset.radio {
+    xdisplay: inline-block;
+    border-radius: 4px;
+    border-color: #767C81;
+    border-style: solid;
+    border-width: 1px;
+    padding: 0.08em;
+    padding-left: 0.2em;
+    margin: 0.05em;
+    margin-left: 0.06em;
+    color: rgb(13, 85, 9);
+    xfont-size: 1em;
+    background-color: #F7F8FA;
+}
+
+input.input_date {
+    xfont-size: 1.2em;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.submit_buttonContain {
+    width: 100%;
+    align-items: right;
+    align-content: right;
+    text-align: right;
+    background-color: transparent;
+}
+
+.submit_button {
+    margin: 8px;
+    border-radius: 4px;
+}
+
+div.groupCont,
+div.vgroupCont,
+div.hgroupCont,
+.groupFS,
+.hgroupFS,
+.vgroupFS,
+.vgroupCont,
+.hgroupCont,
+div.groupCont,
+div.vgroupCont div.hgroupCont {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.5em;
+    border-radius: 2px;
+    background-color: rgb(226, 247, 247, 0.137);
+    background-color: transparent;
+    vertical-align: top;
+    xalign-items: left;
+    xtext-align: left;
+}
+
+div.groupContentDiv {
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+    xjustify-content: space-between;
+    align-items: flex-start;
+    align-content: space-between;
+    xjustify-content: flex-start;
+    max-width: 100%;
+}
+
+div.silent_groupCont {
+    border: 0px;
+    border-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    vertical-align: top;
+}
+
+
+
+legend.vgroupLeg,
+legend.hgroupLeg {
+    width: auto;
+    border: solid 1px rgb(200, 174, 160, 0.3);
+    width: auto;
+    margin-bottom: 0px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #1f497d;
+    margin-top: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 10px;
+    border-radius: 2px;
+    background-color: rgb(226, 247, 247, 0.1);
+}
+
+fieldset.groupFS {
+    display: inline-block;
+    margin-top: 0.1em;
+    border-color: rgb(231, 228, 228);
+    background-color: transparent;
+    border-radius: 3px;
+}
+
+legend.groupLabel {
+    width: 99%;
+    font-size: 1.2em;
+    color: dimgray;
+    display: block;
+    background-color: transparent;
+    margin: 0;
+    margin-bottom: 0.5em;
+    margin-top: 0.6em;
+    margin-left: 0.2em;
+    border: 1px;
+}
+
+vgroup.legend {
+    border: silver 2px;
+    width: auto;
+    xxborder-color: darkgrey;
+    xxborder-width: 1px;
+    background-color: lightgrey;
+    width: auto;
+    margin-bottom: 1px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #1f497d;
+}
+
+fieldset.vgroupFS,
+fieldset.hgroupFS,
+fieldset.groupFS {
+    display: flex;
+    margin-top: 7px;
+    xborder-color: rgb(200, 174, 160, 0.3);
+    xborder-width: 3px;
+    border: 1px solid rgb(200, 174, 160, 0.5);
+    background-color: transparent;
+    border-radius: 5px;
+    padding-bottom: 4px;
+    margin-left: 2px;
+}
+
+legend.vgroupLabel {
+    width: 99%;
+    font-size: 1.2em;
+    color: dimgray;
+    display: block;
+    background-color: transparent;
+    margin: 0;
+    margin-bottom: 0.5em;
+    margin-top: 0.6em;
+    margin-left: 0.2em;
+}
+
+form.inputFrm,
+div.inputFrm {
+    max-height: fit-content;
+    overflow-y: hidden;
+}
+
+fieldset.inputFrm {
+    margin-left: 4em;
+    max-height: fit-content;
+    overflow-y: hidden;
+}
+
+div.fsblock {
+    display: block;
+}
+
+div.buttonCont {
+    display: inline-block;
+}
+
+div.hor_radio {
+    display: inline-block;
+}
+
+fieldset.hor_radio {
+    display: inline-block;
+}
+
+fieldset .hor_radio .optWrap {
+    display: inline-block;
+}
+
+div.hor_radiolabel {
+    display: inline-block;
+}
+
+div.vert_radio {
+    display: inline-block;
+}
+
+fieldset.vert_radio {
+    display: inline-block;
+}
+
+fieldset .vert_radio .buttonCont {
+    display: block;
+}
+
+div.force_wrap,
+div.forceWrap {
+    display: block;
+}
+
+.arrow {
+    display: inline-block;
+    padding-left: 0.5em;
+    font-size: 1.4em;
+    font-weight: 800;
+}
+
+.xarrow-up {
+    xwidth: 0;
+    xheight: 0;
+    xborder-left: 6px solid transparent;
+    xborder-right: 6px solid transparent;
+    xborder-bottom: 6px solid gray;
+    xfloat: right;
+    xpadding: 0px;
+    display: inline-block;
+    padding-left: 0.5em;
+    font-size: 2.5em;
+}
+
+.xarrow-down {
+    xtop: 10px;
+    xwidth: 0;
+    xheight: 0;
+    xborder-left: 6px solid transparent;
+    xborder-right: 6px solid transparent;
+    xborder-top: 6px solid gray;
+    xfloat: right;
+    xpadding: 0px;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 0.5em;
+    font-size: 1.5em;
+}
+
+div.mtableCont {
+    xborder: inset 2px rgb(231, 228, 228);
+    xbackground-color: rgb(231, 228, 228, 0.1);
+    background-color: transparent;
+    xfont-size: 1.0em;
+    margin-top: 0.2em;
+    margin-left: 0.2em;
+    border-radius: 4px;
+    align-items: left;
+    align-content: left;
+    text-align: left;
+    vertical-align: top;
+    padding: 2px;
+}
+
+table.mtable {
+    xborder: outset 1px rgb(231, 228, 228);
+    border: thin rgb(231, 228, 228);
+    background-color: transparent;
+    xfont-size: 1.0em;
+    margin-top: 0.2em;
+    margin-left: 0.2em;
+    border-radius: 4px;
+    margin-right: 2px;
+}
+
+table.mtable th {
+    font-weight: bolder;
+    background-color: rgba(200, 190, 180, 0.2);
+}
+
+table.mtable th,
+table.mtable td {
+    padding: 2px;
+    text-align: left;
+    xborder-left: 1px solid #000;
+    xborder-right: 1px solid #000;
+    background-color: rgba(200, 190, 180, 0.1);
+}
+
+table.mtable .tdright {
+    text-align: right;
+}
+
+table.mtable .tdleft {
+    text-align: left;
+}
+
+table.mtable .tdcenter {
+    text-align: center;
+}
+
+table.mtable tr:nth-child(even) {
+    background: rgb(174, 182, 199, 0.2);
+}
+
+div.mtableaddRowCont {
+    width: 100%;
+    text-align: right;
+    background-color: transparent;
+}
+
+div.mtableCont {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.mtable {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.mtable div.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.8em;
+}
+
+div.mtable div.row:nth-child(even) {
+    background: rgb(174, 182, 199, 0.2);
+}
+
+
+div.mtable div.cell {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.mtable h3 {
+    font-weight: 800;
+    border-bottom: solid green 1px;
+    width: 100%;
+    font-size: 1.1em;
+    padding: 0px;
+    margin: 0px;
+}
+
+button.mtableAddBut {
+    font-weight: 600;
+    border: solid rgb(224, 221, 221) 3px;
+    border-radius: 6px;
+    padding: 0.1em;
+    padding-right: 0.6em;
+    padding-left: 0.6em;
+    width: fit-content;
+    margin: 5px;
+    vertical-align: middle;
+}
+
+button.mtableAddBut:hover {
+    border-color: slategrey;
+}
+
+span.addRowSymbol {
+    font-size: 1.2em;
+    padding-right: 0.5em;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.wrap {
+    display: block;
+}
+
+.allow_wrap {
+    display: block;
+    white-space: normal;
+}
+
+.label_wrap {
+    display: block;
+}
+
+div.auto_sug_items:hover {
+    border: 1px solid silver;
+    background-color: rgb(60, 60, 60, 0.1);
+    padding: 1px;
+    border-radius: 2px;
+}
+
+div.auto_sug_itemsCont {
+    z-index: 99;
+    display: none;
+    background-color: rgb(220, 228, 228);
+    border-radius: 5px;
+    font-size: 0.9em;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    font-family: 'Tahoma', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+
+}
+
+/*--------------
+--- Basic Styling for simple clickable row 
+--- search Table
+----------------*/
+div.simpleSearchCont {
+    display: flex;
+    xoverflow-y: auto;
+    xmax-height: 30em;
+    xwidth: 100%;
+}
+
+table.simpleSearchtbl {
+    font-size: 0.8em;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table.simpleSearchtbl th {
+    background-color: rgb(60, 60, 60, 0.2);
+}
+
+table.simpleSearchtbl tr:nth-child(even) {
+    background: #F7F8FA;
+}
+
+table.simpleSearchtbl tr:nth-child(even):hover {
+    outline: thin solid grey;
+}
+
+table.simpleSearchtbl tr:nth-child(odd):hover {
+    outline: thin solid grey;
+}
+
+table.simpleSearchtbl tr:first-child {
+    background-color: rgb(60, 60, 60, 0.2);
+}
+
+table.simpleSearchtbl tr:first-child:hover {
+    outline: thin solid transparent;
+
+}
+
+/* ------------
+-- TAB Menu style
+---------------
+https: //www.w3schools.com/css/css_navbar.asp*/
+
+div.tabbarCont {
+    width: fit-content;
+    align-content: center;
+    display: table;
+    margin-right: 2em;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+ul.tabbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0F2B52;
+    xposition: fixed;
+    xtop: 0;
+    width: fit-content;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    margin-right: 1em;
+    display: table-row;
+
+
+    flex-wrap: wrap;
+    align-items: stretch;
+
+}
+
+ul.tabbar li:last-child {
+    border-top-right-radius: 6px;
+}
+
+ul.tabbar li:first-child {
+    border-top-left-radius: 6px;
+}
+
+ul.tabbar li {
+    display: table-cell;
+    color: white;
+    text-align: center;
+    padding: 0.2em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-decoration: none;
+    border-right: solid 1px rgb(127, 100, 255, 0.5);
+    margin-right: 1px;
+}
+
+ul.tabbar li:last-child {
+    padding-right: 0.2em;
+    border: none;
+}
+
+
+ul.tabbar li:hover {
+    background-color: rgb(0, 0, 255, 0.2);
+    border: dimgray 1px solid;
+}
+
+/*
+div.tabbar li:hover:not(.active) {
+    background-color: #111;
+}*/
+
+ul.tabbar li.active {
+    background-color: rgba(165, 165, 202, 0.3);
+}
+
+ul.tabbar li.active:hover {
+    background-color: rgb(0, 0, 255, 0.4);
+    border: dimgray 1px solid;
+}
+
+ul.tabbar li span.symbol {
+    padding-right: 0.5em;
+}
+
+ul.subtab li:last-child {
+    border-top-right-radius: 0px;
+}
+
+ul.subtab li:first-child {
+    border-top-left-radius: 0px;
+}
+
+ul.subtab {
+    border-radius: 0px;
+    width: fit-content;
+    display: table-row;
+}
+
+ul.subtab li {
+    background-color: rgba(165, 165, 202, 0.3);
+    display: table-cell;
+    border-radius: 0px;
+}
+
+div.tabContent {
+    xdisplay: table-row;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: self;
+    margin-bottom: 2em;
+    margin-right: 2em;
+    xbox-shadow: 5px 10px #888888;
+}

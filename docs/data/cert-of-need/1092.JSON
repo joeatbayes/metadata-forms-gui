@@ -1,0 +1,37 @@
+{
+    "acknowledgement_date": "4/10/2000", 
+    "application": {
+        "received_date": "3/28/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1092", 
+    "current_operator": {
+        "name": "Nassau County Nassau County Medical Center", 
+        "operating_certificate_number": "2950302N"
+    }, 
+    "facility_id": "534", 
+    "facility_name": "A. Holly Patterson Geriatric Center", 
+    "facility_type": "Residential Health Care Facility", 
+    "initial_review_date": "4/5/2000", 
+    "main_site": {
+        "facility_identifier": "534", 
+        "facility_name": "A. Holly Patterson Geriatric Center"
+    }, 
+    "project": {
+        "description": "Convert 20 RHCF beds to 20 AIDS RHCF beds for a total of 40 AIDS RHCF beds", 
+        "status": "Withdrawn", 
+        "status_date": "4/10/2000"
+    }, 
+    "project_site": {
+        "address_line1": "875 Jerusalem Avenue", 
+        "city": "Uniondale", 
+        "county_name": "NASSAU", 
+        "state": "NY", 
+        "zip_code": "11553"
+    }, 
+    "region": "Long Island", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "1000"
+}

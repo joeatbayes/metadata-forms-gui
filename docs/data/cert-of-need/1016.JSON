@@ -1,0 +1,41 @@
+{
+    "acknowledgement_date": "2/11/2000", 
+    "application": {
+        "received_date": "1/18/2000", 
+        "received_month": "1", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1016", 
+    "current_operator": {
+        "address_line1": "946 East 211th Street", 
+        "city": "Bronx", 
+        "name": "Regeis Care Center,LLC", 
+        "operating_certificate_number": "7000356N", 
+        "state": "NY", 
+        "zip_code": "10469"
+    }, 
+    "facility_id": "1242", 
+    "facility_name": "Rofay Nursing Home", 
+    "facility_type": "Residential Health Care Facility", 
+    "initial_review_date": "2/9/2000", 
+    "main_site": {
+        "facility_identifier": "1242", 
+        "facility_name": "Rofay Nursing Home"
+    }, 
+    "project": {
+        "description": "Certify 10 additional residential health care facility beds", 
+        "status": "Withdrawn", 
+        "status_date": "2/11/2000"
+    }, 
+    "project_site": {
+        "address_line1": "946 East 211th Street", 
+        "city": "Bronx", 
+        "county_name": "BRONX", 
+        "state": "NY", 
+        "zip_code": "10469"
+    }, 
+    "region": "New York City", 
+    "review_level": "Full", 
+    "submission_type_s": "Application - Full Review - Construction - Physical", 
+    "total_project_cost": "0"
+}

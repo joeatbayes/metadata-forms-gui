@@ -1,0 +1,40 @@
+{
+    "acknowledgement_date": "2/23/2000", 
+    "actual_construction_completion_date": "7/22/2003", 
+    "application": {
+        "received_date": "2/8/2000", 
+        "received_month": "2", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "5/24/2002", 
+    "assigned_construction_start_date": "5/23/2002", 
+    "con_project_number": "1034", 
+    "current_operator": {
+        "name": "Dialysis Clinic, Inc.", 
+        "operating_certificate_number": "7004207R"
+    }, 
+    "director_action": "Contingent Approval", 
+    "director_action_date": "5/24/2000", 
+    "facility_name": "Staten Island Artificial Kidney Center", 
+    "facility_type": "Diagnostic And Treatment Center", 
+    "initial_review_date": "2/18/2000", 
+    "main_site": {
+        "facility_name": "Staten Island Artificial Kidney Center"
+    }, 
+    "project": {
+        "description": "Certify a 19 station chronic renal dialysis extension clinic at 6518 Fort Hamilton Parkway, Brooklyn", 
+        "status": "Project Complete", 
+        "status_date": "10/27/2003"
+    }, 
+    "project_site": {
+        "address_line1": "6518 Fort Hamilton Parkway", 
+        "city": "Brooklyn", 
+        "county_name": "KINGS", 
+        "state": "NY", 
+        "zip_code": "11209"
+    }, 
+    "region": "New York City", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "1225000"
+}

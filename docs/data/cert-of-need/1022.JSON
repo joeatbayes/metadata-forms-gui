@@ -1,0 +1,40 @@
+{
+    "acknowledgement_date": "2/11/2000", 
+    "actual_construction_completion_date": "10/2/2000", 
+    "application": {
+        "received_date": "1/26/2000", 
+        "received_month": "1", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "7/31/2002", 
+    "assigned_construction_start_date": "7/30/2002", 
+    "con_project_number": "1022", 
+    "current_operator": {
+        "name": "Southside Hospital, Inc.", 
+        "operating_certificate_number": "5154000H"
+    }, 
+    "director_action": "Contingent Approval", 
+    "director_action_date": "7/31/2000", 
+    "facility_name": "Southside Hospital", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "2/9/2000", 
+    "main_site": {
+        "facility_name": "Southside Hospital"
+    }, 
+    "project": {
+        "description": "Certify a physical therapy extension clinic at 45 Terry Road, Smithtown", 
+        "status": "Project Complete", 
+        "status_date": "10/2/2000"
+    }, 
+    "project_site": {
+        "address_line1": "45 Terry Road", 
+        "city": "Smithtown", 
+        "county_name": "SUFFOLK", 
+        "state": "NY", 
+        "zip_code": "11787"
+    }, 
+    "region": "Long Island", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "45000"
+}

@@ -1,0 +1,41 @@
+{
+    "acknowledgement_date": "6/19/2000", 
+    "application": {
+        "received_date": "3/3/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "con_project_number": "1066", 
+    "current_operator": {
+        "address_line1": "125 Worth Street", 
+        "city": "New York", 
+        "name": "New York City Health and Hospital Corporation", 
+        "operating_certificate_number": "7004304N", 
+        "state": "NY", 
+        "zip_code": "10013"
+    }, 
+    "facility_id": "1749", 
+    "facility_name": "Sea View Hospital, Rehabilitation Center and Home", 
+    "facility_type": "Residential Health Care Facility", 
+    "initial_review_date": "3/21/2000", 
+    "main_site": {
+        "facility_identifier": "1749", 
+        "facility_name": "Sea View Hospital, Rehabilitation Center and Home"
+    }, 
+    "project": {
+        "description": "Certify an Alzheimer's Adult Day Health Care Program with a program capacity of 30", 
+        "status": "Withdrawn", 
+        "status_date": "6/19/2000"
+    }, 
+    "project_site": {
+        "address_line1": "460 Brielle Avenue", 
+        "city": "Staten Island", 
+        "county_name": "RICHMOND", 
+        "state": "NY", 
+        "zip_code": "10314"
+    }, 
+    "region": "New York City", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "884000"
+}

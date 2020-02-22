@@ -1,0 +1,42 @@
+{
+    "acknowledgement_date": "4/5/2000", 
+    "actual_construction_completion_date": "8/3/2000", 
+    "application": {
+        "received_date": "3/23/2000", 
+        "received_month": "3", 
+        "received_year": "2000"
+    }, 
+    "assigned_construction_completion_date": "8/11/2002", 
+    "assigned_construction_start_date": "8/10/2002", 
+    "con_project_number": "1090", 
+    "current_operator": {
+        "name": "Geneva General Hospital, Inc.", 
+        "operating_certificate_number": "3402000H"
+    }, 
+    "director_action": "Contingent Approval", 
+    "director_action_date": "8/11/2000", 
+    "facility_id": "671", 
+    "facility_name": "Geneva General Hospital", 
+    "facility_type": "Hospital", 
+    "initial_review_date": "4/4/2000", 
+    "main_site": {
+        "facility_identifier": "671", 
+        "facility_name": "Geneva General Hospital"
+    }, 
+    "project": {
+        "description": "Increase on-site chronic renal dialysis stations from 12 to 13", 
+        "status": "Project Complete", 
+        "status_date": "10/25/2000"
+    }, 
+    "project_site": {
+        "address_line1": "196-198 North Street", 
+        "city": "Geneva", 
+        "county_name": "ONTARIO", 
+        "state": "NY", 
+        "zip_code": "14456"
+    }, 
+    "region": "Finger Lakes", 
+    "review_level": "Admin", 
+    "submission_type_s": "Application - Administrative Review", 
+    "total_project_cost": "1000"
+}
