@@ -18,8 +18,13 @@ function gattr(ele, name) {
     return ele.getAttribute(name);
 }
 
-const safeFiNameExp1 = /[\:\/\\\s\?\@\#\(\)\[\]\<\>\=\|\{\}\%\$\^\+\,\?\"\'\`\~\!"]/gi;
-
+const safeFiNameExp1 = /[\:\/\\\s\?\@\#\(\)\[\]\<\>\=\|\{\}\%\$\^\+\,\?\"\'\`\~\!]/gi;
+const safeFiNameExp2 = /\._/g;
+const safeFiNameExp3 = /_\./g;
+const safeFiNameExp4 = /_\./g;
+const safeFiNameExp5 = /\.\./g
+const safeFiNameExp6 = /__/g;
+const safeFiNameExp7 = /--/g;
 // Modify a given string so it could be used as a safe
 // component of a FiName or URI. It must be synchronized
 // with makeFiNameSafe() in providers_process_raw.py or
@@ -27,12 +32,12 @@ const safeFiNameExp1 = /[\:\/\\\s\?\@\#\(\)\[\]\<\>\=\|\{\}\%\$\^\+\,\?\"\'\`\~\
 function makeSafeFiName(astr) {
     var tout = (astr.toUpperCase().trim()
         .replace(safeFiNameExp1, "_")
-        .replace(/\._/g, "_")
-        .replace(/_\./g, ".")
-        .replace(/_\./g, "_")
-        .replace(/\.\./g, ".")
-        .replace(/__/g, "_")
-        .replace(/--/g, "-")
+        .replace(safeFiNameExp2, "_")
+        .replace(safeFiNameExp3, ".")
+        .replace(safeFiNameExp4, "_")
+        .replace(safeFiNameExp5, ".")
+        .replace(safeFiNameExp6, "_")
+        .replace(safeFiNameExp7, "-")
     );
     return tout;
 }

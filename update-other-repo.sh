@@ -45,6 +45,7 @@ rm -Rf $1/docs/mforms
 
 cp -R http-docs/mforms $1/http-docs
 cp -n docs/favicon.ico $1/docs || true
+cp -n .dockerignore $1
 cp -R data/states.txt $1/data/states.txt
 cp -n update-gitpages.sh $1
 cp  Dockerfile $1
