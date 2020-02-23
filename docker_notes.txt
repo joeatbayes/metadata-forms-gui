@@ -41,6 +41,18 @@ sudo docker save -o mforms.docker.tgz $imgId
 # copied to another server.
 sudo docker save -o t.t 02f9487b14cc 
 
+# Produce docker image and save to a file
+# https://docs.docker.com/engine/reference/commandline/build/
+docker build --output type=tar,dest=out.tar .
+
+# Produce a docker image and save
+# to repository.
+$ docker build -t myname/myapp --build-arg BUILDKIT_INLINE_CACHE=1 .
+$ docker push myname/myapp
+# Then build a new image using the repositories
+# from the published image.
+docker build --cache-from myname/myapp .
+
 
 # Run the docker image replaces the 47d... with image id built locally
 sudo docker run  -p 9831:9831 47d3189040ae
