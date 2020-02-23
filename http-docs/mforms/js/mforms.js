@@ -42,6 +42,13 @@ function makeSafeFiName(astr) {
     return tout;
 }
 
+function mformsAddAjaxSecurityContext(parms, context) {
+    if (parms.req_headers == undefined) {
+        parms.req_headers = {};
+    }
+    parms.req_headers.Authorization = context.gbl.user.accessToken;
+}
+
 //--------------
 //--- INTERACTION / OnClick / EVENTS
 //---------------
@@ -795,9 +802,9 @@ function mformRenderDropdown(widDef, b, context, custParms) {
                 "parser": getNested(opsource, "parse", "TSV").toUpperCase()
             };
             parms.req_headers = {
-                'Content-Type': "application/json",
-                'Authorization': context.gbl.user.accessToken
+                'Content-Type': "application/json"
             };
+            mformsAddAjaxSecurityContext(parms, context);
             context.gbl.filesLoading[req_uri] = true;
             simpleGet(req_uri, mformDropdownOnData, parms);
         }
@@ -1580,8 +1587,8 @@ function requestAutoSuggest(parms) {
     //console.log("L25: mformsGetDef req_uri=", req_uri);
     parms.req_headers = {
         'Content-Type': "application/json",
-        'Authorization': context.gbl.user.accessToken
     };
+    mformsAddAjaxSecurityContext(parms, context);
     parms.req_method = "GET";
     parms.uri = req_uri;
     context.gbl.filesLoading[req_uri] = true;
@@ -1789,6 +1796,7 @@ function mformsClientSideSearchOnData(data, httpObj, parms) {
     }
 }
 
+
 function client_side_search(hwidget, context) {
     var widId = hwidget.id.split("-_")[0];
     var widDef = GTX.widgets[widId];
@@ -1809,6 +1817,10 @@ function client_side_search(hwidget, context) {
         var fldVal = getNested(dataObj, dc, null);
         if ((fldVal != null) && (fldVal.trim() > "")) {
             var safeVal = makeSafeFiName(fldVal);
+            // TODO: If No change from last search then
+            //  should attempt to apply filters.
+
+            // Make the Request for new dat with new Data conext.
             var extParms = {
                 "safe_value": safeVal,
                 "field_value": fldVal.trim()
@@ -1817,15 +1829,16 @@ function client_side_search(hwidget, context) {
             var searchUri = InterpolateStr(startUri, [extParms, widDef, context.dataObj, context, context.form_def, context.gContext]);
             // Now Make the Request for search Results
 
+            // TODO: Add Chaching here to avoid search same thing over.
             var parms = {
                 "context": context,
                 "uri": searchUri,
-                "req_method": "GET"
+                "req_method": "GET",
+                "req_headers": {
+                    "Content-type": "application/json"
+                }
             };
-            parms.req_headers = {
-                'Content-Type': "application/json",
-                'Authorization': context.gbl.user.accessToken
-            };
+            mformsAddAjaxSecurityContext(parms, context);
             context.gbl.filesLoading[startUri] = true;
             simpleGet(searchUri, mformsClientSideSearchOnData, parms);
             break;
@@ -1870,9 +1883,9 @@ function saveFormChanges(hwidget) {
     var req_uri = InterpolateStr(saveSpec.uri, [context, dataObj, formDef]);
     console.log("L263: saveFormChanges req_uri=", req_uri);
     parms.req_headers = {
-        'Content-Type': "application/json",
-        'Authorization': context.gbl.user.accessToken
+        'Content-Type': "application/json"
     };
+    mformsAddAjaxSecurityContext(parms, context);
     parms.req_method = saveSpec.verb;
     parms.context = context;
     parms.form_id = formId;
@@ -2023,9 +2036,9 @@ function mformGetDataObj(form, context) {
     var req_uri = InterpolateStr(form.fetch.uri, [context, form]);
     console.log("L263: mformGetDataObj req_uri=", req_uri);
     parms.req_headers = {
-        'Content-Type': "application/json",
-        'Authorization': context.gbl.user.accessToken
+        'Content-Type': "application/json"
     };
+    mformsAddAjaxSecurityContext(parms, context);
     parms.req_method = form.fetch.method;
     parms.context = context;
     parms.uri = req_uri;
@@ -2097,8 +2110,8 @@ function mformsGetDef(scriptId, context) {
     console.log("L1433: mformsGetDef req_uri=", req_uri);
     parms.req_headers = {
         'Content-Type': "application/json",
-        'Authorization': context.gbl.user.accessToken
     };
+    mformsAddAjaxSecurityContext(parms, context);
     parms.req_method = "GET";
     parms.scriptId = scriptId;
     parms.context = context;
