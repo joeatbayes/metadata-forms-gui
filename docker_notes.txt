@@ -3,7 +3,7 @@
 # pre-copied into the docker image.  This 
 # version of DockerFile was tested on 
 # a Gigbyte mini-pc running Intel clear 
-# Linux version 
+# Linux.
 #
 # cd into mforms checkout directory
 sudo docker build --no-cache .
@@ -95,3 +95,46 @@ docker images -a | grep "pattern" | awk '{print $3}' | xargs docker rmi
 docker run --name=my_container -d -v $(pwd)/tmp:/var/log/nginx -p 8080:80 nginx
 
 # https://docs.docker.com/registry/spec/api/#listing-repositories
+
+
+################
+### Research 
+################
+# https://blog.container-solutions.com/when-is-the-wrong-time-to-use-kubernetes So 
+the lesson of Step One is: Risk reduction, not cost reduction. Again, looking only 
+at hardware costs it is true the cost will typically go up.  It's always better 
+to be in a value creation business rather than a cost-saving one.  If you do 
+Kubernetes before you’re ready, it is literally worse than not doing it at all.
+
+ 
+
+# Example of how minor configuration issue in Kubernetes caused
+# widespread outage even on a Google administered cluster.
+# https://blog.jetstack.io/blog/gke-webhook-outage/
+# https://github.com/kubernetes/kubernetes/issues/54522
+
+# Example Kubernetes in AWS made latency 10X higher 
+# through no fault of Kubernetes. 
+https://srvaroa.github.io/kubernetes/migration/latency/dns/java/aws/microservices 
+/ 2019/10/22/kubernetes-added-a-0-to-my-latency.html 
+Problems often appear just 
+because we put some pieces together in the first place. Two independently sound 
+decisions don’t necessarily make sense together.
+
+
+# Fun Talk of crashing with Istio and Kubernetes
+# Ultimately needed to recreate multiple kubernetes clusters.
+# due to weakness in Istio for production mutli-tenant
+# deployments.
+https://medium.com/@jakubkulich/sailing-with-the-istio-through-the-shallow-water- 
+8ae81668381e   bug in a service discovery of Istio, which doesn’t update IP 
+addresses of headless services with ServiceEntry.  Consequently, your service 
+won’t be able to do so because the proxy sidecar is already shutdown. because 
+Istio is the single point of the failure. Istio made some changes that made Istio 
+undeployable in the multitenant setup.
+
+
+
+
+
+

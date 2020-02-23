@@ -18,6 +18,24 @@ function gattr(ele, name) {
     return ele.getAttribute(name);
 }
 
+const safeFiNameExp1 = /[\:\/\\\s\?\@\#\(\)\[\]\<\>\=\|\{\}\%\$\^\+\,\?\"\'\`\~\!"]/gi;
+
+// Modify a given string so it could be used as a safe
+// component of a FiName or URI. It must be synchronized
+// with makeFiNameSafe() in providers_process_raw.py or
+// some search functions will fail. 
+function makeSafeFiName(astr) {
+    var tout = (astr.toUpperCase().trim()
+        .replace(safeFiNameExp1, "_")
+        .replace(/\._/g, "_")
+        .replace(/_\./g, ".")
+        .replace(/_\./g, "_")
+        .replace(/\.\./g, ".")
+        .replace(/__/g, "_")
+        .replace(/--/g, "-")
+    );
+    return tout;
+}
 
 //--------------
 //--- INTERACTION / OnClick / EVENTS
@@ -1624,7 +1642,7 @@ function mformsSimpleSearchResRowClick(hwidget) {
             localContext[ckey] = intstr;
             // TODO: Add local interpolation here
             if (isString(intstr)) {
-                localContext._safe[ckey] = intstr.trim().toUpperCase();
+                localContext._safe[ckey] = makeSafeFiName(intstr);
             }
         }
 
@@ -1785,7 +1803,7 @@ function client_side_search(hwidget, context) {
         var dc = fld.data_context;
         var fldVal = getNested(dataObj, dc, null);
         if ((fldVal != null) && (fldVal.trim() > "")) {
-            var safeVal = fldVal.trim().toUpperCase();
+            var safeVal = makeSafeFiName(fldVal);
             var extParms = {
                 "safe_value": safeVal,
                 "field_value": fldVal.trim()

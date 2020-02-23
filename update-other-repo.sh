@@ -20,7 +20,8 @@
 #
 # Re-run whenever you want to update your local copy
 # of the mforms libraries.  You would normally do a 
-# git clone or git pull of 
+# git clone or git pull to update your local copy of
+# of mforms first. 
 #
 # WIP UNDER CONSTRUCTION
 set -x
@@ -37,16 +38,19 @@ fi
 mkdir -p $1
 mkdir $1/data
 mkdir $1/docs
-mkdir -p $1/data/forms/examples
 mkdir -p $1/http-docs/demo
 rm -Rf $1/http-docs/mforms
 rm -Rf $1/docs/mforms
 
-cp -R http-docs/mforms $1/http-docs/mforms
-cp -R update-gitpages.sh $1/update-gitpages.sh
-cp -R .gitignore $1/gitignore
-cp -R http-server $1/http-server
-cp -R http-docs/demo/examples $1/http-docs/demo/examples
+
+cp -R http-docs/mforms $1/http-docs
+cp -n docs/favicon.ico $1/docs || true
+cp -R data/states.txt $1/data/states.txt
+cp -n update-gitpages.sh $1
+cp  Dockerfile $1
+cp -R .gitignore $1
+cp -R httpServer $1
+cp -R http-docs/demo/examples $1/http-docs/demo
 chmod 777 *.sh
 
 
