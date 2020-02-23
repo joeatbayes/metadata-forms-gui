@@ -1,0 +1,20 @@
+
+# Build docker Image
+# cd into mforms checkout directory
+sudo docker build --no-cache .
+# Should show build sucessful with an ID we will use in next step
+
+
+# Run the docker image replaces the 47d... with image id built locally
+sudo docker run  -p 9831:9831 47d3189040ae
+
+
+# List Most recent started docker images running along with size
+# to list more images remove the -l option. 
+sudo docker ps -s -l
+
+# Stop the Docker process so we can rebuild and re-launch
+# repalces 5ee.... with container ID from ps.
+sudo docker stop 5ee03799d9da
+
+
