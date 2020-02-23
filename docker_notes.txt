@@ -1,13 +1,13 @@
-
-# Build docker Image
+# Build docker Image to run httpServer
+# with the docs and forms contents 
+# pre-copied into the docker image. 
+#
 # cd into mforms checkout directory
 sudo docker build --no-cache .
 # Should show build sucessful with an ID we will use in next step
 
-
 # Run the docker image replaces the 47d... with image id built locally
 sudo docker run  -p 9831:9831 47d3189040ae
-
 
 # List Most recent started docker images running along with size
 # to list more images remove the -l option. 
