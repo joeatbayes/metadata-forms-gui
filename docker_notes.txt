@@ -35,6 +35,11 @@ sudo docker image ls -a | grep mfroms.*latest
 imgId=$(sudo docker image ls -a | grep mforms.*latest | sed -r 's/[ ]+/ /g' | cut -d ' ' -f 3)
 echo $imgId
 sudo docker run --rm  -p 9831:9831 $imgId
+sudo docker save -o mforms.docker.tgz $imgId
+
+# Save a docker image to a file that could be
+# copied to another server.
+sudo docker save -o t.t 02f9487b14cc 
 
 
 # Run the docker image replaces the 47d... with image id built locally
