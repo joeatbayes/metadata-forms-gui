@@ -28,7 +28,7 @@ Actions & Roadmap for Metadata Forms Engine
 
 * ProvDemo: Ability to render optional or mandatory tag after label.
 
-* When Simple Search Form Filter is active should suppress auto suggest and only apply the filter. 
+* DONE:JOE:2020-02-23: When Simple Search Form Filter is active should suppress auto suggest and only apply the filter. 
 
 * Set up a auto timer to clean up the request by URI based on a expiration policy to avoid crashing heavily used browser. Same things for the form context.
 

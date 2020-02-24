@@ -7,7 +7,7 @@ var GTX = {
     widgets: {}, // list of  widgets already loaded by widget Id
     dataObj: {}, // list of dataObj already loaded by Object Id
     newObIdCnt: 0,
-    activeAugoSug: {}, // List of form contexts rendered to 
+    activeAutoSug: {}, // List of form contexts rendered to 
     formStack: {},
     user: {
         "accessToken": "282872727" // Will need to get a real access token
@@ -124,15 +124,29 @@ function widgetOnKeyDown(hwidget, event) {
     }
 }
 
+function hideAllAutoSug() {
+    var delkey = [];
+    for (var widWithAutoSug in GTX.activeAutoSug) {
+        var asugId = GTX.activeAutoSug[widWithAutoSug];
+        toDiv(asugId, "");
+        hideDiv(asugId);
+        delkey.push(asugId);
+    }
+    for (var tndx in delkey) {
+        var tid = delkey[tndx];
+        delete GTX.activeAutoSug[tid];
+    }
+}
+
 function widgetGainFocus(hwidget) {
     var widId = hwidget.id.split("-_")[0];
     var widDef = GTX.widgets[widId];
     // hide any other widgets that have
     // auto suggest open
     var delkey = [];
-    for (var widWithAutoSug in GTX.activeAugoSug) {
+    for (var widWithAutoSug in GTX.activeAutoSug) {
         if (widWithAutoSug != widId) {
-            var asugId = GTX.activeAugoSug[widWithAutoSug];
+            var asugId = GTX.activeAutoSug[widWithAutoSug];
             toDiv(asugId, "");
             hideDiv(asugId);
             delkey.push(asugId);
@@ -140,9 +154,10 @@ function widgetGainFocus(hwidget) {
     }
     for (var tndx in delkey) {
         var tid = delkey[tndx];
-        delete GTX.activeAugoSug[tid];
+        delete GTX.activeAutoSug[tid];
     }
 }
+
 
 
 function mformValidateFieldValue(context, dataObj, widDef, hwidget, fldVal) {
@@ -1627,7 +1642,7 @@ function requestAutoSuggest(parms) {
     parms.req_method = "GET";
     parms.uri = req_uri;
     context.gbl.filesLoading[req_uri] = true;
-    context.gbl.activeAugoSug[parms.widId] = parms.id;
+    context.gbl.activeAutoSug[parms.widId] = parms.id;
     simpleGet(req_uri, mformsAutoSuggestOnData, parms);
 }
 
@@ -1698,6 +1713,7 @@ function mformsSimpleSearchResRowClick(hwidget) {
         var formUri = InterpolateStr(targForm, interpArr);
 
         display_form(targDiv, formUri, localContext, context.gbl);
+
 
         //alert("TODO: display_form data object uri=" + turi + " for " + JSON.stringify(dataRow));
     }
@@ -1828,6 +1844,7 @@ function mformsClientSideSearchOnData(data, httpObj, parms) {
             }
             b.toDiv(targetDiv);
             showDiv(targetDiv);
+            setTimeout(hideAllAutoSug, 25);
         } catch (err) {
             console.log("error parsing and rendering=", err, " data=", data);
         }
@@ -1941,6 +1958,7 @@ function client_side_search(hwidget, context) {
                 }
                 b.toDiv(targetDiv);
                 showDiv(targetDiv);
+                setTimeout(hideAllAutoSug, 25);
                 break;
             } else {
                 // Make the Request for new dat with new Data conext.
