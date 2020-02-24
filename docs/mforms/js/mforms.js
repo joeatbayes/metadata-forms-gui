@@ -18,7 +18,49 @@ function gattr(ele, name) {
     return ele.getAttribute(name);
 }
 
+const safeFiNameExp1 = /[\:\/\\\s\?\@\#\(\)\[\]\<\>\=\|\{\}\%\$\^\+\,\?\"\'\`\~\!]/gi;
+const safeFiNameExp2 = /\._/g;
+const safeFiNameExp3 = /_\./g;
+const safeFiNameExp4 = /_\./g;
+const safeFiNameExp5 = /\.\./g
+const safeFiNameExp6 = /__/g;
+const safeFiNameExp7 = /--/g;
+// Modify a given string so it could be used as a safe
+// component of a FiName or URI. It must be synchronized
+// with makeFiNameSafe() in providers_process_raw.py or
+// some search functions will fail. 
+function makeSafeFiName(astr) {
+    var tout = (astr.toUpperCase().trim()
+        .replace(safeFiNameExp1, "_")
+        .replace(safeFiNameExp2, "_")
+        .replace(safeFiNameExp3, ".")
+        .replace(safeFiNameExp4, "_")
+        .replace(safeFiNameExp5, ".")
+        .replace(safeFiNameExp6, "_")
+        .replace(safeFiNameExp7, "-")
+    );
+    return tout;
+}
 
+function mformsAddAjaxSecurityContext(parms, context) {
+    if (parms.req_headers == undefined) {
+        parms.req_headers = {};
+    }
+    parms.req_headers.Authorization = context.gbl.user.accessToken;
+}
+
+// Cache data with a key alternative to the URI and cache 
+// it at the context specified rather than as a gbl.  Intended
+// to allow caching by widget ID within a single form.
+function cacheQueryRes(context, key, data) {
+    if (context.queries == undefined) {
+        context.queries = {};
+    }
+    context.queries[key] = {
+        "time": curr_time(),
+        "data": data
+    };
+}
 //--------------
 //--- INTERACTION / OnClick / EVENTS
 //---------------
@@ -65,9 +107,21 @@ function widgetLooseFocus(hwidget) {
     // Add some logic to cleanup if needed.
 
 
+
     // Note: Can not put auto suggest hide
     // here because text box  loose focus when 
     // selecting from auto suggest.
+}
+
+function widgetOnKeyDown(hwidget, event) {
+    var keyCode = event.keyCode;
+    if (keyCode == 27) {
+        var widId = hwidget.id.split("-_")[0];
+        //var widDef = GTX.widgets[widId];
+        var asugId = widId + "sugCont";
+        toDiv(asugId, "");
+        hideDiv(asugId);
+    }
 }
 
 function widgetGainFocus(hwidget) {
@@ -734,7 +788,9 @@ function mformDropdownOnData(data, httpObj, parms) {
                     parms.uri);
                 return;
             }
-            context.gbl.filesLoaded[parms.uri] = pdata;
+
+            mformsCacheAjaxData(parms, pdata);
+
             custParms.send_to_div = true; // will send data direct to div instead of part of larger stream.
             custParms.skip_container = true; // will place data into previously rendered container
             b = new String_builder();
@@ -759,7 +815,7 @@ function mformRenderDropdown(widDef, b, context, custParms) {
         // Fetch the List of Options from file on server or service.
         if (context.gbl.filesLoaded[req_uri] != undefined) {
             // data is already cached from prior call
-            options = context.gbl.filesLoaded[req_uri];
+            options = context.gbl.filesLoaded[req_uri].data;
         } else {
             // We are not already trying to load and it is not already
             // loaded so we need to request it.
@@ -772,9 +828,9 @@ function mformRenderDropdown(widDef, b, context, custParms) {
                 "parser": getNested(opsource, "parse", "TSV").toUpperCase()
             };
             parms.req_headers = {
-                'Content-Type': "application/json",
-                'Authorization': context.gbl.user.accessToken
+                'Content-Type': "application/json"
             };
+            mformsAddAjaxSecurityContext(parms, context);
             context.gbl.filesLoading[req_uri] = true;
             simpleGet(req_uri, mformDropdownOnData, parms);
         }
@@ -791,7 +847,7 @@ function mformRenderDropdown(widDef, b, context, custParms) {
     //widAttr["-webkit-appearance"] = "none";
     b.start("select", widAttr);
 
-    var matchOptVal = null;
+    var matchOptVal = null; // set to matched option when match is found
     var dataPath = makeDataContext(widDef, context, custParms);
     var dataVal = getDataValue(context.dataObj, widDef, context, custParms);
     var opt = null;
@@ -827,7 +883,8 @@ function mformRenderDropdown(widDef, b, context, custParms) {
         //  where every selected value is active.
         if (opt.value == matchOptVal) {
             optattr.selected = true;
-        } else if ((matchOptVal == false) && ("default" in opt) && (opt.default == true)) {
+        } else if ((matchOptVal == null) && ("default" in opt) && (opt.default == true)) {
+            // Not matching option was found so use the default
             optattr.selected = true;
         }
         b.make("option", optattr, opt.label);
@@ -889,6 +946,7 @@ function mformsRenderTextWidget(widDef, b, context, custParms) {
     }
     widAttr.onblur = "widgetLooseFocus(this);";
     widAttr.onfocus = "widgetGainFocus(this);";
+    widAttr.onkeydown = "widgetOnKeyDown(this, event);";
 
     var makeEleName = "input";
     if (widDef.type == "date") {
@@ -1483,7 +1541,13 @@ function autoSugClicked(hwidget) {
     toDiv(targetDiv, "");
     hideDiv(targetDiv);
     if (form.onchange != undefined) {
-        client_side_search(hwidget, context);
+        // Call the named funtion if we can find it
+        // in defined as a globally available function
+        var funName = form.onchange.function;
+        var funPtr = window[funName];
+        if (funPtr != undefined) {
+            funPtr(hwidget, context);
+        }
     }
     refreshShowDataObj(context);
 }
@@ -1512,6 +1576,7 @@ function mformsAutoSuggestOnData(data, httpObj, parms) {
         var pdata = null;
         try {
             //pdata = tsvParse(data);
+            mformsCacheAjaxData(parms, data);
             var sug = widDef.suggest;
             var b = new String_builder();
             var rows = data.split("\n");
@@ -1557,8 +1622,8 @@ function requestAutoSuggest(parms) {
     //console.log("L25: mformsGetDef req_uri=", req_uri);
     parms.req_headers = {
         'Content-Type': "application/json",
-        'Authorization': context.gbl.user.accessToken
     };
+    mformsAddAjaxSecurityContext(parms, context);
     parms.req_method = "GET";
     parms.uri = req_uri;
     context.gbl.filesLoading[req_uri] = true;
@@ -1586,7 +1651,7 @@ function mformsSimpleSearchResRowClick(hwidget) {
     var dataContext = widDef.data_context;
     var dataContextOvr = gattr(hwidget, "data_context");
     var lastRes = context.queries[widId];
-    var dataRow = lastRes[rowNum];
+    var dataRow = lastRes.data[rowNum];
     if (dataRow == undefined) {
         return;
     }
@@ -1624,7 +1689,7 @@ function mformsSimpleSearchResRowClick(hwidget) {
             localContext[ckey] = intstr;
             // TODO: Add local interpolation here
             if (isString(intstr)) {
-                localContext._safe[ckey] = intstr.trim().toUpperCase();
+                localContext._safe[ckey] = makeSafeFiName(intstr);
             }
         }
 
@@ -1657,6 +1722,8 @@ function mformsSimpleSearchRes(widDef, b, context, custParms) {
     var frow = searchRes[0];
     var fname = null;
     var rowndx = null;
+    var onch = context.form.onchange;
+    searchRes = client_side_search_apply_filter(onch, context, searchRes);
 
     // Generate the table header
 
@@ -1708,6 +1775,8 @@ function mformsSimpleSearchRes(widDef, b, context, custParms) {
     //b.finish("div");
 }
 
+
+
 function mformsClientSideSearchOnData(data, httpObj, parms) {
     var context = parms.context;
     var form = context.form;
@@ -1744,11 +1813,11 @@ function mformsClientSideSearchOnData(data, httpObj, parms) {
             var custParms = {
                 "searchRes": parsed
             };
-            // Save the parsed data in this context
-            // by the widgetId it is rendered to so we
-            // can it back up when the user clicks.
-            context.queries[targetWidId] = parsed;
-
+            // Save the parsed data in this context by the req_uri
+            // so we can reload the parsed result to use latter 
+            // when we needed it. 
+            cacheQueryRes(context, targetWidId, parsed);
+            mformsCacheAjaxData(parms, parsed);
             // Now Lookup the widget to do the rendering
             var targWid = context.gbl.widgets[targetWidId];
             if (targWid == undefined) {
@@ -1766,6 +1835,51 @@ function mformsClientSideSearchOnData(data, httpObj, parms) {
     }
 }
 
+// Filter rows from data that do not match the 
+function client_side_search_apply_filter(spec, context, data) {
+    //var gbl = context.gbl;
+    //var formId = context.form_id;
+    //var dataObjId = context.dataObjId;
+    var dataObj = context.dataObj;
+    //var form = context.form;
+    //var indexes = spec.indexes;
+    var filters = spec.filters;
+    //var cscache = context.client_side_cache;
+    var tout = [];
+    for (var rowndx in data) {
+        var keepFlg = true;
+        var arow = data[rowndx];
+        for (var fpos in filters) {
+            var filt = filters[fpos];
+            var form_context = filt.field.form_context;
+            var res_context = filt.field.res_context;
+            if ((res_context == undefined) || (form_context == undefined)) {
+                console.log("ERROR form_context and res_context must be defined filt=", filt, "spec=", spec);
+                return;
+            }
+
+            var formVal = getNested(dataObj, form_context, "").trim().toUpperCase();
+            if (formVal < " ") {
+                continue;
+            }
+            var rowVal = getNested(arow, res_context, null);
+            if (rowVal == null) {
+                keepFlg = false;
+                break;
+            }
+            rowVal = rowVal.trim().toUpperCase();
+            if ((rowVal.startsWith(formVal)) == false) {
+                keepFlg = false;
+                break;
+            }
+        } // for filter
+        if (keepFlg == true) {
+            tout.push(arow);
+        }
+    } // for row
+    return tout;
+} // func()
+
 function client_side_search(hwidget, context) {
     var widId = hwidget.id.split("-_")[0];
     var widDef = GTX.widgets[widId];
@@ -1776,6 +1890,19 @@ function client_side_search(hwidget, context) {
     var onch = form.onchange;
     var indexes = onch.indexes;
     var filters = onch.filters;
+    var gbl = context.gbl;
+    if (context.client_side_cache == undefined) {
+        context.client_side_cache = {
+            "last": {
+                "context": "",
+                "val": "",
+                "result": ""
+            },
+            "cached": {}
+        };
+    }
+    var cscache = context.client_side_cache;
+
     if (indexes == undefined) {
         console.log("client_side_search no indexes defined");
         return;
@@ -1785,30 +1912,56 @@ function client_side_search(hwidget, context) {
         var dc = fld.data_context;
         var fldVal = getNested(dataObj, dc, null);
         if ((fldVal != null) && (fldVal.trim() > "")) {
-            var safeVal = fldVal.trim().toUpperCase();
+            // Found the first Value in named indexes that is 
+            // not empty so we either run a new search or apply
+            // a client side filter. 
+            var safeVal = makeSafeFiName(fldVal);
             var extParms = {
                 "safe_value": safeVal,
                 "field_value": fldVal.trim()
             };
             var startUri = fld.uri;
+            // Compute Query Early because want to use the URI for caching.
             var searchUri = InterpolateStr(startUri, [extParms, widDef, context.dataObj, context, context.form_def, context.gContext]);
-            // Now Make the Request for search Results
-
-            var parms = {
-                "context": context,
-                "uri": searchUri,
-                "req_method": "GET"
-            };
-            parms.req_headers = {
-                'Content-Type': "application/json",
-                'Authorization': context.gbl.user.accessToken
-            };
-            context.gbl.filesLoading[startUri] = true;
-            simpleGet(searchUri, mformsClientSideSearchOnData, parms);
-            break;
-        }
-    }
-}
+            // TODO: Detect a Search Result that is already loaded 
+            // And simply call the render function. 
+            if (searchUri in gbl.filesLoaded) {
+                var b = new String_builder();
+                var targetDiv = onch.target_div;
+                var targetWidId = onch.target_widget;
+                var targWid = gbl.widgets[targetWidId];
+                var custParms = {
+                    "searchRes": gbl.filesLoaded[searchUri].data
+                };
+                if (targWid == undefined) {
+                    b.b("L1909: Could not find widget " + targetWidId);
+                } else {
+                    var rendFunc = widgRenderFuncs[targWid.type];
+                    rendFunc(targWid, b, context, custParms);
+                }
+                b.toDiv(targetDiv);
+                showDiv(targetDiv);
+                break;
+            } else {
+                // Make the Request for new dat with new Data conext.
+                // Now Make the Request for search Results
+                // TODO: Add Chaching here to avoid search same thing over.
+                var parms = {
+                    "context": context,
+                    "uri": searchUri,
+                    "req_method": "GET",
+                    "req_headers": {
+                        "Content-type": "application/json"
+                    }
+                };
+                mformsAddAjaxSecurityContext(parms, context);
+                context.gbl.filesLoading[startUri] = true;
+                simpleGet(searchUri, mformsClientSideSearchOnData, parms);
+                break;
+            } // make AJAX
+        } // fld_pos 
+    } // for ipos in indexes
+} // func
 
 //-------------
 //-- Data Save & Retrieval Funcations
@@ -1847,9 +2000,9 @@ function saveFormChanges(hwidget) {
     var req_uri = InterpolateStr(saveSpec.uri, [context, dataObj, formDef]);
     console.log("L263: saveFormChanges req_uri=", req_uri);
     parms.req_headers = {
-        'Content-Type': "application/json",
-        'Authorization': context.gbl.user.accessToken
+        'Content-Type': "application/json"
     };
+    mformsAddAjaxSecurityContext(parms, context);
     parms.req_method = saveSpec.verb;
     parms.context = context;
     parms.form_id = formId;
@@ -1948,6 +2101,18 @@ function mformSetFormContext(form, context) {
 //-- mforms AJAX support for fetching Data Objects
 //------------------------
 
+function mformsCacheAjaxData(parms, data) {
+    if (parms.context == undefined) {
+        return;
+    }
+    var context = parms.context;
+    var gbl = context.gbl;
+
+    gbl.filesLoaded[parms.uri] = {
+        "time": curr_time(),
+        "data": data
+    };
+}
 
 // AJAX Event handler to receive data objects requested
 // by the form.   Once data has arrived will also 
@@ -1976,7 +2141,7 @@ function mformGetDataObjOnData(data, httpObj, parms) {
         /// PUT Proper Processing HERE
         gtx.dataObj[objId] = pdata;
         context.dataObj = pdata;
-        context.gbl.filesLoaded[parms.uri] = pdata;
+        mformsCacheAjaxData(parms, pdata);
         console.log(" parsed dataObj=", pdata, " context=", context);
         mformsRenderForm(context.form, context);
         refreshShowDataObj(context);
@@ -2000,9 +2165,9 @@ function mformGetDataObj(form, context) {
     var req_uri = InterpolateStr(form.fetch.uri, [context, form]);
     console.log("L263: mformGetDataObj req_uri=", req_uri);
     parms.req_headers = {
-        'Content-Type': "application/json",
-        'Authorization': context.gbl.user.accessToken
+        'Content-Type': "application/json"
     };
+    mformsAddAjaxSecurityContext(parms, context);
     parms.req_method = form.fetch.method;
     parms.context = context;
     parms.uri = req_uri;
@@ -2061,7 +2226,7 @@ function mformsGetDefOnData(data, httpObj, parms) {
         //console.log("L1420: mformsGetDefOnData get data=", data, " parms=", parms);
         var pdata = mformsParseMeta(data);
         //console.log("L1422 parsed form data=", pdata, " context=", parms.context);
-        parms.context.gbl.filesLoaded[parms.uri] = pdata;
+        mformsCacheAjaxData(parms, pdata);
         mformsProcessFormSpec(pdata, parms.context);
     }
 }
@@ -2074,8 +2239,8 @@ function mformsGetDef(scriptId, context) {
     console.log("L1433: mformsGetDef req_uri=", req_uri);
     parms.req_headers = {
         'Content-Type': "application/json",
-        'Authorization': context.gbl.user.accessToken
     };
+    mformsAddAjaxSecurityContext(parms, context);
     parms.req_method = "GET";
     parms.scriptId = scriptId;
     parms.context = context;

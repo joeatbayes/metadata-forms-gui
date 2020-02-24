@@ -128,7 +128,7 @@ select.input_field,
 fieldset.hor_radio,
 fieldset.vert_radio,
 fieldset.radio {
-    xdisplay: inline-block;
+    display: inline-block;
     border-radius: 4px;
     border-color: #767C81;
     border-style: solid;
