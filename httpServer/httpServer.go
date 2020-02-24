@@ -1,4 +1,5 @@
 package main
+
 //"encoding/json"
 
 import (
@@ -12,6 +13,26 @@ import (
 	"os/exec"
 	"strings"
 )
+
+// FileExists reports whether the named file exists as a boolean
+func FileExists(name string) bool {
+	if fi, err := os.Stat(name); err == nil {
+		if fi.Mode().IsRegular() {
+			return true
+		}
+	}
+	return false
+}
+
+// DirExists reports whether the dir exists as a boolean
+func DirExists(name string) bool {
+	if fi, err := os.Stat(name); err == nil {
+		if fi.Mode().IsDir() {
+			return true
+		}
+	}
+	return false
+}
 
 /* Simple handler to demonstrate responding to
 a posted form.   Can be accessed via:
@@ -216,9 +237,17 @@ func main() {
 	http.Handle("/", http.FileServer(http.Dir("../http-docs")))
 	http.Handle("/data/", http.StripPrefix("/data/", http.FileServer(http.Dir("../data"))))
 	http.Handle("/data/dental/provider/autosug/", http.StripPrefix("/data/dental/provider/autosug/", http.FileServer(http.Dir("../docs/data/dental/provider/autosug"))))
-    http.Handle("/data/dental/provider/index/", http.StripPrefix("/data/dental/provider/index/", http.FileServer(http.Dir("../docs/data/dental/provider/index"))))
-    http.Handle("/data/dental/provider/recs/", http.StripPrefix("/data/dental/provider/recs/", http.FileServer(http.Dir("../docs/data/dental/provider/recs"))))
+	http.Handle("/data/dental/provider/index/", http.StripPrefix("/data/dental/provider/index/", http.FileServer(http.Dir("../docs/data/dental/provider/index"))))
+	http.Handle("/data/dental/provider/recs/", http.StripPrefix("/data/dental/provider/recs/", http.FileServer(http.Dir("../docs/data/dental/provider/recs"))))
 
+	// Allow http server to server the common mforms library from the
+	// mforms/http-docs directory rather than mforms-provider or other
+	// client while under development. This minimimizes the need to run
+	// update-other-repo.sh and update-gitpages.sh until a feature has
+	// been fully tested.
+	if FileExists("../../mforms/http-docs/mforms/js/mforms.js") {
+		http.Handle("/mforms/", http.StripPrefix("/mforms/", http.FileServer(http.Dir("../../mforms/http-docs/mforms"))))
+	}
 	// When path ends with "/" it is treated as a tree root
 	// which allos the handler to pick up the path and any
 	// sub paths such as /ping/apple.

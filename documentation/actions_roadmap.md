@@ -6,21 +6,13 @@ Actions & Roadmap for Metadata Forms Engine
 
 * Languages & Accommodations on provider detail page should be Multi-select.  Also should default to unset if no matches are found and no default specified in form spec.
 
+* Support Checkbox Widget
+
 * Credentialing / Educations tab.
 
 * Provider detail Missing some fields such as  Middle Name, Prefix, Suffix, SSN, Type1 NPI Numbers, Ethnicity, DOB, Degrees.
 
-* DONE:JOE:2020-02-17: Provider Detail When languages group is added as a group formatting causes improper second column. Fixed: When No Fieldset was specified was getting one extra /div. in render group.
-
 * Prevent Lookup, formload and autosuggest  from being fired twice because the on-change and on-update are both hitting autosuggest.
-
-* DONE:2020-02-17:JOE: ProvDemo: Allow tables to be rendered with a series of DIV instead of a table while retaining custom array.  this can allow wrapping of columns which is not possible with normal table. 
-
-* DONE:2020-02-23JOE:  ProvDemo: Search multi-word tokens are failing in search due to escaping that is slightly different.  Need to duplicate exact functionality from the python make safe function.
-
-* DONE:2020-02-17:JOE: ProvDemo: Option to render Table as a set of nested DIV rather than the Table Syntax
-
-* DONE:2020-02-17: ProvDemo: Move the Collapse Expand Icon inside the field group label. 
 
 * ProvDemo: Add Status field at the bottom of Group and at bottom of Table.
 
@@ -36,17 +28,15 @@ Actions & Roadmap for Metadata Forms Engine
 
 * ProvDemo: Ability to render optional or mandatory tag after label.
 
-* DONE:JOE:2020-02-16: ProvDemo:  State widget should be rendered from list of states returned from service
+* When Simple Search Form Filter is active should suppress auto suggest and only apply the filter. 
 
-* DONE:JOE:2020-02-23: Modify all Ajax calls made by mforms to use single method to function mformsAddAjaxSecurityContext(parms, context) to add the security context.  This is intended to make it easy to make the calls OIDC compliant.
+* Set up a auto timer to clean up the request by URI based on a expiration policy to avoid crashing heavily used browser. Same things for the form context.
 
 * Client side search needs to render headers from widget spec.
 
 * Client side search needs to render columns based on a named widget spec.
 
 * Client side search needs option to change heading repeat spec.
-
-* Client side search needs to filter records based on other fields that are filled in.
 
 * ProvDemo: Status in on Licence status screen must allow specification of a class to show in green when active.
 
@@ -144,8 +134,6 @@ Actions & Roadmap for Metadata Forms Engine
 
 * ProvDemo:  Fix reset button so on same page with Search.
 
-* DONE:JOE:2020-02-09: ProvDemo:  Python to convert sample dentists into searchable format with simple handler to do the search but preferably make it work entirely client side.
-
 * ProvDemo:  Ability to string Dialog Pop over forms into a sequence.
 
 * ProvDemo:  Popover: Add New Provider Screens 10 to 12
@@ -157,8 +145,6 @@ Actions & Roadmap for Metadata Forms Engine
 * ProvDemo:  Need a non editing text box to display long messages. 
 
 * Modify Date parser to accept alternative input form and reform to desired format to support date picker.
-
-* Support Checkbox Widget
 
 * ProvDemo: ability to display a large text box area above main widgets in the form. Screen 13:
 
@@ -176,8 +162,6 @@ Actions & Roadmap for Metadata Forms Engine
 
 * Make the Tab order on android work correctly for Text Area and radio forms.   If the user is advancing with TAB through a form we do not want to break the flow and make them close the android keyboard to advance past these fields. 
 
-* DONE:JOE:2020-02-16: ProvDemo: Implement the render dropdown form service call. ProvDemo: Demonstrate render dropdown but wait to get contents until field gains context
-
 * ProvDemo: TabBar: Ability to show TABS that have incomplete work before record can be saved to server.
 
 * SaveData: Display indicator that form when  dirty and unsaved when a field changes from original data. Save Data: Need to updates field_value_valid flag  at field level so we can rapidly determine if any required fields contain invalid values.  Save button should be disabled when invalid fields are present.  SaveData: Disable Save Button until the Form is Dirty.
@@ -194,7 +178,7 @@ Actions & Roadmap for Metadata Forms Engine
 
 * Add support to allow multiple forms to be defined in a single file and only the one marked master.
 
-* DONE:2020-02-17: EditTable: Allow Removal of AddRow button.  Also allow the label and style to be shown for the AddRow.  Allow HTML symbol prefix or suffix  image and allow leading image icon. 
+* 
 
 * **OIDC for existing Session** - Implement basic support for OIDC to allow real data access.   This only needs  to run once a OIDC session has been established they can use login from other screens provided it is in the same domain.  Otherwise will need login screens.
 
@@ -378,17 +362,7 @@ Actions & Roadmap for Metadata Forms Engine
 
 * Support to feed incremental changes back to server so user can switch devices even before they submit using the deep link features. 
 
-* DONE:JOE:2020-02-11: Generic Delimited parser for tab delimited files with headers.  Converts into an array of objects matching the column names in the TSV.
-
-* DONE:JOE:2020-02-15: Switch over to using Flexbox instead of inline-block for field placement.
-
-* DONE:JOE:2020-02-08: Detect portrait mode on phone and change font size or try different font specifications such as 12px to see what shows up most consistently readable across the largest number of devices.
-
-* DONE:JOE:2020-02-15: Add support for tabs across top of page rendering sub forms into tab as they are clicked.
-
-* DONE:JOE:2020-02-13: DEMO: Hide data / JSON view when in  portrait on mobile device. Main Index Page: Suppress the display of JSON from Data Object or reflow move to bottom when page is too narrow
-
-* DONE:JOE:2020-02-13: Add support to change text size when page is displayed on mobile device.
+* 
 
 * Add support for chained forms that display one after another
 
@@ -961,41 +935,108 @@ defaults:
 
 # DONE - COMPLETED ITEMS
 
--------------------------------
+* DONE:2020-02-17: EditTable: Allow Removal of AddRow button.  Also allow the label and style to be shown for the AddRow.  Allow HTML symbol prefix or suffix  image and allow leading image icon. 
+
+* DONE:JOE:2020-02-16: ProvDemo: Implement the render dropdown form service call. ProvDemo: Demonstrate render dropdown but wait to get contents until field gains context
+
+* DONE:JOE:2020-02-09: ProvDemo:  Python to convert sample dentists into searchable format with simple handler to do the search but preferably make it work entirely client side.
+
+* DONE:2020-02-23:JOE: Client side search needs to filter records based on other fields that are filled in.
+
+* DONE:JOE:2020-02-23: Build a basic docker image showing how to host the HTTP server. 
+
+* DONE:JOE:2020-02-16: ProvDemo:  State widget should be rendered from list of states returned from service
+
+* DONE:JOE:2020-02-23: Modify all Ajax calls made by mforms to use single method to function mformsAddAjaxSecurityContext(parms, context) to add the security context.  This is intended to make it easy to make the calls OIDC compliant.
+
+* DONE:JOE:2020-02-17: Provider Detail When languages group is added as a group formatting causes improper second column. Fixed: When No Fieldset was specified was getting one extra /div. in render group.
+
+* DONE:2020-02-17:JOE: ProvDemo: Allow tables to be rendered with a series of DIV instead of a table while retaining custom array.  this can allow wrapping of columns which is not possible with normal table. 
+
+* DONE:2020-02-23JOE:  ProvDemo: Search multi-word tokens are failing in search due to escaping that is slightly different.  Need to duplicate exact functionality from the python make safe function.
+
+* DONE:2020-02-17:JOE: ProvDemo: Option to render Table as a set of nested DIV rather than the Table Syntax
+
+* DONE:2020-02-17: ProvDemo: Move the Collapse Expand Icon inside the field group label. 
+
+* DONE:JOE:2020-02-11: Generic Delimited parser for tab delimited files with headers.  Converts into an array of objects matching the column names in the TSV.
+
+* DONE:JOE:2020-02-15: Switch over to using Flexbox instead of inline-block for field placement.
+
+* DONE:JOE:2020-02-08: Detect portrait mode on phone and change font size or try different font specifications such as 12px to see what shows up most consistently readable across the largest number of devices.
+
+* DONE:JOE:2020-02-15: Add support for tabs across top of page rendering sub forms into tab as they are clicked.
+
+* DONE:JOE:2020-02-13: DEMO: Hide data / JSON view when in  portrait on mobile device. Main Index Page: Suppress the display of JSON from Data Object or reflow move to bottom when page is too narrow
+
+* DONE:JOE:2020-02-13: Add support to change text size when page is displayed on mobile device.
 
 * DONE: JOE:2020-02-14: Readme: Add Tabs and subtabs screen from provider
+
 * DONE:JOE:2020-02-16: ProvDemo: Update Buttons CSS to reflect what is required for the mockup.
+
 * DONE:JOE:2020-02-16: ProvDemo: Implement Special programs Tab. Page 31 - 37.  Note implemented as a simple array rather than the multiple screens they showed.
+
 * DONE:JOE:2020-02-10: Demo: Dental Claim:Create basic ADA For Fields.
+
 * DONE:JOE:2020-02-15:  Editable Table: Add a way to group multiple widgets in a single cell when the table would otherwise be too wide. Note: Done by using a group widget in the table column.
+
 * DONE: JOE:2020-02-10: Ability to specify a class for label independent of class of the widget.
+
 * DONE:JOE:2020-02-11: Text widget when num_dec has been specified should reformat to fit the specification when it looses format.  In reality this should be implemented as a general purpose function that allows a reformat pattern to do this work. 
+
 * DONE:JOE:2020-02-05: ProvDemo: Download and parse public data for Dental providers to drive auto suggest, search and supply basic data for demo.
+
 * DONE: JOE:2020-02-15: Demonstrate ability to  handle multi-level nested forms eg:   Plan to list of clients to single client to list of sub clients to list of contacts to single contact with CRUD Add, Edit, Drop.
+
 * SKIP: Alternative Found: Make a clean way to read a directory of files and return header data to allow rendering a summary table.  EG: If each contact is in a separate file then would want to returns some basic data for each contact to render the initial table prior to the click that drills in to edit each piece of content.
+
 * DONE:JOE:2020-02-13: Allow label Class to override normal generated class for the label.  Demonstrate shrinking label for state to allow better formatting.    This is to allow easier formatting when we want custom behavior out of a subset of labels.
+
 * DONE:JOE:2020-02-15: Done in a different way using cached objects and ability to render child forms in tabs.  Add support to invalidate and remove parent object after edit of child when child views are included in parent fetch.  Or support editing them in place so other forms can properly see the changed fields when sub form edit field is displayed.
+
 * DONE:JOE:2020-01-30: **DEMO** [Configure custom domain](https://help.github.com/en/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site) for github pages site
+
 * DONE: JOE:2020-02-08: Demo: Dental Claim:Form field which Sums other fields on the form.  Even when those fields are not part of table
+
 * DONE:JOE:2020-01-30: Demo: Dental Claim:Feature to set a random / timestamp data object Id after an empty object is loaded. Support rendering blank form when source object can not be located.
+
 * DONE:JOE:2020-01-30: Demo: Dental Claim: Download sample CDT Codes to populate drop down.
+
 * DONE:JOE:2020-02-13: Done as Auto Suggest for provider can be reused for Claim: Demo: Dental Claim: Fast search filter widget to make search by codes easy. AND Filter dropdown list of CDT codes as user types the code.
+
 * DONE:JOE:2020-02-16: DentalClaimDemo: Make the container objects flex-wrap they are not reflowing on browser correctly.
+
 * DONE:JOE:2020-02-15: Validation message is broken in dental claim for tooth system.
+
 * DONE:JOE:2020-02-15: ProvDemo: License:  An editable table where each row is composed of a multi-field block that is not presented in an array.  
+
 * DONE:JOE:2020-02-15: TabBar:  Sub tab bar should remember what tab was open after visiting other major tab button and then returning to sub tab menu.
+
 * DONE:JOE:2020-02-15: tabBar: When child exits should render the next line but only when active.
+
 * DONE:JOE:2020-02-15: tabBar: When tab is selected the children should show.  This may be a display: none, display:block type scenario so each tab can render all children up front.  When a tab is active and specifieds a form or a widget then that widget will be rendered into the div created by the parent div.   Since data could have changed in the display then must re-render child form content at time of display or when tab is activated.
+
 * DONE:JOE:2020-02-14: ProvDemo:  Execute search and render results.    This requires a read only table with alternating rows where the row is clickable or individual sub widgets are render able.  Supports hover over row and scroll box on bottom of row.  Screen-8.  OK so we have a main search area any of city, last_name, first_name changing could trigger a search that can return a list of record. if more than one of them are filled in then we can only do the search on one and filter on the rest or search on all and then merge.   the other fields will be driven based as filters.  If we new from autosug results which one has the smallest # of times then we could use it to get the shortest search results. For easy implementation then simply use the others as filter records.  Apply search set retrieval in this order only use lower priority items to drive initial search higher priority items are empty.  last_name, first_name,  city, specialty.
+
 * DONE:JOE:2020-02-10: Field rendering system Rendering: Describe all common widget types in meta data only
+
 * DONE:JOE:2020-02-10: Rendering: Ability to name widget rendering agents in a table so they can be over-ridden
+
 * DONE:JOE:2020-02-10: support interpolating values from context into URI  specified in the form.
+
 * DONE:JOE:2020-02-10: Agility to differentiate a new record from update in calls to save 
+
 * DONE:JOE:2020-02-10: Support basic filed edit with re-pattern.
+
 * DONEJOE:2020-02-10: For fda sample page remove the right navigation payne and enlarge middle payne when  displaying on anything less than 900 px;
+
 * DONE:JOE:2020-02-09: Auto Suggest values displayed should have _ converted to space for display
+
 * DONE:JOE:2020-02-10: Auto Suggest must hide when the widget looses focus.
+
 * DONE:JOE:2020-02-10: Add auto suggest index for provider zip
+
 * DONE:JOE:2020-02-09: ProvDemo:  Add Auto suggest for NPI, Specialty,  city, state
 
 * DONE: JOE:2020-02-08: Allow a group to be autohid on initial rendering.  Need to support advanced search.
