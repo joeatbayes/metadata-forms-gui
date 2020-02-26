@@ -237,6 +237,12 @@ function mformFieldChanged(hwidget) {
         } else {
             fldVal = "NULL";
         }
+    } else if (widDef.type == "checkbox") {
+        if (hwidget.checked == true) {
+            fldVal = true;
+        } else {
+            fldVal = false;
+        }
     } else {
         // read value like we do as text field.
         fldVal = hwidget.value.trim();
@@ -417,6 +423,7 @@ var widgRenderFuncs = {
     "button": mformsRenderButton,
     "dropdown": mformRenderDropdown,
     "radio": mformRenderRadio,
+    "checkbox": mformsRenderTextWidget,
     "date": mformsRenderTextWidget,
     "table": mformsRenderEditableTable,
     "simple_search_res": mformsSimpleSearchRes,
@@ -870,13 +877,13 @@ function mformRenderDropdown(widDef, b, context, custParms) {
 
     if (dataVal != null) {
         // Find the matching option and default
-        var dataValMatch = dataVal.trim().toLowerCase();
+        var dataValMatch = String(dataVal).trim().toLowerCase();
         // search options to find one that matches the 
         // value. 
         for (optndx in options) {
             opt = options[optndx];
             if ("value" in opt) {
-                var oval = opt.value.trim().toLowerCase();
+                var oval = String(opt.value).trim().toLowerCase();
                 if (oval == dataValMatch) {
                     matchOptVal = opt.value;
                     break;
@@ -970,6 +977,13 @@ function mformsRenderTextWidget(widDef, b, context, custParms) {
     if (widDef.type == "textarea") {
         b.make("textarea", widAttr, widVal);
     } else {
+        if (widDef.type == "checkbox") {
+            if(widAttr.value == "true" || widAttr.value == true) {
+                widAttr.checked = "checked";
+            } else {
+                delete widAttr.checked;
+            }
+        }
         b.make(makeEleName, widAttr);
     }
 
