@@ -2,15 +2,15 @@ Actions & Roadmap for Metadata Forms Engine
 
 # Rank Ordered Feature Work
 
-* A Ability for Left or Navigation to render from same Tab Menu spec with either a change of CSS or change in parameter for Meta DAta.
+* Try a basic Drag and drop to allow quicker construction of basic screens.
 
-* Ability for Left or Right Navigation to render Images where the image render size can be controlled in metadata.
+* DONE:JOE:2020-02-29: A Ability for Left or Navigation to render from same Tab Menu spec with either a change of CSS or change in parameter for Meta DAta.
 
-* Ability for Image to be rendered before or after 
+* DONE:JOE:2020-02-29: Ability for Left or Right Navigation to render Images where the image render size can be controlled in metadata.
 
 * Fix Rendering of Dental Claim CSS seems messed up. 
 
-* Left Nav should Have ability to target content into a Div.  The top nav may be contained inside that body or left nave may be contained inside the left nav.  Either containment strategy should work.
+* DONE:JOE:2020-02-29: Left Nav should Have ability to target content into a Div.  The top nav may be contained inside that body or left nave may be contained inside the left nav.  Either containment strategy should work.
 
 * DONE:Eric: 2020-02-27: Ability for Drop down to support Multi-select 
 
