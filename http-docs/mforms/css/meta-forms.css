@@ -704,9 +704,9 @@ div.leftNavCont {
 
 /* Smartphones (landscape) ----------- */
 @media only screen and (max-width : 680px) {
-    #LeftNavDemo div.leftNavCont {
-        width: 2em;
-        min-width: 2em;
+    div.leftNavCont {
+        width: 3em;
+        min-width: 3em;
         max-width: 3em;
     }
 }

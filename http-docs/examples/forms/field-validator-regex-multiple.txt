@@ -8,8 +8,8 @@
     class: input_field
     valid_pat:
        pattern:
-         -^[0-9]{5}(?:-[0-9]{4})?$
-         -^(([\d]{2} )|(2[abAB] ))*(([\d]{2})|(2[abAB]))$
+         -"^[0-9]{5}(?:-[0-9]{4})?$"
+         -"^(([\d]{2} )|(2[abAB] ))*(([\d]{2})|(2[abAB]))$"
        message : Invalid zipcode try 5 digits or zip plus 4. eg: 84401 or 84401-8178
 
 - form:
