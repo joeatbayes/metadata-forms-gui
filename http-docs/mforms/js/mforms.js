@@ -1844,7 +1844,7 @@ function mformsClientSideSearchOnData(data, httpObj, parms) {
             }
             b.toDiv(targetDiv);
             showDiv(targetDiv);
-            setTimeout(hideAllAutoSug, 25);
+            setTimeout(hideAllAutoSug, 75);
         } catch (err) {
             console.log("error parsing and rendering=", err, " data=", data);
         }
@@ -1958,7 +1958,7 @@ function client_side_search(hwidget, context) {
                 }
                 b.toDiv(targetDiv);
                 showDiv(targetDiv);
-                setTimeout(hideAllAutoSug, 25);
+                setTimeout(hideAllAutoSug, 75);
                 break;
             } else {
                 // Make the Request for new dat with new Data conext.
