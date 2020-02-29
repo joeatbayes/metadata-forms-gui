@@ -1,6 +1,6 @@
 # Areas of Study that will help a person effectively build applications with the Frigate Forms System.
 
-Frigate Forms is designed to make delivering highly interactive [RIA (Rich Internet Applications)](https://www.computerworld.com/article/2551058/rich-internet-applications.html).  It provides  complex forms based systems easy and 10X faster than if they were built using traditional frameworks.   It is also designed to make it possible for people who are not full time programmers to build and customize forms without expensive high engineering talent.    Some basic skills that will make it much easier for people to use the system quickly.
+Frigate Forms is designed to make delivering highly interactive [RIA (Rich Internet Applications)](https://www.computerworld.com/article/2551058/rich-internet-applications.html).  It provides  complex forms based systems easy and 10X faster than if they were built using traditional frameworks.   It is also designed to make it possible for people who are not full time programmers to build and customize forms without expensive dedicated engineering talent.    Some basic skills that will make it much easier for people to use the system quickly.
 
 Our goal is for a well  person to be able to invest less than 5 days of self study and become productive producing new high quality,  highly interactive Web Forms using the Frigate Forms system.       The tutorials below should allow most motivated non-programmers to reach proficiency in a few days even if they do not have a programming background.
 
