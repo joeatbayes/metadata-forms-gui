@@ -237,7 +237,20 @@ function mformFieldChanged(hwidget) {
         } else {
             fldVal = "NULL";
         }
-    } else {
+    } else if (widDef.type == "checkbox") {
+        if (hwidget.checked == true) {
+            fldVal = true;
+        } else {
+            fldVal = false;
+        }
+    } else if (hwidget.multiple == true && widDef.type == "dropdown") {
+        fldVal = []
+        for (var [key, option] of Object.entries(hwidget)){
+            if(option.selected == true) {
+                fldVal.push(option.value);
+            }
+        }
+    }else {
         // read value like we do as text field.
         fldVal = hwidget.value.trim();
     }
@@ -417,6 +430,7 @@ var widgRenderFuncs = {
     "button": mformsRenderButton,
     "dropdown": mformRenderDropdown,
     "radio": mformRenderRadio,
+    "checkbox": mformsRenderTextWidget,
     "date": mformsRenderTextWidget,
     "table": mformsRenderEditableTable,
     "simple_search_res": mformsSimpleSearchRes,
@@ -859,10 +873,13 @@ function mformRenderDropdown(widDef, b, context, custParms) {
     mformCopyAttribs(widDef, widAttr, mformTextFieldCopyAttr);
     copyOverCustParms(widAttr, widDef, custParms);
     delete widAttr.onInput; // We do not need this handler for drop down
+    if(String(widDef.multiple).toLowerCase() == "true" || widDef.multiple == true) {
+        widAttr.multiple="multiple";
+    }
     //widAttr["-webkit-appearance"] = "none";
     b.start("select", widAttr);
 
-    var matchOptVal = null; // set to matched option when match is found
+    var matchOptVal = []; // set to matched option when match is found
     var dataPath = makeDataContext(widDef, context, custParms);
     var dataVal = getDataValue(context.dataObj, widDef, context, custParms);
     var opt = null;
@@ -870,16 +887,19 @@ function mformRenderDropdown(widDef, b, context, custParms) {
 
     if (dataVal != null) {
         // Find the matching option and default
-        var dataValMatch = dataVal.trim().toLowerCase();
+        var dataValMatch = String(dataVal).split(",").map(item => item.trim().toLowerCase());
         // search options to find one that matches the 
         // value. 
         for (optndx in options) {
             opt = options[optndx];
             if ("value" in opt) {
-                var oval = opt.value.trim().toLowerCase();
-                if (oval == dataValMatch) {
-                    matchOptVal = opt.value;
-                    break;
+                var oval = String(opt.value).trim().toLowerCase();
+                if (dataValMatch.includes(oval)) {
+                    matchOptVal.push(opt.value);
+                    dataValMatch.splice(dataValMatch.indexOf(oval), 1);
+                    if(!(Array.isArray(dataValMatch) && dataValMatch.length)){
+                        break;
+                    }
                 }
             }
         }
@@ -896,7 +916,7 @@ function mformRenderDropdown(widDef, b, context, custParms) {
         }
         // TODO: Add Multi-select support here
         //  where every selected value is active.
-        if (opt.value == matchOptVal) {
+        if (matchOptVal.includes(opt.value)) {
             optattr.selected = true;
         } else if ((matchOptVal == null) && ("default" in opt) && (opt.default == true)) {
             // Not matching option was found so use the default
@@ -970,7 +990,14 @@ function mformsRenderTextWidget(widDef, b, context, custParms) {
     if (widDef.type == "textarea") {
         b.make("textarea", widAttr, widVal);
     } else {
-        b.make(makeEleName, widAttr);
+        if (widDef.type == "checkbox") {
+            if(widAttr.value == "true" || widAttr.value == true) {
+                widAttr.checked = "checked";
+            } else {
+                delete widAttr.checked;
+            } 
+        }
+        b.make(makeEleName, widAttr); 
     }
 
     if ("suggest" in widDef) {
