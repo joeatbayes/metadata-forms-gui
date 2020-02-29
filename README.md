@@ -21,11 +21,17 @@ Please file a Issue to request enhancements.  You can also reach me on Linked-in
 ![dental Claim Form](documentation/img/dental-claim-form-1.jpg)
 [Live Version](http://claim.frigateforms.com/)   [metadata source](https://github.com/joeatbayes/dental-claim-demo/blob/master/http-docs/forms/dental-claim.txt)    [html source](https://github.com/joeatbayes/dental-claim-demo/blob/master/http-docs/index.html)
 
+
+
+## Graphical Left Navigation
+
+![sample graphical left nav](documentation/img/sample-left-navigation.jpg)
+
 > ### Simple Form
 
 ![Simple Form](documentation/img/simple-form-demo-1.jpg)
 
-[Live Version](https://frigateforms.com/)  [metadata source](http-docs/demo/examples/forms/simple-form.txt) [html source](http-docs/demo/examples/simple-form.html)
+[Live Version](https://frigateforms.com/)  [metadata source](http-docs/examples/forms/simple-form.txt) [html source](http-docs/examples/simple-form.html)
 
 > ### Simple Form Demonstrating field level Validation
 
@@ -33,7 +39,7 @@ Please file a Issue to request enhancements.  You can also reach me on Linked-in
 
 ![field level validation](documentation/img/sample-failed-regex-validation.jpg)
 
-[metadata source](http-docs/demo/examples/forms/field-validator-regex.txt)
+[metadata source](http-docs/examples/forms/field-validator-regex.txt)
 
 
 
