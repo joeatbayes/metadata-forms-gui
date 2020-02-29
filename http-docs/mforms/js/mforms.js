@@ -245,12 +245,12 @@ function mformFieldChanged(hwidget) {
         }
     } else if (hwidget.multiple == true && widDef.type == "dropdown") {
         fldVal = []
-        for (var [key, option] of Object.entries(hwidget)){
-            if(option.selected == true) {
+        for (var [key, option] of Object.entries(hwidget)) {
+            if (option.selected == true) {
                 fldVal.push(option.value);
             }
         }
-    }else {
+    } else {
         // read value like we do as text field.
         fldVal = hwidget.value.trim();
     }
@@ -873,8 +873,8 @@ function mformRenderDropdown(widDef, b, context, custParms) {
     mformCopyAttribs(widDef, widAttr, mformTextFieldCopyAttr);
     copyOverCustParms(widAttr, widDef, custParms);
     delete widAttr.onInput; // We do not need this handler for drop down
-    if(String(widDef.multiple).toLowerCase() == "true" || widDef.multiple == true) {
-        widAttr.multiple="multiple";
+    if (String(widDef.multiple).toLowerCase() == "true" || widDef.multiple == true) {
+        widAttr.multiple = "multiple";
     }
     //widAttr["-webkit-appearance"] = "none";
     b.start("select", widAttr);
@@ -897,7 +897,7 @@ function mformRenderDropdown(widDef, b, context, custParms) {
                 if (dataValMatch.includes(oval)) {
                     matchOptVal.push(opt.value);
                     dataValMatch.splice(dataValMatch.indexOf(oval), 1);
-                    if(!(Array.isArray(dataValMatch) && dataValMatch.length)){
+                    if (!(Array.isArray(dataValMatch) && dataValMatch.length)) {
                         break;
                     }
                 }
@@ -991,13 +991,13 @@ function mformsRenderTextWidget(widDef, b, context, custParms) {
         b.make("textarea", widAttr, widVal);
     } else {
         if (widDef.type == "checkbox") {
-            if(widAttr.value == "true" || widAttr.value == true) {
+            if (widAttr.value == "true" || widAttr.value == true) {
                 widAttr.checked = "checked";
             } else {
                 delete widAttr.checked;
-            } 
+            }
         }
-        b.make(makeEleName, widAttr); 
+        b.make(makeEleName, widAttr);
     }
 
     if ("suggest" in widDef) {
@@ -1075,8 +1075,9 @@ function mformsRenderTabBar(widDef, b, context, custParms) {
             activeStr = " active";
             widDef.active_tab = activeTab;
         }
+        var tabId = "" + widId + tabndx;
         var tabattr = {
-            "id": "" + widId + tabndx,
+            "id": tabId,
             "tab_num": tabndx,
             "onclick": "mformsActivateTab(this)",
             "form_id": context.form_id,
@@ -1095,6 +1096,13 @@ function mformsRenderTabBar(widDef, b, context, custParms) {
             });
             b.b("&#" + atab.symbol);
             b.finish("span");
+        }
+        if ("icon" in atab) {
+            b.make("img", {
+                "class": "icon",
+                "src": atab.icon,
+                "id": tabId + "Icon"
+            });
         }
         b.b(atab.label);
         b.finish("li");
@@ -1511,17 +1519,18 @@ function mformsRenderForm(form, context) {
     context.form_id = form.id;
     mformSetFormContext(form, context);
 
-    if (form.label != undefined) {
+    b.start("div", {
+        "id": form.id + "Cont",
+        "class": form.class
+    });
+
+    if ((form.label != undefined) && (form.label > " ")) {
         b.make("h3", {
             "id": form.id + "Head",
             class: form.class + "Head"
         }, form.label);
     }
 
-    b.start("div", {
-        "id": form.id + "Cont",
-        "class": form.class
-    });
 
     var formAttr = {
         "id": form.id
@@ -2246,7 +2255,7 @@ function mformsProcessFormSpec(data, context) {
             // we have the form spec and fetch it if not and
             // then render it.  If it is already loaded then
             // simply render the form for that data Object.
-            if ((context.dataObjId in gtx.dataObj) || (context.skip_fetch == true)) {
+            if ((context.dataObjId in gtx.dataObj) || (context.skip_fetch == true) || (form.fetch == undefined) || (form.fetch.uri == undefined)) {
                 // Data Object is already loaded so skip to render
                 context.dataObj = gtx.dataObj[context.dataObjId];
                 mformsRenderForm(context.form, context);

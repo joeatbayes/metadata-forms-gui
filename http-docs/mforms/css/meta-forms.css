@@ -9,8 +9,8 @@
     border: none;
     overflow-y: auto;
     overflow-x: hidden;
-    display: flex;
-    flex-wrap: wrap;
+    display: table;
+    xflex-wrap: wrap;
 }
 
 .inputFrmHead {
@@ -20,7 +20,7 @@
     margin: 0px;
     color: #424242;
     padding: 0.1em;
-    display: block;
+    display: table-row;
 }
 
 input,
@@ -682,12 +682,56 @@ ul.subtab li {
 }
 
 div.tabContent {
-    xdisplay: table-row;
-    display: flex;
+    display: table-cell;
+    xdisplay: flex;
     flex-wrap: wrap;
     width: 100%;
     align-items: self;
     margin-bottom: 2em;
     margin-right: 2em;
     xbox-shadow: 5px 10px #888888;
+
+}
+
+div.leftNavCont {
+    display: table-cell;
+    max-width: 8em;
+    text-align: center;
+    vertical-align: top;
+    overflow-x: hidden;
+    color: whitesmoke;
+}
+
+ul.leftNav {
+    display: block;
+    background-color: #1f497d;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.leftNav li:hover {
+    background-color: rgb(0, 0, 255, 0.2);
+    border: dimgray 1px solid;
+}
+
+ul.leftNav li.active:hover {
+    background-color: rgb(0, 0, 255, 0.4);
+    border: dimgray 1px solid;
+}
+
+ul.leftNav li {
+    display: block;
+    padding-bottom: 0.3em;
+}
+
+ul.leftNav img.icon {
+    display: block;
+    width: 98%;
+}
+
+#LeftNavDemo {
+    width: 100%;
+    text-align: left;
+    vertical-align: left;
 }

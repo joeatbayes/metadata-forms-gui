@@ -168,101 +168,121 @@ The form specification metadata is saved in a text file on the server and retrie
 
 # Basic Form Usage
 
-* ## Define a Widget
+## Define a Widget
 
-  * ### Hooking widgets to the Data Model
+* ### Hooking widgets to the Data Model
 
-* 
 
-* ## Define a form using the Widget
 
-* Define Groups of Widget
+## Define a form using the Widget
 
-* D
+Define Groups of Widget
 
-* ## Display the form
+D
 
-* ## How Metadata relates to Generated HTML
+## Display the form
 
-  * No matter how it is done we ultimately require markup to control how things are rendered in the web browser.    The Metadata forms system reads the metadata generates markup and injects it into a DIV in the browser to render the form.   The ultimate look and feel of the form is controlled by CSS.    We include some default CSS that can easily be customized or overridden to produce nearly any look and feel.    We generate a pretty standard containment div structure with heavy use of ID, class and custom HTML attributes to make it easy to render. 
+## How Metadata relates to Generated HTML
 
-  * Example of a Widget Metadata: 
+* No matter how it is done we ultimately require markup to control how things are rendered in the web browser.    The Metadata forms system reads the metadata generates markup and injects it into a DIV in the browser to render the form.   The ultimate look and feel of the form is controlled by CSS.    We include some default CSS that can easily be customized or overridden to produce nearly any look and feel.    We generate a pretty standard containment div structure with heavy use of ID, class and custom HTML attributes to make it easy to render. 
 
-    ```yaml
+* Example of a Widget Metadata: 
+
+  ```yaml
+  - widget:
+      id: preauthNumber
+      data_type: text
+      type: text
+      label : Preauthorization number
+      label_class: noWrap noWidth
+      data_context: claim.insurance.preAuthRef
+      class: input_field
+      ignore-case-match: true
+  ```
+
+  Causes the generation of the following Markup.  The actual shape of the generated markup is controlled by the library but a number of  options exist to influence how things get rendered.  Some widgets like drop downs,  select boxes, etc generate larger amounts of markup.  
+
+  Most of this developers guide involves showing you how to control the specifics ways system renders content and how you can control it to meet your specific needs.
+
+  ```html
+  <div id="preauthNumberCont" class="input_fieldCont">
+     <label class="nowrap input_fieldLabel" for="preauthNumber" 
+         id="preauthNumberLabel">Preauthorization number
+      </label>
+     <input id="preauthNumber" type="text" 
+        onchange="mformFieldChanged(this)" 
+        oninput="mformFieldInput(this)" 
+        dataobjid="AUTO-1580573118535-518"
+        form_id="dentalClaim" 
+        data_context="claim.insurance.preAuthRef"
+        class="input_field">
+     <div class="fieldStatusMsg" id="preauthNumberStatus"></div>
+  </div>
+  ```
+
+  
+
+
+
+## Modifying CSS to control form look & Feel
+
+* ##### Customizing Label Presentation
+
+  * Widget Labels are by default rendered with a CSS class the same as the class: attributed with "label" appended.  For example if the  "class: input_field" is specified for the widget then the label will be rendered with "<label for="someid" class="input_fieldLabel>.  
+
+    The default rendering for most instances but there are times when the behavior of the label must be modified for example the label "preauthorization number" is too long and will force wrapping if the label width is set to 8em.    
+
+    When we want to override that behavior to prevent the wraping.  You can do this with direct css selectors by ID but we provide an attribute "label_class".    When label_class is specified,  it's class is added to the label class specifier before the default specifier.  
+
+    Example: If you specify "class: input_field" and label_class "NoWrap AutoWidth" then the HTML rendering becomes "<label for "someid" class NoWrap AutoWidth input_fieldLabel"  
+
+    ```
     - widget:
         id: preauthNumber
         data_type: text
         type: text
         label : Preauthorization number
-        label_class: noWrap noWidth
+        label_class: noWrap;
         data_context: claim.insurance.preAuthRef
         class: input_field
-        ignore-case-match: true
     ```
 
-    Causes the generation of the following Markup.  The actual shape of the generated markup is controlled by the library but a number of  options exist to influence how things get rendered.  Some widgets like drop downs,  select boxes, etc generate larger amounts of markup.  
+    Causes Generation of 
 
-    Most of this developers guide involves showing you how to control the specifics ways system renders content and how you can control it to meet your specific needs.
-
-    ```html
-    <div id="preauthNumberCont" class="input_fieldCont">
-       <label class="nowrap input_fieldLabel" for="preauthNumber" 
-           id="preauthNumberLabel">Preauthorization number
-        </label>
-       <input id="preauthNumber" type="text" 
-          onchange="mformFieldChanged(this)" 
-          oninput="mformFieldInput(this)" 
-          dataobjid="AUTO-1580573118535-518"
-          form_id="dentalClaim" 
-          data_context="claim.insurance.preAuthRef"
-          class="input_field">
-       <div class="fieldStatusMsg" id="preauthNumberStatus"></div>
-    </div>
+    ```
+    <label class="noWrap input_fieldLabel" for="preauthNumber" id="preauthNumberLabel">Preauthorization number</label>
     ```
 
     
 
-* 
+  * Use cases where label_class is useful:
 
-* ## Modifying CSS to control form look & Feel
+    * Override default behavior of label width
+    * Override wrapping behavior of label
+    * Force wrapping so label appears above the field
+    * Prevent Wrapping so label appears to left of field
+    * Change color, text-size, background of the label so it behaves different than other labels.
+    * 
 
-  * ##### Customizing Label Presentation
 
-    * Widget Labels are by default rendered with a CSS class the same as the class: attributed with "label" appended.  For example if the  "class: input_field" is specified for the widget then the label will be rendered with "<label for="someid" class="input_fieldLabel>.  
 
-      The default rendering for most instances but there are times when the behavior of the label must be modified for example the label "preauthorization number" is too long and will force wrapping if the label width is set to 8em.    
+# Supporting Left Navigation Bar
 
-      When we want to override that behavior to prevent the wraping.  You can do this with direct css selectors by ID but we provide an attribute "label_class".    When label_class is specified,  it's class is added to the label class specifier before the default specifier.  
+Adding a left or right navigation bar is accomplished with the TabBar widget.   The only thing that really changes between side bar and top bar navigation is the css class you specify. 
 
-      Example: If you specify "class: input_field" and label_class "NoWrap AutoWidth" then the HTML rendering becomes "<label for "someid" class NoWrap AutoWidth input_fieldLabel"  
+- Example:
+- Sample Source:
+- Explanation
 
-      ```
-      - widget:
-          id: preauthNumber
-          data_type: text
-          type: text
-          label : Preauthorization number
-          label_class: noWrap;
-          data_context: claim.insurance.preAuthRef
-          class: input_field
-      ```
 
-      Causes Generation of 
 
-      ```
-      <label class="noWrap input_fieldLabel" for="preauthNumber" id="preauthNumberLabel">Preauthorization number</label>
-      ```
 
-      
 
-    * Use cases where label_class is useful:
 
-      * Override default behavior of label width
-      * Override wrapping behavior of label
-      * Force wrapping so label appears above the field
-      * Prevent Wrapping so label appears to left of field
-      * Change color, text-size, background of the label so it behaves different than other labels.
-      * 
+
+
+
+
 
 * ## Example JSON Sample Data
 
