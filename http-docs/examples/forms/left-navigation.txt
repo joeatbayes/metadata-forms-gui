@@ -39,6 +39,11 @@
        label: Reimbursement
        icon: /img/icons/hand-coins.svg
        form: examples/forms/simple-form
+   - tab: 
+       id: mainTabExit
+       label: Exit
+       symbol: 10060
+       href: "/"
 
       
 - widget:

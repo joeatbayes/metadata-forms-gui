@@ -1090,6 +1090,11 @@ function mformsRenderTabBar(widDef, b, context, custParms) {
             tabattr.class = activeStr;
         }
         b.start("li", tabattr);
+        if (("href" in atab) && (atab.href > " ")) {
+            b.start("a", {
+                "href": atab.href
+            });
+        }
         if ("symbol" in atab) {
             b.start("span", {
                 "class": "symbol"
@@ -1105,6 +1110,9 @@ function mformsRenderTabBar(widDef, b, context, custParms) {
             });
         }
         b.b(atab.label);
+        if (("href" in atab) && (atab.href > " ")) {
+            b.finish("a");
+        }
         b.finish("li");
     }
     b.finish("ul");

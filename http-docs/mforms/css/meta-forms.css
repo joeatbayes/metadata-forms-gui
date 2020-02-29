@@ -730,8 +730,13 @@ ul.leftNav img.icon {
     width: 98%;
 }
 
-#LeftNavDemo {
-    width: 100%;
-    text-align: left;
-    vertical-align: left;
+ul.leftNav a {
+    padding-top: 0.3em;
+    color: whitesmoke;
+}
+
+ul.leftNav a:hover {
+    padding-top: 0.3em;
+    color: whitesmoke;
+    font-weight: 900;
 }

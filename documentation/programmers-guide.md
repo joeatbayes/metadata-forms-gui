@@ -268,17 +268,96 @@ D
 
 # Supporting Left Navigation Bar
 
-Adding a left or right navigation bar is accomplished with the TabBar widget.   The only thing that really changes between side bar and top bar navigation is the css class you specify. 
+Adding a left or right navigation bar is accomplished with the TabBar widget.   The main thing that changes between side bar and top bar navigation is the css class you specify.    In this example when you click on icons on the left it will render a different form in the right hand Payne.
 
-- Example:
-- Sample Source:
-- Explanation
+- ##### Example:
 
+  #####  ![left nav bar example](img/sample-left-navigation.jpg)
 
+  
 
+- ##### [Sample Source:](../http-docs/examples/forms/left-navigation.txt)
 
+  ```yaml
+  
+  - widget:
+    id:  SampleLeftNav
+    class: leftNav
+    icon: none
+    type: tabbar
+    content_div: LeftNavTabContent
+    tabs:
+     -tab: 
+         id: mainTabHome
+         label: Home
+         icon: /img/icons/home-outline.svg
+         active: true
+         form: demo/cert-of-need/forms/cneed
+     -tab: 
+         id: mainTabSearch
+         label: Search
+         icon: /img/icons/search-person-blue.svg
+         form: examples/forms/simple-form
+     - tab:
+         id: mainTabProvider
+         label: Provider
+         icon: /img/icons/female-stethoscope.svg
+         form: demo/cert-of-need/forms/cneed
+     - tab:
+         id: mainTabOffice
+         label: Office
+         icon: /img/icons/three-people.svg
+         form: examples/forms/simple-form
+     - tab: 
+         id: mainTabBusiness
+         label: Business
+         icon: /img/icons/building-multi-story.svg
+         form: demo/cert-of-need/forms/cneed
+     - tab: 
+         id: mainTabReimbursement
+         label: Reimbursement
+         icon: /img/icons/hand-coins.svg
+         form: examples/forms/simple-form
+     - tab: 
+         id: mainTabExit
+         label: Exit
+         symbol: 10060
+         href: "/"
+  
+  - widget:
+    id: LeftNavTabContent
+    class: tabContent
+    type: emptydiv
+  
+    
+  - form:
+     id : LeftNavDemo
+     class: inputFrm
+     XXlabel: Left Navigation Demo
+     show_data_obj_div: dataObjDivBottom
+  
+     widgets:   
+      - SampleLeftNav
+      - LeftNavTabContent
+   
+  ```
 
+  
 
+- ##### Explanation
+
+  - As you click on each form it will attempt to open the form named in the tab.form.  I used some forms we already had defined for other demonstrations.
+  - We create a form that contains only two widgets the Div where we want to render content "LeftNavTabContent"  and "SampleLeftNav" which defines our actual menu.  Notice that "LeftNavTabContent" is created as a empty div.  It will be filled in later.     The form could have contained other widgets but for this demo we only needed the two. 
+  - The "SampleLeftNav"  is defined as a type of "tabbar"   which tells the system to render it with links and hover over functionality.   
+    - The class: " leftNav" is a pre-defined CSS class that tells the browser to render the menu as a thin vertical strip.   The assumption is that you will override the CSS to change the visual look and feel for to fit your needs.   The "leftnav" class forces the images to fit the width so the system will auto scale the images to fit.  
+    - Note the content_div: setting of "LeftNavTabContent"  This is the DivId the system will fill in with the form you specified when the user clicks on the menu links.     
+  - Each Tab contains: the following fields: 
+    - tab.id -  A unique string for each tab.   This is normally used to allow you to explicitly select it with a CSS selector by ID.
+    - tab.label - Optional textual Label to display for this menu option.
+    - tab.icon - Optional but when supplied it must be the URI to a Image or SVG file that will fill in the pictures in the nav bar.
+    - tab.symbol - Optional but when supplied is is a HTML code for a symbol to render eg: \&#169; will render  &#169; 
+    - tab.form - This is a the URI to a form file the system will fetch and render into the target div when this tab button is clicked.
+    - tab.href - Optional but will force loading a new HTML page at the URI specified.
 
 
 
