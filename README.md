@@ -27,7 +27,7 @@ Please file a Issue to request enhancements.  You can also reach me on Linked-in
 
 ![sample graphical left nav](documentation/img/sample-left-navigation.jpg) 
 
-[metadata source](http-docs/forms/dental-claim.txt) 
+[metadata source](http-docs/examples/forms/left-navigation.txt) 
 
 > ### Simple Form
 
