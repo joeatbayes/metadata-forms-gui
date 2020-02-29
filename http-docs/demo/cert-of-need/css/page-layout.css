@@ -1,7 +1,7 @@
 .body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color: #FFFF;
-    font-size: 14px;
+    font-size: 12pt;
     margin: 0px;
     padding: 0px;
     border: none;
@@ -9,13 +9,13 @@
 
 #top_nav {
     width: 100%;
-    display: flex;
+    display: block;
     height: 1.7em;
     background-color: #124981;
     color: #FFF;
     font-family: Arial;
     font-size: 1.4em;
-    font-weigt: bold;
+    font-weight: bold;
     text-align: center;
     vert-align: center;
     padding-top: 0.03em;
@@ -32,7 +32,7 @@
 #page-vmid {
     width: 100%;
     height: 88%;
-    display: flex;
+    display: table-row;
     background-color: transparent;
     margin: 0px;
     border: none;
@@ -41,8 +41,9 @@
 }
 
 #lbody {
-    display: flex;
-    width: 16%;
+    display: inline-block;
+    width: 14%;
+    float: left;
     max-width: 12em;
     min-width: 8em;
     height: 100%;
@@ -55,7 +56,6 @@
     margin: 0px;
     border: none;
     padding: 0px;
-    flex-direction: column;
 }
 
 #lbody a {
@@ -94,9 +94,10 @@
 }
 
 #mbody {
-    display: flex;
+    display: inline-block;
     background-color: white;
-    width: auto;
+    width: 67%;
+    min-width: 15em;
     height: 100%;
     vertical-align: top;
     margin: 0px;
@@ -113,7 +114,7 @@
 
 
 #page_footer {
-    display: flex;
+    display: block;
     width: 100%;
     background-color: #114980;
     color: #FAFAFA;
@@ -126,11 +127,11 @@
 }
 
 #dataObjDiv {
-    display: flex;
+    display: inline-block;
     font-family: Arial, Helvetica, sans-serif;
     max-width: 20em;
     min-width: 15%;
-    overflow: scroll;
+    overflow-x: hidden;
     font-size: 0.78em;
     background-color: rgb(223, 222, 221);
 

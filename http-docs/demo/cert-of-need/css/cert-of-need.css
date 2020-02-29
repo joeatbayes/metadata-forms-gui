@@ -10,3 +10,63 @@ div.vgroupCont {
     flex-wrap: wrap;
     overflow-x: hidden;
 }
+
+@media only screen and (max-width: 1040px) {
+    body {
+        width: 99%;
+        overflow-x: hidden;
+        font-size: 14pt;
+    }
+
+    #lbody {
+        height: auto;
+    }
+
+    #mbody {
+        height: auto;
+        max-width: 99%;
+        width: fit-content;
+    }
+
+    #dataObjDiv {
+        display: block;
+        width: 99%;
+        max-width: 99%;
+        min-width: 99%;
+        margin-top: 10em;
+        height: auto;
+        overflow-x: none;
+    }
+
+
+    #mbody {
+        width: 99%;
+        overflow-x: auto;
+        height: auto;
+    }
+
+    #lbody {
+        width: 99%;
+        max-width: 100%;
+        min-width: 100%;
+        display: block;
+        float: none;
+        height: auto;
+    }
+
+    .input_fieldvCont,
+    .input_fieldhCont,
+    .input_fieldCont {
+        display: inline-block;
+    }
+
+    div.groupContentDiv {
+        display: inline-block;
+        max-width: 98%;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 780px) {}

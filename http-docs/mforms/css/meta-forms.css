@@ -9,7 +9,7 @@
     border: none;
     overflow-y: auto;
     overflow-x: hidden;
-    display: table;
+    display: table-cell;
     xflex-wrap: wrap;
 }
 
@@ -700,6 +700,15 @@ div.leftNavCont {
     vertical-align: top;
     overflow-x: hidden;
     color: whitesmoke;
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (max-width : 680px) {
+    #LeftNavDemo div.leftNavCont {
+        width: 2em;
+        min-width: 2em;
+        max-width: 3em;
+    }
 }
 
 ul.leftNav {
