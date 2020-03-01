@@ -220,6 +220,21 @@ function setFormValue(divId, value) {
   return undefined;
 }
 
+// Extends interpolateStr to allow retrieval 
+// of objects when building intermediate structures
+function Interpolate(inputStr, interpArr) {
+  for (var andx in interpArr) {
+    var tobj = interpArr[andx];
+    var tmp = getNested(tobj, inputStr, undefined);
+    if ((tmp != undefined) && (tmp != null)) {
+      return tmp;
+    }
+  }
+  // Fall back to interpolating as a string
+  return InterpolateStr(inputStr, interpArr);
+}
+
+
 /* Interpolate data values into variables named by { + variableName + }
 and generate a new string.  variables not found are left as is
 in the generated string. Searches the dictionaries as supplied
@@ -785,6 +800,9 @@ function getWDef(model, path, defVal) {
 // value is supplied when sub object does not
 // exists then return null;
 function getNested(model, path, defVal) {
+  if (isString(model)) {
+    return defVal;
+  }
   if (defVal == undefined) {
     defVal = null;
   }
@@ -805,6 +823,9 @@ function getNested(model, path, defVal) {
       }
     } else {
       // still walking the tree;
+      if (isString(sobj)) {
+        return defVal;
+      }
       if (fldName in sobj) {
         // sub obj already exists so just use it
         sobj = sobj[fldName];
