@@ -4,6 +4,8 @@ Actions & Roadmap for Metadata Forms Engine
 
 * Try a basic Drag and drop to allow quicker construction of basic screens.
 
+* For Display form consider computing the request URI for the data Object and use it as the cache element rather than using the dataObjId since the dataObjId is a rather arbitrary item and could be ambigous.
+
 * DONE:JOE:2020-02-29: A Ability for Left or Navigation to render from same Tab Menu spec with either a change of CSS or change in parameter for Meta DAta.
 
 * DONE:JOE:2020-02-29: Ability for Left or Right Navigation to render Images where the image render size can be controlled in metadata.
