@@ -1762,12 +1762,115 @@ function requestAutoSuggest(parms) {
 }
 
 
+var defLocalContextVar = {
+    "dataObjId": "{dataObjId}",
+    "dataObj": "{dataObj.id}",
+    "form": "{form}",
+    "form_id": "{form.id}",
+    "wid_id": "{widDef.id}",
+    "wid_def": "{widDef}",
+    "action_spec": "{action_spec}",
+    "row_num": "{row_num}",
+    "last_res": "{lasst_res}",
+    "cust_parms": "{cust_parms}"
+};
+
+// Extracts pieces of context from active objects to produce a 
+// new data context object that can be passed to other
+// operations such as displayForm().  For each key transfered
+// as a simple string we also create a value under the _safe
+// branch that has been made safe for passing.
+function mformsMakeLocalContext(contextSpec, interpArr) {
+    if ((contextSpec == null) || (contextSpec == undefined) || (contextSpec.length < 1)) {
+        contextSpec = defContextVar;
+    }
+    var tout = {
+        "_safe": {}
+    };
+    for (var ckey in contextSpec) {
+        var constr = contextSpec[ckey];
+        var intstr = InterpolateStr(constr, interpArr);
+        tout[ckey] = intstr;
+        // TODO: Add local interpolation here
+        if (isString(intstr)) {
+            tout._safe[ckey] = makeSafeFiName(intstr);
+        }
+    }
+    return tout;
+}
+
+// Generalized Action Click Results 
+// provides the generic processor for search rowClick 
+// and button clicks.
+function mformsProcessActionRequest(widDef, context, actionSpec, custParms) {
+    var widId = widDef.id;
+    var dataObj = context.dataObj;
+    var dataObjId = context.dataObjId;
+    var rowNum = custParms.row_num;
+    var dataRow = {};
+    if (actionSpec == undefined) {
+        console.log("WARN: rowclick undefined widDef=", onchDef);
+        return;
+    }
+
+    var action = actionSpec.action;
+    if (action == undefined) {
+        console.log("WARN: No Action specified actionSpec=", actionSpec, " widDef=", widDef);
+        return;
+    }
+
+    // Label the extra data so we can access it explicitly when willing to 
+    // so data can name it explicitly.
+    var exParms = {
+        "cust_parms": custParms,
+        "action_spec": actionSpec,
+        "wid_def": widDef,
+        "dataObj": dataObj,
+        "dataObjId": dataObjId
+    };
+
+    if (rowNum != undefined) {
+        exParms.row_num = rowNum;
+        var lastRes = context.queries[widId];
+        if (lastRes != undefined) {
+            lastRes = lastRes.data;
+            exParms.last_res = lastRes;
+            dataRow = lastRes[rowNum];
+            if (dataRow != undefined) {
+                exParms.data_row = dataRow;
+            } else {
+                console.log("WARN: Could not find dataRow rowNum=", rowNum, " actionSpec=", actionSpec, " custParms=", custParms, " widDef=", widDef);
+                return;
+            }
+        }
+    }
+    var interpArr = [dataRow, context.dataObj, exParms, custParms, actionSpec, widDef, context, context.form, context.gbl];
+    var contextSpec = actionSpec.context;
+    if (contextSpec == undefined) {
+        // Use the default local Context variables
+        // if the user did not specify any in the
+        // original request. 
+        contextSpec = defLocalContextVar;
+    }
+    var localContext = mformsMakeLocalContext(contextSpec, interpArr);
+    if (action == "display_form") {
+        var targForm = actionSpec.form_id;
+        var targDiv = actionSpec.target_div;
+        if (targDiv == null) {
+            targDiv = "default";
+        }
+        var formUri = InterpolateStr(targForm, [localContext, exParms]);
+        display_form(targDiv, formUri, localContext, context.gbl);
+        //alert("TODO: display_form data object uri=" + turi + " for " + JSON.stringify(dataRow));
+    } else {
+        console.log("WARN:  Action ", action, " can not be found actionSpec=", actionSpec, " widDef=", widDef);
+    }
+} // func()
 
 //-----------------------
 //-- Client Side Search Handlers
 //-----------------------
 function mformsSimpleSearchResRowClick(hwidget) {
-    var id = hwidget.id;
     var widId = gattr(hwidget, "wid_id");
     var onchId = gattr(hwidget, "onch_id");
     var formId = gattr(hwidget, "form_id");
@@ -1775,12 +1878,8 @@ function mformsSimpleSearchResRowClick(hwidget) {
     var rowNum = gattr(hwidget, "row_num");
     rowNum = parseInt(rowNum);
     var context = GTX.formContexts[formId][dataObjId];
-    var form = context.form;
     var widDef = GTX.widgets[widId];
     var onchDef = GTX.widgets[onchId];
-    var dataObj = GTX.dataObj[dataObjId];
-    var dataContext = widDef.data_context;
-    var dataContextOvr = gattr(hwidget, "data_context");
     var lastRes = context.queries[widId];
     var dataRow = lastRes.data[rowNum];
     if (dataRow == undefined) {
@@ -1793,39 +1892,13 @@ function mformsSimpleSearchResRowClick(hwidget) {
     }
     var action = rowclick.action;
     if (action == undefined) {
+        console.log("WARN: no Action for rowclick onchDef=", onchDef, " widDef=", widDef);
         return;
     }
-    if (action == "display_form") {
-        var interpArr = [dataRow, context.dataObj, widDef, onchDef, context, context.form, context.gbl];
-        var targForm = rowclick.form_id;
-        var targDiv = rowclick.target_div;
-        if (targDiv == null) {
-            targDiv = "default";
-        }
-        //var startUri = rowclick.uri;
-        //if (startUri == undefined) {
-        //    return;
-        //}
-        var localContext = {
-            "_safe": {}
-        };
-        var clickContext = rowclick.context;
-        for (var ckey in clickContext) {
-            var constr = clickContext[ckey];
-            var intstr = InterpolateStr(constr, interpArr);
-            localContext[ckey] = intstr;
-            // TODO: Add local interpolation here
-            if (isString(intstr)) {
-                localContext._safe[ckey] = makeSafeFiName(intstr);
-            }
-        }
-        //var turi = InterpolateStr(startUri, interpArr);
-        //var objId = InterpolateStr(onch.rowclick.objId, interpArr);
-        var formUri = InterpolateStr(targForm, interpArr);
-        display_form(targDiv, formUri, localContext, context.gbl);
-        //alert("TODO: display_form data object uri=" + turi + " for " + JSON.stringify(dataRow));
-    }
-
+    var custParms = {
+        "row_num": rowNum,
+    };
+    mformsProcessActionRequest(widDef, context, rowclick, custParms);
 }
 
 function mformsRenderSimpleSearchRes(widDef, b, context, custParms) {
