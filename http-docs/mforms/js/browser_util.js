@@ -108,26 +108,7 @@ function showDiv(divId) {
   return tdiv
 }
 
-function toggleDivEvent(sender, divId) {
-  var tdiv = document.getElementById(divId);
-  if ((tdiv !== undefined) && (tdiv !== null)) {
-    var lastStyle = tdiv.style.lastStyle;
-    if (tdiv.style.display != "none") {
-      tdiv.style.lastStyle = tdiv.style.display;
-      tdiv.style.display = "none";
-      sender.className = "arrow-down";
 
-    } else {
-      if (lastStyle != undefined) {
-        tdiv.style.display = lastStyle;
-      } else {
-        tdiv.style.display = "block";
-      }
-      sender.className = "arrow-up";
-    }
-  }
-  return tdiv;
-}
 
 function toggleDiv(divId) {
   var tdiv = document.getElementById(divId);
@@ -256,7 +237,7 @@ function InterpolateStr(pstr, dictArr) {
     var tseg = tarr[ndx];
     var tsegTrim = tseg.trim();
     if ((tsegTrim[0] === '{') && (tsegTrim[tseg.length - 1] === '}')) {
-      var tpath = tsegTrim.slice(1, -1);
+      var tpath = tsegTrim.slice(1, -1).trim();
       var lookVal = null;
       for (var dictNdx in dictArr) {
         tdict = dictArr[dictNdx];

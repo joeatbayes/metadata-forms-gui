@@ -320,19 +320,53 @@ function mformFieldChanged(hwidget) {
     }
     // console.log("FieldChanged", widId, "fldVal=", fldVal, "formId=", formId,
     //   " dataObjId=", dataObjId, "context=", context, "dataObj", dataObj);
-    if ("onchange" in context.form) {
-        var callFunc = context.form.onchange.function;
-        var fn = window[callFunc];
-        if (typeof fn === "function") {
-            fn(hwidget, context);
-        } else {
-            console.log("Could not find function named=" + callFunc);
-        }
+    processOnChangeSpec(hwidget, context, widDef);
+    processOnChangeSpec(hwidget, context, context.form);
 
-    }
+
     //TODO:  Add Field Validation and Error Message Here
     //TODO: Mark field context as dirty
     //TODO: Mark field invalid if any fields fail validation
+}
+
+
+// Process the onchange spec from either the active widget
+// or the form.  Call either the direct named function 
+// or the function named in the function parameter of the 
+// widget specified.
+function processOnChangeSpec(hwidget, context, workObj) {
+    var onch = workObj.onchange;
+    if (onch == undefined) {
+        return;
+    }
+    var gtx = context.gbl;
+    if (isString(onch)) {
+        onch = [onch];
+    }
+    for (var ondx in onch) {
+        var oncit = onch[ondx];
+        var fn = window[oncit];
+        if (typeof fn === "function") {
+            // value was function name
+            fn(hwidget, context, workObj);
+            continue;
+        }
+        var widDef = gtx.widgets[oncit];
+        if (widDef == undefined) {
+            continue;
+        }
+
+        var callFunc = widDef.function;
+        if (callFunc == undefined) {
+            continue;
+        }
+        fn = window[callFunc];
+        if (typeof fn === "function") {
+            fn(hwidget, context, widDef);
+        } else {
+            console.log("Could not find function named=" + callFunc);
+        }
+    }
 }
 
 
@@ -422,7 +456,6 @@ function addTableRowButton(hwidget) {
 // ---- Rendering Support Functions 
 // --------------
 
-
 var widgRenderFuncs = {
     "widgetGroup": mformsRenderGroupWidget,
     "text": mformsRenderTextWidget,
@@ -433,7 +466,7 @@ var widgRenderFuncs = {
     "checkbox": mformsRenderTextWidget,
     "date": mformsRenderTextWidget,
     "table": mformsRenderEditableTable,
-    "simple_search_res": mformsSimpleSearchRes,
+    "simple_search_res": mformsRenderSimpleSearchRes,
     "tabbar": mformsRenderTabBar,
     "emptydiv": mformsRenderEmptyDiv
 };
@@ -460,6 +493,11 @@ var mformTextFieldCopyAttr = {
     "jimbo": true
 };
 
+// Add a custom rendering function to the set of 
+// pre-registered rendering functions. 
+function mformAddRenderFunc(widgetType, renderFunc) {
+    widgRenderFuncs[widgetType] = renderFunc;
+}
 
 // Check widget defenition for missing things like
 // class and set them to reasonable defaults
@@ -1599,15 +1637,8 @@ function autoSugClicked(hwidget) {
     var targetDiv = widDef.id + "sugCont";
     toDiv(targetDiv, "");
     hideDiv(targetDiv);
-    if (form.onchange != undefined) {
-        // Call the named funtion if we can find it
-        // in defined as a globally available function
-        var funName = form.onchange.function;
-        var funPtr = window[funName];
-        if (funPtr != undefined) {
-            funPtr(hwidget, context);
-        }
-    }
+    processOnChangeSpec(hwidget, context, widDef);
+    processOnChangeSpec(hwidget, context, form);
     refreshShowDataObj(context);
 }
 
@@ -1697,8 +1728,8 @@ function requestAutoSuggest(parms) {
 //-----------------------
 function mformsSimpleSearchResRowClick(hwidget) {
     var id = hwidget.id;
-    var sugVal = gattr(hwidget, "sug_val");
     var widId = gattr(hwidget, "wid_id");
+    var onchId = gattr(hwidget, "onch_id");
     var formId = gattr(hwidget, "form_id");
     var dataObjId = gattr(hwidget, "dataObjId");
     var rowNum = gattr(hwidget, "row_num");
@@ -1706,6 +1737,7 @@ function mformsSimpleSearchResRowClick(hwidget) {
     var context = GTX.formContexts[formId][dataObjId];
     var form = context.form;
     var widDef = GTX.widgets[widId];
+    var onchDef = GTX.widgets[onchId];
     var dataObj = GTX.dataObj[dataObjId];
     var dataContext = widDef.data_context;
     var dataContextOvr = gattr(hwidget, "data_context");
@@ -1714,21 +1746,17 @@ function mformsSimpleSearchResRowClick(hwidget) {
     if (dataRow == undefined) {
         return;
     }
-    var onch = form.onchange;
-    if (onch == undefined) {
-        return;
-    }
-    var rowclick = onch.rowclick;
+    var rowclick = onchDef.rowclick;
     if (rowclick == undefined) {
+        console.log("WARN: rowclick undefined widDef=", onchDef);
         return;
     }
     var action = rowclick.action;
     if (action == undefined) {
         return;
     }
-
     if (action == "display_form") {
-        var interpArr = [dataRow, context.dataObj, widDef, context, context.form, context.gbl];
+        var interpArr = [dataRow, context.dataObj, widDef, onchDef, context, context.form, context.gbl];
         var targForm = rowclick.form_id;
         var targDiv = rowclick.target_div;
         if (targDiv == null) {
@@ -1751,22 +1779,19 @@ function mformsSimpleSearchResRowClick(hwidget) {
                 localContext._safe[ckey] = makeSafeFiName(intstr);
             }
         }
-
         //var turi = InterpolateStr(startUri, interpArr);
         //var objId = InterpolateStr(onch.rowclick.objId, interpArr);
         var formUri = InterpolateStr(targForm, interpArr);
-
         display_form(targDiv, formUri, localContext, context.gbl);
-
-
         //alert("TODO: display_form data object uri=" + turi + " for " + JSON.stringify(dataRow));
     }
 
 }
 
-function mformsSimpleSearchRes(widDef, b, context, custParms) {
+function mformsRenderSimpleSearchRes(widDef, b, context, custParms) {
     var gtx = context.gbl;
     var widId = widDef.id;
+    var onch = custParms.onch;
     var cols = widDef.columns;
     var dataObj = context.dataObj;
     var searchRes = custParms.searchRes;
@@ -1782,8 +1807,7 @@ function mformsSimpleSearchRes(widDef, b, context, custParms) {
     var frow = searchRes[0];
     var fname = null;
     var rowndx = null;
-    var onch = context.form.onchange;
-    searchRes = client_side_search_apply_filter(onch, context, searchRes);
+    searchRes = client_side_search_apply_filter(widDef, context, searchRes);
 
     // Generate the table header
 
@@ -1813,6 +1837,7 @@ function mformsSimpleSearchRes(widDef, b, context, custParms) {
             "class": widDef.class + "row",
             "onclick": "mformsSimpleSearchResRowClick(this)",
             "wid_id": widId,
+            "onch_id": onch.id,
             "form_id": context.form.id,
             "dataObjId": context.dataObjId,
             "row_num": rowndx
@@ -1839,11 +1864,13 @@ function mformsSimpleSearchRes(widDef, b, context, custParms) {
 
 function mformsClientSideSearchOnData(data, httpObj, parms) {
     var context = parms.context;
+    var gbl = context.gbl;
     var form = context.form;
-    var onch = form.onchange;
-    var targetDiv = onch.target_div;
-    var targetWidId = onch.target_widget;
-    var parser = onch.parser;
+    var widDef = parms.onch;
+    var targetDiv = widDef.target_div;
+    var targetWidId = widDef.render_widget;
+    var targetWid = gbl.widgets[targetWidId];
+    var parser = widDef.parser;
     if (parms.uri in context.gbl.filesLoading) {
         delete context.gbl.filesLoading[parms.uri];
     }
@@ -1871,7 +1898,8 @@ function mformsClientSideSearchOnData(data, httpObj, parms) {
                 return;
             }
             var custParms = {
-                "searchRes": parsed
+                "searchRes": parsed,
+                "onch": widDef
             };
             // Save the parsed data in this context by the req_uri
             // so we can reload the parsed result to use latter 
@@ -1879,12 +1907,15 @@ function mformsClientSideSearchOnData(data, httpObj, parms) {
             cacheQueryRes(context, targetWidId, parsed);
             mformsCacheAjaxData(parms, parsed);
             // Now Lookup the widget to do the rendering
-            var targWid = context.gbl.widgets[targetWidId];
-            if (targWid == undefined) {
+            if (targetWid == undefined) {
                 b.b("Could not find widget " + targetWidId);
             } else {
-                var rendFunc = widgRenderFuncs[targWid.type];
-                rendFunc(targWid, b, context, custParms);
+                var rendFunc = widgRenderFuncs[targetWid.type];
+                if (typeof rendFunc === "function") {
+                    rendFunc(targetWid, b, context, custParms);
+                } else {
+                    console.log("WARN: Cold not find Rendering function for ", targetWid, " widDef=", widDef)
+                }
             }
             b.toDiv(targetDiv);
             showDiv(targetDiv);
@@ -1918,7 +1949,6 @@ function client_side_search_apply_filter(spec, context, data) {
                 console.log("ERROR form_context and res_context must be defined filt=", filt, "spec=", spec);
                 return;
             }
-
             var formVal = getNested(dataObj, form_context, "").trim().toUpperCase();
             if (formVal < " ") {
                 continue;
@@ -1941,17 +1971,35 @@ function client_side_search_apply_filter(spec, context, data) {
     return tout;
 } // func()
 
-function client_side_search(hwidget, context) {
+function client_side_search(hwidget, context, widDef) {
     var widId = hwidget.id.split("-_")[0];
-    var widDef = GTX.widgets[widId];
     var formId = context.form_id;
     var dataObjId = context.dataObjId;
     var dataObj = context.dataObj;
     var form = context.form;
-    var onch = form.onchange;
-    var indexes = onch.indexes;
-    var filters = onch.filters;
+    var indexes = widDef.indexes;
+    var filters = widDef.filters;
     var gbl = context.gbl;
+    var targetDiv = widDef.target_div;
+    var targetWidId = widDef.render_widget;
+    var targetWid = gbl.widgets[targetWidId];
+    var parser = widDef.parser;
+    if (targetDiv == undefined) {
+        console.log("WARN: target_div is missing", widDef);
+        return;
+    }
+    if (targetWidId == undefined) {
+        console.log("WARN: render_widget is missing", widDef);
+        return;
+    }
+    if (targetWid == undefined) {
+        console.log("WARN: Could not locate render_widget ",
+            targetWidId, " widDef=", widDef);
+        return;
+    }
+    if (indexes == undefined) {
+        console.log("WARN: No indexes defined widDef=", widDef);
+    }
     if (context.client_side_cache == undefined) {
         context.client_side_cache = {
             "last": {
@@ -1963,7 +2011,6 @@ function client_side_search(hwidget, context) {
         };
     }
     var cscache = context.client_side_cache;
-
     if (indexes == undefined) {
         console.log("client_side_search no indexes defined");
         return;
@@ -1988,21 +2035,19 @@ function client_side_search(hwidget, context) {
             // And simply call the render function. 
             if (searchUri in gbl.filesLoaded) {
                 var b = new String_builder();
-                var targetDiv = onch.target_div;
-                var targetWidId = onch.target_widget;
-                var targWid = gbl.widgets[targetWidId];
                 var custParms = {
-                    "searchRes": gbl.filesLoaded[searchUri].data
+                    "searchRes": gbl.filesLoaded[searchUri].data,
+                    "onch": widDef
                 };
-                if (targWid == undefined) {
+                if (targetWid == undefined) {
                     b.b("L1909: Could not find widget " + targetWidId);
                 } else {
-                    var rendFunc = widgRenderFuncs[targWid.type];
-                    rendFunc(targWid, b, context, custParms);
+                    var rendFunc = widgRenderFuncs[targetWid.type];
+                    rendFunc(targetWid, b, context, custParms);
                 }
                 b.toDiv(targetDiv);
                 showDiv(targetDiv);
-                setTimeout(hideAllAutoSug, 75);
+                setTimeout(hideAllAutoSug, 100);
                 break;
             } else {
                 // Make the Request for new dat with new Data conext.
@@ -2011,12 +2056,15 @@ function client_side_search(hwidget, context) {
                 var parms = {
                     "context": context,
                     "uri": searchUri,
+                    "widDef": widDef,
+                    "onch": widDef,
                     "req_method": "GET",
                     "req_headers": {
                         "Content-type": "application/json"
                     }
                 };
                 mformsAddAjaxSecurityContext(parms, context);
+                // TODO: Handle POST in-addition to GET
                 context.gbl.filesLoading[startUri] = true;
                 simpleGet(searchUri, mformsClientSideSearchOnData, parms);
                 break;
@@ -2296,7 +2344,7 @@ function mformsGetDefOnData(data, httpObj, parms) {
 // Make Ajax Call to Load script file from server
 function mformsGetDef(scriptId, context) {
     var parms = {};
-    var req_uri = scriptId + ".txt?ti=" + Date.now();
+    var req_uri = scriptId + ".yaml?ti=" + Date.now();
     req_uri = req_uri.replace("//", "/");
     console.log("L1433: mformsGetDef req_uri=", req_uri);
     parms.req_headers = {
