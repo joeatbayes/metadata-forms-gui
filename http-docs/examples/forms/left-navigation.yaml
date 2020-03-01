@@ -1,0 +1,64 @@
+# Demonstrate Left Navigation
+# Menu system with swap out forms.
+
+- widget:
+  id:  SampleLeftNav
+  class: leftNav
+  icon: none
+  type: tabbar
+  content_div: LeftNavTabContent
+  tabs:
+   -tab: 
+       id: mainTabHome
+       label: Home
+       icon: /img/icons/home-outline.svg
+       active: true
+       form: demo/cert-of-need/forms/cneed
+   -tab: 
+       id: mainTabSearch
+       label: Search
+       icon: /img/icons/search-person-blue.svg
+       form: examples/forms/simple-form
+   - tab:
+       id: mainTabProvider
+       label: Provider
+       icon: /img/icons/female-stethoscope.svg
+       form: demo/cert-of-need/forms/cneed
+   - tab:
+       id: mainTabOffice
+       label: Office
+       icon: /img/icons/three-people.svg
+       form: examples/forms/simple-form
+   - tab: 
+       id: mainTabBusiness
+       label: Business
+       icon: /img/icons/building-multi-story.svg
+       form: demo/cert-of-need/forms/cneed
+   - tab: 
+       id: mainTabReimbursement
+       label: Reimbursement
+       icon: /img/icons/hand-coins.svg
+       form: examples/forms/simple-form
+   - tab: 
+       id: mainTabExit
+       label: Exit
+       symbol: 10060
+       href: "/"
+
+      
+- widget:
+  id: LeftNavTabContent
+  class: tabContent
+  type: emptydiv
+
+  
+- form:
+   id : LeftNavDemo
+   class: inputFrm
+   XXlabel: Left Navigation Demo
+   show_data_obj_div: dataObjDivBottom
+
+   widgets:   
+    - SampleLeftNav
+    - LeftNavTabContent
+ 
