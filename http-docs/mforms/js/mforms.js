@@ -1802,10 +1802,10 @@ function mformsSimpleSearchResRowClick(hwidget) {
         if (targDiv == null) {
             targDiv = "default";
         }
-        var startUri = rowclick.uri;
-        if (startUri == undefined) {
-            return;
-        }
+        //var startUri = rowclick.uri;
+        //if (startUri == undefined) {
+        //    return;
+        //}
         var localContext = {
             "_safe": {}
         };
