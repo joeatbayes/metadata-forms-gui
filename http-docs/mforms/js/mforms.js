@@ -369,10 +369,50 @@ function processOnChangeSpec(hwidget, context, workObj) {
     }
 }
 
-
 function mformFieldInput(hwidget) {
     mformFieldChanged(hwidget);
 }
+
+function mformsButtonClicked(hwidget) {
+    var attr = hwidget.attributes;
+    var widIdFull = hwidget.id;
+    var widId = widIdFull.split("-_")[0];
+    var widDef = GTX.widgets[widId];
+    var dataContext = widDef.data_context;
+    var dataContextOvr = gattr(hwidget, "data_context");
+    if (dataContextOvr > "") {
+        // override the widget data context with the 
+        // value encoded into the widget if present.
+        // needed this to support array elements that 
+        // require a differnt data context for every row of every cell.
+        dataContext = dataContextOvr;
+    }
+    var formId = gattr(hwidget, "form_id");
+    var dataObjId = gattr(hwidget, "dataObjId");
+    var context = GTX.formContexts[formId][dataObjId];
+    var dataObj = GTX.dataObj[dataObjId];
+    var action = widDef.action;
+    if (action == undefined) {
+        console.log("WARN: No Action defined widId=", widId, " widDef=", widDef);
+        return;
+    }
+    if (isString(action)) {
+        action = [action];
+    }
+
+    for (var andx in action) {
+        var tact = action[andx];
+        var intAct = InterpolateStr(tact, [context.dataObj, widDef, context.form, context, context.gbl]);
+        // Lookup as function and call if found.
+
+        // Lookup as widget and process like it was called
+        // from the onchange event if so. 
+        console.log("TODO: buttonClicked Take action on the interpolated string");
+    }
+
+}
+
+
 
 // When a table column header is clicked default behavior is
 // to sort the table on that column. This function receives the
@@ -668,6 +708,7 @@ function mformsRenderEmptyDiv(widDef, b, context, custParms) {
     });
 }
 
+
 function mformsRenderButton(widDef, b, context, custParms) {
     b.start("div", {
         "class": widDef.class + "contain"
@@ -676,8 +717,7 @@ function mformsRenderButton(widDef, b, context, custParms) {
     mformCopyAttribs(widDef, attr, mformTextFieldCopyAttr);
     copyOverCustParms(attr, widDef, custParms);
     attr.type = "button";
-    attr.onClick = InterpolateStr(widDef.action, [context.dataObj, context, context.form_def, context.gContext]);
-    //"saveFormChanges(this)";
+    attr.onClick = "mformsButtonClicked(this)";
     b.make("button", attr, widDef.label);
     b.finish("div");
 }
