@@ -391,7 +391,7 @@ function mformsButtonClicked(hwidget) {
     var dataObjId = gattr(hwidget, "dataObjId");
     var context = GTX.formContexts[formId][dataObjId];
     var dataObj = GTX.dataObj[dataObjId];
-    var action = widDef.action;
+    var action = widDef.onclick;
     if (action == undefined) {
         console.log("WARN: No Action defined widId=", widId, " widDef=", widDef);
         return;
