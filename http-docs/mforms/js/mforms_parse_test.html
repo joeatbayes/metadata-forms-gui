@@ -241,6 +241,9 @@
         if(tout[2].widget.option[0].label != "Male") {
           addTestRes("FAIL: option label should be \"Male\" but found " + tout[2].widget.option[0].label);
         }
+        if(tout[2].widget.default != "M") {
+          addTestRes("FAIL: default field should be \"M\" but found " + tout[2].widget.default);
+        }
       } catch (err) {
         addTestRes("FAIL: test " + err);
       }
