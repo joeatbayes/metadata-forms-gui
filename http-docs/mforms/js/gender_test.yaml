@@ -1,0 +1,9 @@
+  data_type: text
+  type: radio
+  label : Gender    
+  class: hor_radio
+  ignore-case-match: true
+  default: M
+  option:
+      - {"label" : "Male", "value" : "M"}
+      - {"label" : "Female", "value": "F"}
