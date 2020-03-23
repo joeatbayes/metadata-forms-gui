@@ -73,7 +73,7 @@ function simpleGetBlock(uri, errCallback)
    var tHttp=new XMLHttpRequest();
    tHttp.open("GET",uri,false);
    tHttp.send();
-   return {'txt' : tHttp.responseText, 'req' : xmlHttp};
+   return {'txt' : tHttp.responseText, 'req' : tHttp.status};
 }
 
 

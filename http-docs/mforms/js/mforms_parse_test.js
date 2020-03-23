@@ -226,6 +226,37 @@ var testMerge2 = `
 
 `;
 
+var testInclude = `
+- validators:
+      auth_patern: {0.9}8.\s\w\n
+      phone: ^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$
+      zip: ^[0-9]{5}(?:-[0-9]{4})?$
+
+- &GENDER !include gender_test.yaml
+
+- &ANCHOR widget: 
+      id: basic_phone
+      data_type: text
+      type: text
+      label: phone
+      data_context: empty
+      class: input_field
+      ignore_case_match: true
+      valid_patt: <validators.phone
+
+- widget: 
+      << : *ANCHOR
+      id: basic_phone_1
+      label: Patient Phone
+      data_context: claim.patient.phoneNum
+
+- widget: 
+      << : *GENDER
+      id: gender_1
+      data_context: claim.patient.gender
+
+`;
+
 
 var testStrNestedObj = `
 - widget:
@@ -302,4 +333,5 @@ if (typeof require != "undefined") {
   mParserTest("test single dict at outer level", testStrPerson4);
   mParserTest("test merge 1", testMerge1);
   mParserTest("test merge 2", testMerge2);
+  mParserTest("test include", testInclude);
 }
