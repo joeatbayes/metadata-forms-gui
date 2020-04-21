@@ -172,6 +172,19 @@ function parseAnchor(input, anchorMap, position, outObj) {
     var name = input.slice(_position, position);
     c = input.charCodeAt(++position);
     while (c !== 0 && !isWS(c) && !isEOL(c) && !isValueSet(c) && !isNaN(c)) {
+        // !
+        if (c === 0x21){
+            var includeObjectTest = input.slice(position);
+            var regex = /!include\s+(\S+\.ya?ml$)/
+            var includeObject = includeObjectTest.match(regex);
+            if(isArray(includeObject) && includeObject.length > 1 && includeObject[1] != null){
+                anchorMap[name.trim()] = mformsParseMeta(simpleGetBlock(includeObject[1]).txt, outObj);
+                return {
+                    isAnchor: true,
+                    map: anchorMap
+                };
+             }
+        }
         c = input.charCodeAt(++position);
     }
     var obj = input.slice(position);

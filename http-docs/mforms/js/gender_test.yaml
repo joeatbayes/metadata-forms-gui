@@ -1,0 +1,11 @@
+- &TEST !include gender_test_2.yaml
+
+<< : *TEST
+data_type: text
+type: radio
+label : Gender    
+class: hor_radio
+ignore-case-match: true
+option:
+    - {"label" : "Male", "value" : "M"}
+    - {"label" : "Female", "value": "F"}

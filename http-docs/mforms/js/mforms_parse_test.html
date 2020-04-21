@@ -18,6 +18,7 @@
     }
   </style>
   <script src="browser_util.js" type="text/javascript"></script>
+  <script src="simple_ajax.js" type="text/javascript"></script>
   <script src="mforms_parse.js" type="text/javascript"></script>
   <script src="mforms_parse_test.js" type="text/javascript"></script>
   <script>
@@ -147,38 +148,45 @@
     function runTest8() {
       var tout = runTest("Test Merge 2", testMerge2);
 
-      if(tout[1].widget.id != "basic_phone_1") {
-        addTestRes("FAIL: id should be \"basic_phone_1\" but found " + tout.widget.id);
-      }
-      if(tout[1].widget.data_type != "text") {
-        addTestRes("FAIL: data_type should be \"text\" but found " + tout.widget.data_type);
-      }
-      if(tout[1].widget.type != "text") {
-        addTestRes("FAIL: type should be \"text\" but found " + tout[1].widget.type);
-      }
-      if(tout[1].widget.label != "Patient Phone") {
-        addTestRes("FAIL: label should be \"Patient Phone\" but found " + tout[1].widget.label);
-      }
-      if(tout[1].widget.data_context != "claim.patient.phoneNum") {
-        addTestRes("FAIL: data_context should be \"claim.patient.phoneNum\" but found " + tout[1].widget.data_context);
-      }
-      if(tout[1].widget.class != "input_field") {
-        addTestRes("FAIL: class should be \"input_field\" but found " + tout[1].widget.class);
-      }
-      if(tout[1].widget.ignore_case_match != true) {
-        addTestRes("FAIL: ignore_case_match should be \"true\" but found " + tout[1].widget.ignore_case_match);
-      }
-      if(tout[1].widget.valid_patt != "^([0-9]( |-)?)?((?[0-9]{3})?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$") {
-        addTestRes("FAIL: valid_patt should be \"^([0-9]( |-)?)?((?[0-9]{3})?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$\" but found " + tout[1].widget.valid_patt);
-      }
-      if(Object.keys(tout[1].widget).length != 8) {
-        addTestRes("FAIL: should be 8 elements in widget but found " + Object.keys(tout[1].widget).length);
-      }
-      if(Object.keys(tout[0].validators).length != 3) {
-        addTestRes("FAIL: should be 3 elements in validators but found " + Object.keys(tout[0].validators).length);
-      }
-      if(Object.keys(tout).length != 3) {
-        addTestRes("FAIL: should be 3 elements in object but found " + Object.keys(tout).length);
+      try {
+        if(tout[1].widget.id != "basic_phone_1") {
+          addTestRes("FAIL: id should be \"basic_phone_1\" but found " + tout.widget.id);
+        }
+        if(tout[1].widget.data_type != "text") {
+          addTestRes("FAIL: data_type should be \"text\" but found " + tout.widget.data_type);
+        }
+        if(tout[1].widget.type != "text") {
+          addTestRes("FAIL: type should be \"text\" but found " + tout[1].widget.type);
+        }
+        if(tout[1].widget.label != "Patient Phone") {
+          addTestRes("FAIL: label should be \"Patient Phone\" but found " + tout[1].widget.label);
+        }
+        if(tout[1].widget.data_context != "claim.patient.phoneNum") {
+          addTestRes("FAIL: data_context should be \"claim.patient.phoneNum\" but found " + tout[1].widget.data_context);
+        }
+        if(tout[1].widget.class != "input_field") {
+          addTestRes("FAIL: class should be \"input_field\" but found " + tout[1].widget.class);
+        }
+        if(tout[1].widget.ignore_case_match != true) {
+          addTestRes("FAIL: ignore_case_match should be \"true\" but found " + tout[1].widget.ignore_case_match);
+        }
+        if(tout[1].widget.valid_patt != "^([0-9]( |-)?)?((?[0-9]{3})?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$") {
+          addTestRes("FAIL: valid_patt should be \"^([0-9]( |-)?)?((?[0-9]{3})?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$\" but found " + tout[1].widget.valid_patt);
+        }
+        if(Object.keys(tout[1].widget).length != 8) {
+          addTestRes("FAIL: should be 8 elements in widget but found " + Object.keys(tout[1].widget).length);
+        }
+        if(Object.keys(tout[0].validators).length != 3) {
+          addTestRes("FAIL: should be 3 elements in validators but found " + Object.keys(tout[0].validators).length);
+        }
+        if(Object.keys(tout).length != 3) {
+          addTestRes("FAIL: should be 3 elements in object but found " + Object.keys(tout).length);
+        }
+        if(tout[2].widget.option[0].label != "Male") {
+          addTestRes("FAIL: option label should be \"Male\" but found " + tout[2].widget.option[0].label);
+        }
+      } catch (err) {
+        addTestRes("FAIL: test " + err);
       }
     }
 
@@ -192,7 +200,54 @@
       } catch(err) {
         addTestRes("FAIL: Validation check failed err=" +  err);
       }
-   } 
+   }
+
+   function runTest10() {
+      var tout = runTest("Test Include", testInclude);
+      try {
+        if(tout[1].widget.id != "basic_phone_1") {
+          addTestRes("FAIL: id should be \"basic_phone_1\" but found " + tout.widget.id);
+        }
+        if(tout[1].widget.data_type != "text") {
+          addTestRes("FAIL: data_type should be \"text\" but found " + tout.widget.data_type);
+        }
+        if(tout[1].widget.type != "text") {
+          addTestRes("FAIL: type should be \"text\" but found " + tout[1].widget.type);
+        }
+        if(tout[1].widget.label != "Patient Phone") {
+          addTestRes("FAIL: label should be \"Patient Phone\" but found " + tout[1].widget.label);
+        }
+        if(tout[1].widget.data_context != "claim.patient.phoneNum") {
+          addTestRes("FAIL: data_context should be \"claim.patient.phoneNum\" but found " + tout[1].widget.data_context);
+        }
+        if(tout[1].widget.class != "input_field") {
+          addTestRes("FAIL: class should be \"input_field\" but found " + tout[1].widget.class);
+        }
+        if(tout[1].widget.ignore_case_match != true) {
+          addTestRes("FAIL: ignore_case_match should be \"true\" but found " + tout[1].widget.ignore_case_match);
+        }
+        if(tout[1].widget.valid_patt != "^([0-9]( |-)?)?((?[0-9]{3})?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$") {
+          addTestRes("FAIL: valid_patt should be \"^([0-9]( |-)?)?((?[0-9]{3})?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$\" but found " + tout[1].widget.valid_patt);
+        }
+        if(Object.keys(tout[1].widget).length != 8) {
+          addTestRes("FAIL: should be 8 elements in widget but found " + Object.keys(tout[1].widget).length);
+        }
+        if(Object.keys(tout[0].validators).length != 3) {
+          addTestRes("FAIL: should be 3 elements in validators but found " + Object.keys(tout[0].validators).length);
+        }
+        if(Object.keys(tout).length != 3) {
+          addTestRes("FAIL: should be 3 elements in object but found " + Object.keys(tout).length);
+        }
+        if(tout[2].widget.option[0].label != "Male") {
+          addTestRes("FAIL: option label should be \"Male\" but found " + tout[2].widget.option[0].label);
+        }
+        if(tout[2].widget.default != "M") {
+          addTestRes("FAIL: default field should be \"M\" but found " + tout[2].widget.default);
+        }
+      } catch (err) {
+        addTestRes("FAIL: test " + err);
+      }
+    }
 
     
   </script>
@@ -213,6 +268,7 @@
     <ul><a href="#" onClick="runTest7()">Run Test 7 merge 1</a></ul>
     <ul><a href="#" onClick="runTest8()">Run Test 8 merge 2</a></ul>
     <ul><a href="#" onClick="runTest9()">Run Test 9 Proper Array Detection</a></ul>
+    <ul><a href="#" onClick="runTest10()">Run Test 10 Include</a></ul>
     <div>
       <div id="testResult"></div>
       <div id="sourceData"></div>
