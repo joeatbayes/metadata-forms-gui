@@ -18,13 +18,13 @@ function gattr(ele, name) {
     return ele.getAttribute(name);
 }
 
-const safeFiNameExp1 = /[\:\/\\\s\?\@\#\(\)\[\]\<\>\=\|\{\}\%\$\^\+\,\?\"\'\`\~\!]/gi;
-const safeFiNameExp2 = /\._/g;
-const safeFiNameExp3 = /_\./g;
-const safeFiNameExp4 = /_\./g;
-const safeFiNameExp5 = /\.\./g
-const safeFiNameExp6 = /__/g;
-const safeFiNameExp7 = /--/g;
+var safeFiNameExp1 = /[\:\/\\\s\?\@\#\(\)\[\]\<\>\=\|\{\}\%\$\^\+\,\?\"\'\`\~\!]/gi;
+var safeFiNameExp2 = /\._/g;
+var safeFiNameExp3 = /_\./g;
+var safeFiNameExp4 = /_\./g;
+var safeFiNameExp5 = /\.\./g
+var safeFiNameExp6 = /__/g;
+var safeFiNameExp7 = /--/g;
 // Modify a given string so it could be used as a safe
 // component of a FiName or URI. It must be synchronized
 // with makeFiNameSafe() in providers_process_raw.py or
@@ -105,8 +105,6 @@ function widgetLooseFocus(hwidget) {
     var widId = hwidget.id.split("-_")[0];
     var widDef = GTX.widgets[widId];
     // Add some logic to cleanup if needed.
-
-
 
     // Note: Can not put auto suggest hide
     // here because text box  loose focus when 
@@ -237,6 +235,19 @@ function mformFieldChanged(hwidget) {
         } else {
             fldVal = "NULL";
         }
+    } else if (widDef.type == "checkbox") {
+        if (hwidget.checked == true) {
+            fldVal = true;
+        } else {
+            fldVal = false;
+        }
+    } else if (hwidget.multiple == true && widDef.type == "dropdown") {
+        fldVal = []
+        for (var [key, option] of Object.entries(hwidget)) {
+            if (option.selected == true) {
+                fldVal.push(option.value);
+            }
+        }
     } else {
         // read value like we do as text field.
         fldVal = hwidget.value.trim();
@@ -266,12 +277,10 @@ function mformFieldChanged(hwidget) {
             // TODO:  If user sets to NULL and the value exists then
             // remove it from the DOM tree all together.
         }
-
         if (saveFlg == true) {
             setNested(dataObj, dataContext, fldVal);
             refreshShowDataObj(context);
         }
-
         // Process Auto Suggest
         if ("suggest" in widDef) {
             var sug = widDef.suggest;
@@ -305,18 +314,8 @@ function mformFieldChanged(hwidget) {
     if (widDef.isCol == true) {
         tableCellChanged(hwidget);
     }
-    // console.log("FieldChanged", widId, "fldVal=", fldVal, "formId=", formId,
-    //   " dataObjId=", dataObjId, "context=", context, "dataObj", dataObj);
-    if ("onchange" in context.form) {
-        var callFunc = context.form.onchange.function;
-        var fn = window[callFunc];
-        if (typeof fn === "function") {
-            fn(hwidget, context);
-        } else {
-            console.log("Could not find function named=" + callFunc);
-        }
-
-    }
+    mformsProcessActionRequests(widDef, context, widDef.onchange);
+    mformsProcessActionRequests(context.form, context, context.form.onchange);
     //TODO:  Add Field Validation and Error Message Here
     //TODO: Mark field context as dirty
     //TODO: Mark field invalid if any fields fail validation
@@ -326,6 +325,193 @@ function mformFieldChanged(hwidget) {
 function mformFieldInput(hwidget) {
     mformFieldChanged(hwidget);
 }
+
+var defLocalContextVar = {
+    "dataObjId": "dataObjId",
+    "dataObj": "dataObj",
+    "form": "form",
+    "form_id": "form.id",
+    "wid_id": "widDef.id",
+    "wid_def": "widDef",
+    "action_spec": "action_spec",
+    "row_num": "row_num",
+    "last_res": "last_res",
+    "cust_parms": "cust_parms"
+};
+
+
+// Extracts pieces of context from active objects to produce a 
+// new data context object that can be passed to other
+// operations such as displayForm().  For each key transfered
+// as a simple string we also create a value under the _safe
+// branch that has been made safe for passing.
+function mformsMakeLocalContext(contextSpec, interpArr) {
+    if ((contextSpec == null) || (contextSpec == undefined) || (contextSpec.length < 1)) {
+        contextSpec = defContextVar;
+    }
+    var tout = {
+        "_safe": {}
+    };
+    for (var ckey in contextSpec) {
+        var constr = contextSpec[ckey];
+        var intstr = Interpolate(constr, interpArr);
+        tout[ckey] = intstr;
+        // TODO: Add local interpolation here
+        if (isString(intstr)) {
+            tout._safe[ckey] = makeSafeFiName(intstr);
+        }
+    }
+    return tout;
+}
+
+
+// Process a single Generalized Action Request 
+// provides the generic processor for search rowClick,
+// button clicks,  onChange Specs. 
+function mformsProcessActionRequest(widDef, context, actionSpec, custParms) {
+    var widId = widDef.id;
+    var dataObj = context.dataObj;
+    var dataObjId = context.dataObjId;
+    var gbl = context.gbl;
+    if (custParms == undefined) {
+        custParms = {};
+    }
+    var rowNum = custParms.row_num;
+    var dataRow = {};
+    if (actionSpec == undefined) {
+        console.log("WARN: rowclick undefined widDef=", onchDef);
+        return;
+    }
+
+    var exParms = {
+        "cust_parms": custParms,
+        "action_spec": actionSpec,
+        "wid_def": widDef,
+        "dataObj": dataObj,
+        "dataObjId": dataObjId
+    };
+
+    if (rowNum != undefined) {
+        exParms.row_num = rowNum;
+        var lastRes = context.queries[widId];
+        if (lastRes != undefined) {
+            lastRes = lastRes.data;
+            exParms.last_res = lastRes;
+            dataRow = lastRes[rowNum];
+            if (dataRow != undefined) {
+                exParms.data_row = dataRow;
+            } else {
+                console.log("WARN: Could not find dataRow rowNum=", rowNum, " actionSpec=", actionSpec, " custParms=", custParms, " widDef=", widDef);
+                return;
+            }
+        }
+    }
+    var interpArr = [dataRow, context.dataObj, exParms, custParms, actionSpec, widDef, context, context.form, context.gbl];
+    var contextSpec = actionSpec.context;
+    if (contextSpec == undefined) {
+        // Use the default local Context variables
+        // if the user did not specify any in the
+        // original request. 
+        contextSpec = defLocalContextVar;
+    }
+
+    var localContext = mformsMakeLocalContext(contextSpec, interpArr);
+    if (isString(actionSpec)) {
+        // If a simple string then they passed me 
+        // either function name or a name of a widget
+        // that contains a more detailed action spec.
+        var fn = window[actionSpec];
+        if (typeof fn === "function") {
+            // value was function name
+            // TODO----- What is workObj
+            fn(widDef, actionSpec, context, exParms);
+            return;
+        } else {
+            var lookWidDef = gbl.widgets[actionSpec];
+            if (lookWidDef == undefined) {
+                console.log("Could not find named function or matching widget.id actionSpec=", actionSpec);
+                return;
+            }
+
+            var callFunc = lookWidDef.function;
+            if (callFunc == undefined) {
+                console.log("WARN: Could not find widDef.function widDef=", lookWidDef);
+                return;
+            }
+            fn = window[callFunc];
+            if (typeof fn === "function") {
+                fn(lookWidDef, actionSpec, context, exParms);
+            } else {
+                console.log("Could not find function named=" + callFunc);
+                return;
+            }
+        }
+    } else {
+        var action = actionSpec.action;
+        if (action == undefined) {
+            console.log("WARN: No Action specified actionSpec=", actionSpec, " widDef=", widDef);
+            return;
+        }
+        if (action == "display_form") {
+            var targForm = actionSpec.form_id;
+            var targDiv = actionSpec.target_div;
+            if (targDiv == null) {
+                targDiv = "default";
+            }
+            var formUri = InterpolateStr(targForm, [localContext, exParms]);
+            display_form(targDiv, formUri, localContext, context.gbl);
+            //alert("TODO: display_form data object uri=" + turi + " for " + JSON.stringify(dataRow));
+            // TODO: ADD OTHER KINDS OF ACTION HANDLERS
+        } else {
+            console.log("WARN:  Action ", action, " can not be found actionSpec=", actionSpec, " widDef=", widDef);
+        }
+    }
+} // func()
+
+
+// Generalized Action Click Results 
+// provides the generic processor for search rowClick 
+// and button clicks.
+function mformsProcessActionRequests(widDef, context, actionArr, custParms) {
+    if (actionArr == undefined) {
+        //console.log("WARN: actionArr undefined widDef=", widDef, "custParms=", custParms);
+        return;
+    }
+    if (isArray(actionArr)) {
+        for (var actNdx in actionArr) {
+            var actionSpec = actionArr[actNdx];
+            mformsProcessActionRequest(widDef, context, actionSpec, custParms)
+        }
+    } else {
+        mformsProcessActionRequest(widDef, context, actionArr, custParms)
+    }
+} // func()
+
+// Callback function called by name form Spec.
+function frigate_reset_form(widDef, actionSpec, context, exParms) {
+    var widId = widDef.id;
+    var formId = context.form.id;
+    var dataObjId = context.dataObjId;
+    console.log("TODO: Implement the frigate_reset_form");
+}
+
+
+function mformsButtonClicked(hwidget) {
+    var attr = hwidget.attributes;
+    var widIdFull = hwidget.id;
+    var widId = widIdFull.split("-_")[0];
+    var widDef = GTX.widgets[widId];
+    var formId = gattr(hwidget, "form_id");
+    var dataObjId = gattr(hwidget, "dataObjId");
+    var context = GTX.formContexts[formId][dataObjId];
+    var action = widDef.onclick;
+    if (action == undefined) {
+        console.log("WARN: No Action defined widId=", widId, " widDef=", widDef);
+        return;
+    }
+    mformsProcessActionRequests(widDef, context, action);
+}
+
 
 // When a table column header is clicked default behavior is
 // to sort the table on that column. This function receives the
@@ -343,17 +529,13 @@ function mformsColHeadClicked(hwidget) {
     // TODO: Set Sort Specification for this column
     widDef.userSortCol = colId;
     var targetDiv = tblId + "Cont";
-
     // TODO: Set Build The Sort Keys with pointers to data records
-
-
     // TODO: Re-Render the HTML for the Table and replace it in the container
     var b = new String_builder();
     mformsRenderEditableTable(widDef, b, context, {
         "skip_container": true
     });
     b.toDiv(targetDiv);
-
 }
 
 // when table cells change we may need to do 
@@ -395,7 +577,6 @@ function addTableRowButton(hwidget) {
     widDef.userSortCol = colId;
     var targetDiv = tblId + "Cont";
     dataArr.push({});
-
     // TODO: Re-Render the HTML for the Table and replace it in the container
     var b = new String_builder();
     mformsRenderEditableTable(widDef, b, context, {
@@ -409,7 +590,6 @@ function addTableRowButton(hwidget) {
 // ---- Rendering Support Functions 
 // --------------
 
-
 var widgRenderFuncs = {
     "widgetGroup": mformsRenderGroupWidget,
     "text": mformsRenderTextWidget,
@@ -417,9 +597,10 @@ var widgRenderFuncs = {
     "button": mformsRenderButton,
     "dropdown": mformRenderDropdown,
     "radio": mformRenderRadio,
+    "checkbox": mformsRenderTextWidget,
     "date": mformsRenderTextWidget,
     "table": mformsRenderEditableTable,
-    "simple_search_res": mformsSimpleSearchRes,
+    "simple_search_res": mformsRenderSimpleSearchRes,
     "tabbar": mformsRenderTabBar,
     "emptydiv": mformsRenderEmptyDiv
 };
@@ -446,6 +627,11 @@ var mformTextFieldCopyAttr = {
     "jimbo": true
 };
 
+// Add a custom rendering function to the set of 
+// pre-registered rendering functions. 
+function mformAddRenderFunc(widgetType, renderFunc) {
+    widgRenderFuncs[widgetType] = renderFunc;
+}
 
 // Check widget defenition for missing things like
 // class and set them to reasonable defaults
@@ -462,7 +648,6 @@ function mformFixupWidget(widDef, context) {
     if (!("data_type" in widDef)) {
         widDef.data_type = "text";
     }
-
     return widDef;
 }
 
@@ -616,6 +801,7 @@ function mformsRenderEmptyDiv(widDef, b, context, custParms) {
     });
 }
 
+
 function mformsRenderButton(widDef, b, context, custParms) {
     b.start("div", {
         "class": widDef.class + "contain"
@@ -624,8 +810,7 @@ function mformsRenderButton(widDef, b, context, custParms) {
     mformCopyAttribs(widDef, attr, mformTextFieldCopyAttr);
     copyOverCustParms(attr, widDef, custParms);
     attr.type = "button";
-    attr.onClick = InterpolateStr(widDef.action, [context.dataObj, context, context.form_def, context.gContext]);
-    //"saveFormChanges(this)";
+    attr.onClick = "mformsButtonClicked(this)";
     b.make("button", attr, widDef.label);
     b.finish("div");
 }
@@ -712,10 +897,8 @@ function mformRenderRadio(widDef, b, context, custParms) {
     b.start("fieldset", widAttr).nl();
 
     var matchOptVal = null;
-
     var dataObj = context.dataObj;
     var dataVal = getDataValue(dataObj, widDef, context, custParms);
-
     var opt = null;
     var optndx = null;
     if ("option" in widDef) {
@@ -859,10 +1042,13 @@ function mformRenderDropdown(widDef, b, context, custParms) {
     mformCopyAttribs(widDef, widAttr, mformTextFieldCopyAttr);
     copyOverCustParms(widAttr, widDef, custParms);
     delete widAttr.onInput; // We do not need this handler for drop down
+    if (String(widDef.multiple).toLowerCase() == "true" || widDef.multiple == true) {
+        widAttr.multiple = "multiple";
+    }
     //widAttr["-webkit-appearance"] = "none";
     b.start("select", widAttr);
 
-    var matchOptVal = null; // set to matched option when match is found
+    var matchOptVal = []; // set to matched option when match is found
     var dataPath = makeDataContext(widDef, context, custParms);
     var dataVal = getDataValue(context.dataObj, widDef, context, custParms);
     var opt = null;
@@ -870,16 +1056,19 @@ function mformRenderDropdown(widDef, b, context, custParms) {
 
     if (dataVal != null) {
         // Find the matching option and default
-        var dataValMatch = dataVal.trim().toLowerCase();
+        var dataValMatch = String(dataVal).split(",").map(item => item.trim().toLowerCase());
         // search options to find one that matches the 
         // value. 
         for (optndx in options) {
             opt = options[optndx];
             if ("value" in opt) {
-                var oval = opt.value.trim().toLowerCase();
-                if (oval == dataValMatch) {
-                    matchOptVal = opt.value;
-                    break;
+                var oval = String(opt.value).trim().toLowerCase();
+                if (dataValMatch.includes(oval)) {
+                    matchOptVal.push(opt.value);
+                    dataValMatch.splice(dataValMatch.indexOf(oval), 1);
+                    if (!(Array.isArray(dataValMatch) && dataValMatch.length)) {
+                        break;
+                    }
                 }
             }
         }
@@ -896,7 +1085,7 @@ function mformRenderDropdown(widDef, b, context, custParms) {
         }
         // TODO: Add Multi-select support here
         //  where every selected value is active.
-        if (opt.value == matchOptVal) {
+        if (matchOptVal.includes(opt.value)) {
             optattr.selected = true;
         } else if ((matchOptVal == null) && ("default" in opt) && (opt.default == true)) {
             // Not matching option was found so use the default
@@ -970,6 +1159,13 @@ function mformsRenderTextWidget(widDef, b, context, custParms) {
     if (widDef.type == "textarea") {
         b.make("textarea", widAttr, widVal);
     } else {
+        if (widDef.type == "checkbox") {
+            if (widAttr.value == "true" || widAttr.value == true) {
+                widAttr.checked = "checked";
+            } else {
+                delete widAttr.checked;
+            }
+        }
         b.make(makeEleName, widAttr);
     }
 
@@ -1048,8 +1244,9 @@ function mformsRenderTabBar(widDef, b, context, custParms) {
             activeStr = " active";
             widDef.active_tab = activeTab;
         }
+        var tabId = "" + widId + tabndx;
         var tabattr = {
-            "id": "" + widId + tabndx,
+            "id": tabId,
             "tab_num": tabndx,
             "onclick": "mformsActivateTab(this)",
             "form_id": context.form_id,
@@ -1062,6 +1259,11 @@ function mformsRenderTabBar(widDef, b, context, custParms) {
             tabattr.class = activeStr;
         }
         b.start("li", tabattr);
+        if (("href" in atab) && (atab.href > " ")) {
+            b.start("a", {
+                "href": atab.href
+            });
+        }
         if ("symbol" in atab) {
             b.start("span", {
                 "class": "symbol"
@@ -1069,7 +1271,17 @@ function mformsRenderTabBar(widDef, b, context, custParms) {
             b.b("&#" + atab.symbol);
             b.finish("span");
         }
+        if ("icon" in atab) {
+            b.make("img", {
+                "class": "icon",
+                "src": atab.icon,
+                "id": tabId + "Icon"
+            });
+        }
         b.b(atab.label);
+        if (("href" in atab) && (atab.href > " ")) {
+            b.finish("a");
+        }
         b.finish("li");
     }
     b.finish("ul");
@@ -1090,10 +1302,7 @@ function mformsRenderTabBar(widDef, b, context, custParms) {
             mformsRenderTabBar(cwid, b, context, custParms);
         }
     }
-
     mformFinishWidget(widDef, b, context, custParms);
-
-
     if ((activeTab != null) && ("form" in activeTab)) {
         var localContext = [];
         for (var akey in context) {
@@ -1106,7 +1315,6 @@ function mformsRenderTabBar(widDef, b, context, custParms) {
         };
         display_form(contentDivId, activeTab.form, localContext, context.gbl);
     }
-
 }
 
 //-------------
@@ -1131,10 +1339,6 @@ function mformsCalcArrTotal(dataArr, data_context) {
     }
     return totVal;
 }
-
-
-
-
 
 function mformsRenderEditableTable(widDef, b, context, custParms) {
     mformFixupWidget(widDef, context);
@@ -1173,10 +1377,7 @@ function mformsRenderEditableTable(widDef, b, context, custParms) {
     var rowndx = null;
     custParms.skip_label = true; // will render label as part of caption
     mformStartWidget(widDef, b, context, custParms);
-    // TODO: determine right or left alignment
-    // by column
-
-
+    // TODO: determine right or left alignment by column
     //b.make("div", {
     //    "class": widDef.class + "caption"
     //}, widDef.label);
@@ -1193,14 +1394,12 @@ function mformsRenderEditableTable(widDef, b, context, custParms) {
             b.make("h3", {}, widDef.label);
         }
     }
-
     var dataArr = getNested(dataObj, dataContext, []);
     if (dataArr.length == 0) {
         // Create the data array if there is not one.
         dataArr.push({});
         setNested(dataObj, dataContext, dataArr);
     }
-
     var colId = null;
     var rendFunc = null;
     var colWidDef = null;
@@ -1256,6 +1455,7 @@ function mformsRenderEditableTable(widDef, b, context, custParms) {
             colId = cols[colndx];
             if (colId in flds) {
                 colWidDef = flds[colId];
+                context.form.all_wid[colId] = colWidDef;
                 var cellClass = "cell";
                 if ("cell_class" in colWidDef) {
                     cellClass = colWidDef.cell_class + " " + cellClass;
@@ -1363,7 +1563,6 @@ function mformsRenderEditableTable(widDef, b, context, custParms) {
         }
         b.finish(trEleType);
     }
-
     if (widDef.render_as_div != true) {
         // If rendering as a table then we must 
         // finish the table before rendering the 
@@ -1372,8 +1571,6 @@ function mformsRenderEditableTable(widDef, b, context, custParms) {
         // div.
         b.finish(tableEleType);
     }
-
-
     //----------
     //--- Render the Table Add Row button
     //----------
@@ -1408,22 +1605,15 @@ function mformsRenderEditableTable(widDef, b, context, custParms) {
     if (widDef.render_as_div == true) {
         b.finish(tableEleType);
     }
-
     mformFinishWidget(widDef, b, context, custParms);
 }
 
 
-
 // Create a clone of parts of the custom parms object
-
 // to allow retention of the array stack and other things
-
 // we want preserved while allowing other things to varry
-
 // in the stack.
-
 function partialCloneCustParms(custParms) {
-
     if ((custParms == null) || (custParms == undefined)) {
         return {};
     } else {
@@ -1451,7 +1641,7 @@ function mformsRenderWidgets(parent, widgets, b, context, custParms) {
             var widDef = flds[widId];
             mformFixupWidget(widDef, context);
             if (widDef.type in widgRenderFuncs) {
-
+                context.form.all_wid[widDef.id] = widId;
                 try {
                     var rendFunc = widgRenderFuncs[widDef.type];
                     var wsCustParms = partialCloneCustParms(custParms);
@@ -1482,33 +1672,28 @@ function mformsRenderForm(form, context) {
     var b = new String_builder();
     var flds = gtx.widgets;
     context.form_id = form.id;
+    form.all_wid[form.id] = form;
     mformSetFormContext(form, context);
-
-    if (form.label != undefined) {
-        b.make("h3", {
-            "id": form.id + "Head",
-            class: form.class + "Head"
-        }, form.label);
-    }
 
     b.start("div", {
         "id": form.id + "Cont",
         "class": form.class
     });
 
+    if ((form.label != undefined) && (form.label > " ")) {
+        b.make("h3", {
+            "id": form.id + "Head",
+            class: form.class + "Head"
+        }, form.label);
+    }
     var formAttr = {
         "id": form.id
     };
-
     mformCopyAttribs(form, formAttr, mformTextFieldCopyAttr);
     if (form.autocomplete == false) {
         formAttr.autocomplete = false;
     }
-
-
     b.start("form", formAttr);
-
-
     mformsRenderWidgets(form, form.widgets, b, context, null);
     /*
     b.addInputField({
@@ -1549,21 +1734,13 @@ function autoSugClicked(hwidget) {
     if (dataContext == null) {
         dataContext = widDef.data_context;
     }
-
     setNested(dataObj, dataContext, sugVal);
     setFormValue(fullWidId, sugVal);
     var targetDiv = widDef.id + "sugCont";
     toDiv(targetDiv, "");
     hideDiv(targetDiv);
-    if (form.onchange != undefined) {
-        // Call the named funtion if we can find it
-        // in defined as a globally available function
-        var funName = form.onchange.function;
-        var funPtr = window[funName];
-        if (funPtr != undefined) {
-            funPtr(hwidget, context);
-        }
-    }
+    mformsProcessActionRequests(widDef, context, widDef.onchange);
+    mformsProcessActionRequests(widDef, context, form.onchange);
     refreshShowDataObj(context);
 }
 
@@ -1647,82 +1824,44 @@ function requestAutoSuggest(parms) {
 }
 
 
-
 //-----------------------
 //-- Client Side Search Handlers
 //-----------------------
 function mformsSimpleSearchResRowClick(hwidget) {
-    var id = hwidget.id;
-    var sugVal = gattr(hwidget, "sug_val");
     var widId = gattr(hwidget, "wid_id");
+    var onchId = gattr(hwidget, "onch_id");
     var formId = gattr(hwidget, "form_id");
     var dataObjId = gattr(hwidget, "dataObjId");
     var rowNum = gattr(hwidget, "row_num");
     rowNum = parseInt(rowNum);
     var context = GTX.formContexts[formId][dataObjId];
-    var form = context.form;
     var widDef = GTX.widgets[widId];
-    var dataObj = GTX.dataObj[dataObjId];
-    var dataContext = widDef.data_context;
-    var dataContextOvr = gattr(hwidget, "data_context");
+    var onchDef = GTX.widgets[onchId];
     var lastRes = context.queries[widId];
     var dataRow = lastRes.data[rowNum];
     if (dataRow == undefined) {
         return;
     }
-    var onch = form.onchange;
-    if (onch == undefined) {
-        return;
-    }
-    var rowclick = onch.rowclick;
+    var rowclick = onchDef.rowclick;
     if (rowclick == undefined) {
+        console.log("WARN: rowclick undefined widDef=", onchDef);
         return;
     }
     var action = rowclick.action;
     if (action == undefined) {
+        console.log("WARN: no Action for rowclick onchDef=", onchDef, " widDef=", widDef);
         return;
     }
-
-    if (action == "display_form") {
-        var interpArr = [dataRow, context.dataObj, widDef, context, context.form, context.gbl];
-        var targForm = rowclick.form_id;
-        var targDiv = rowclick.target_div;
-        if (targDiv == null) {
-            targDiv = "default";
-        }
-        var startUri = rowclick.uri;
-        if (startUri == undefined) {
-            return;
-        }
-        var localContext = {
-            "_safe": {}
-        };
-        var clickContext = rowclick.context;
-        for (var ckey in clickContext) {
-            var constr = clickContext[ckey];
-            var intstr = InterpolateStr(constr, interpArr);
-            localContext[ckey] = intstr;
-            // TODO: Add local interpolation here
-            if (isString(intstr)) {
-                localContext._safe[ckey] = makeSafeFiName(intstr);
-            }
-        }
-
-        //var turi = InterpolateStr(startUri, interpArr);
-        //var objId = InterpolateStr(onch.rowclick.objId, interpArr);
-        var formUri = InterpolateStr(targForm, interpArr);
-
-        display_form(targDiv, formUri, localContext, context.gbl);
-
-
-        //alert("TODO: display_form data object uri=" + turi + " for " + JSON.stringify(dataRow));
-    }
-
+    var custParms = {
+        "row_num": rowNum,
+    };
+    mformsProcessActionRequest(widDef, context, rowclick, custParms);
 }
 
-function mformsSimpleSearchRes(widDef, b, context, custParms) {
+function mformsRenderSimpleSearchRes(widDef, b, context, custParms) {
     var gtx = context.gbl;
     var widId = widDef.id;
+    var onch = custParms.onch;
     var cols = widDef.columns;
     var dataObj = context.dataObj;
     var searchRes = custParms.searchRes;
@@ -1738,8 +1877,7 @@ function mformsSimpleSearchRes(widDef, b, context, custParms) {
     var frow = searchRes[0];
     var fname = null;
     var rowndx = null;
-    var onch = context.form.onchange;
-    searchRes = client_side_search_apply_filter(onch, context, searchRes);
+    searchRes = client_side_search_apply_filter(widDef, context, searchRes);
 
     // Generate the table header
 
@@ -1769,6 +1907,7 @@ function mformsSimpleSearchRes(widDef, b, context, custParms) {
             "class": widDef.class + "row",
             "onclick": "mformsSimpleSearchResRowClick(this)",
             "wid_id": widId,
+            "onch_id": onch.id,
             "form_id": context.form.id,
             "dataObjId": context.dataObjId,
             "row_num": rowndx
@@ -1791,15 +1930,15 @@ function mformsSimpleSearchRes(widDef, b, context, custParms) {
     //b.finish("div");
 }
 
-
-
 function mformsClientSideSearchOnData(data, httpObj, parms) {
     var context = parms.context;
+    var gbl = context.gbl;
     var form = context.form;
-    var onch = form.onchange;
-    var targetDiv = onch.target_div;
-    var targetWidId = onch.target_widget;
-    var parser = onch.parser;
+    var widDef = parms.onch;
+    var targetDiv = widDef.target_div;
+    var targetWidId = widDef.render_widget;
+    var targetWid = gbl.widgets[targetWidId];
+    var parser = widDef.parser;
     if (parms.uri in context.gbl.filesLoading) {
         delete context.gbl.filesLoading[parms.uri];
     }
@@ -1827,7 +1966,8 @@ function mformsClientSideSearchOnData(data, httpObj, parms) {
                 return;
             }
             var custParms = {
-                "searchRes": parsed
+                "searchRes": parsed,
+                "onch": widDef
             };
             // Save the parsed data in this context by the req_uri
             // so we can reload the parsed result to use latter 
@@ -1835,16 +1975,19 @@ function mformsClientSideSearchOnData(data, httpObj, parms) {
             cacheQueryRes(context, targetWidId, parsed);
             mformsCacheAjaxData(parms, parsed);
             // Now Lookup the widget to do the rendering
-            var targWid = context.gbl.widgets[targetWidId];
-            if (targWid == undefined) {
+            if (targetWid == undefined) {
                 b.b("Could not find widget " + targetWidId);
             } else {
-                var rendFunc = widgRenderFuncs[targWid.type];
-                rendFunc(targWid, b, context, custParms);
+                var rendFunc = widgRenderFuncs[targetWid.type];
+                if (typeof rendFunc === "function") {
+                    rendFunc(targetWid, b, context, custParms);
+                } else {
+                    console.log("WARN: Cold not find Rendering function for ", targetWid, " widDef=", widDef)
+                }
             }
             b.toDiv(targetDiv);
             showDiv(targetDiv);
-            setTimeout(hideAllAutoSug, 25);
+            setTimeout(hideAllAutoSug, 75);
         } catch (err) {
             console.log("error parsing and rendering=", err, " data=", data);
         }
@@ -1874,7 +2017,6 @@ function client_side_search_apply_filter(spec, context, data) {
                 console.log("ERROR form_context and res_context must be defined filt=", filt, "spec=", spec);
                 return;
             }
-
             var formVal = getNested(dataObj, form_context, "").trim().toUpperCase();
             if (formVal < " ") {
                 continue;
@@ -1897,17 +2039,35 @@ function client_side_search_apply_filter(spec, context, data) {
     return tout;
 } // func()
 
-function client_side_search(hwidget, context) {
-    var widId = hwidget.id.split("-_")[0];
-    var widDef = GTX.widgets[widId];
+function client_side_search(widDef, actionSpec, context, exParms) {
+    var widId = widDef.id;
     var formId = context.form_id;
     var dataObjId = context.dataObjId;
     var dataObj = context.dataObj;
     var form = context.form;
-    var onch = form.onchange;
-    var indexes = onch.indexes;
-    var filters = onch.filters;
+    var indexes = widDef.indexes;
+    var filters = widDef.filters;
     var gbl = context.gbl;
+    var targetDiv = widDef.target_div;
+    var targetWidId = widDef.render_widget;
+    var targetWid = gbl.widgets[targetWidId];
+    var parser = widDef.parser;
+    if (targetDiv == undefined) {
+        console.log("WARN: target_div is missing", widDef);
+        return;
+    }
+    if (targetWidId == undefined) {
+        console.log("WARN: render_widget is missing", widDef);
+        return;
+    }
+    if (targetWid == undefined) {
+        console.log("WARN: Could not locate render_widget ",
+            targetWidId, " widDef=", widDef);
+        return;
+    }
+    if (indexes == undefined) {
+        console.log("WARN: No indexes defined widDef=", widDef);
+    }
     if (context.client_side_cache == undefined) {
         context.client_side_cache = {
             "last": {
@@ -1919,7 +2079,6 @@ function client_side_search(hwidget, context) {
         };
     }
     var cscache = context.client_side_cache;
-
     if (indexes == undefined) {
         console.log("client_side_search no indexes defined");
         return;
@@ -1944,21 +2103,19 @@ function client_side_search(hwidget, context) {
             // And simply call the render function. 
             if (searchUri in gbl.filesLoaded) {
                 var b = new String_builder();
-                var targetDiv = onch.target_div;
-                var targetWidId = onch.target_widget;
-                var targWid = gbl.widgets[targetWidId];
                 var custParms = {
-                    "searchRes": gbl.filesLoaded[searchUri].data
+                    "searchRes": gbl.filesLoaded[searchUri].data,
+                    "onch": widDef
                 };
-                if (targWid == undefined) {
+                if (targetWid == undefined) {
                     b.b("L1909: Could not find widget " + targetWidId);
                 } else {
-                    var rendFunc = widgRenderFuncs[targWid.type];
-                    rendFunc(targWid, b, context, custParms);
+                    var rendFunc = widgRenderFuncs[targetWid.type];
+                    rendFunc(targetWid, b, context, custParms);
                 }
                 b.toDiv(targetDiv);
                 showDiv(targetDiv);
-                setTimeout(hideAllAutoSug, 25);
+                setTimeout(hideAllAutoSug, 100);
                 break;
             } else {
                 // Make the Request for new dat with new Data conext.
@@ -1967,12 +2124,15 @@ function client_side_search(hwidget, context) {
                 var parms = {
                     "context": context,
                     "uri": searchUri,
+                    "widDef": widDef,
+                    "onch": widDef,
                     "req_method": "GET",
                     "req_headers": {
                         "Content-type": "application/json"
                     }
                 };
                 mformsAddAjaxSecurityContext(parms, context);
+                // TODO: Handle POST in-addition to GET
                 context.gbl.filesLoading[startUri] = true;
                 simpleGet(searchUri, mformsClientSideSearchOnData, parms);
                 break;
@@ -2089,10 +2249,6 @@ function mformSaveDataObjOnData(data, httpObj, parms) {
 }
 
 
-
-
-
-
 //-------------
 //-- Data & Form Retrieval Event Handlers
 //-------------
@@ -2111,8 +2267,6 @@ function mformSetFormContext(form, context) {
     }
     gtx.formContexts[formId][context.dataObjId] = context;
 }
-
-
 
 
 //------------------------
@@ -2167,7 +2321,6 @@ function mformGetDataObjOnData(data, httpObj, parms) {
 }
 
 
-
 // AJAX Request to fetch a User Object based on the
 // Fetch specification in the Metadata.  Supports interpolation
 // to fill in the request URI: 
@@ -2215,11 +2368,13 @@ function mformsProcessFormSpec(data, context) {
             var form = tObj.form;
             gtx.forms[form.id] = form;
             context.form = form;
+            form.all_wid = {};
+            form.all_wid[form.id] = form;
             // Check to see if the data object is loaded after
             // we have the form spec and fetch it if not and
             // then render it.  If it is already loaded then
             // simply render the form for that data Object.
-            if ((context.dataObjId in gtx.dataObj) || (context.skip_fetch == true)) {
+            if ((context.dataObjId in gtx.dataObj) || (context.skip_fetch == true) || (form.fetch == undefined) || (form.fetch.uri == undefined)) {
                 // Data Object is already loaded so skip to render
                 context.dataObj = gtx.dataObj[context.dataObjId];
                 mformsRenderForm(context.form, context);
@@ -2252,7 +2407,7 @@ function mformsGetDefOnData(data, httpObj, parms) {
 // Make Ajax Call to Load script file from server
 function mformsGetDef(scriptId, context) {
     var parms = {};
-    var req_uri = scriptId + ".txt?ti=" + Date.now();
+    var req_uri = scriptId + ".yaml?ti=" + Date.now();
     req_uri = req_uri.replace("//", "/");
     console.log("L1433: mformsGetDef req_uri=", req_uri);
     parms.req_headers = {
@@ -2323,7 +2478,5 @@ function display_form(targetDiv, formSpecUri, localContext, gContext) {
     if (dataObjId != undefined) {
         localContext.dataObjId = dataObjId;
     }
-
     mformsGetDef(formSpecUri, localContext);
-
 }

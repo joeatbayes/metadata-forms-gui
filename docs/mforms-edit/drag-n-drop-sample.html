@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+  div.drag-target {
+    width:10em;
+    height:10em;
+    background-color:silver;
+    margin:0.2em;
+  }
+  
+  div.draggable {
+    background-color: cyan;
+    border: thin;
+    
+  }
+
+  #lnav {
+    display: inline-block;
+    width: 4em;
+    height: 80%;
+    background-color: gray;
+    vertical-align: top;
+    border: 1px solid red;
+  }
+  #lnav img{
+    display:block;
+    width: 95%;
+    border-radius: 4px;
+    margin: 2px;
+  }
+
+  #lnav img:hover{
+    background-color: silver;
+  }
+
+  #lnav h3 {
+    background-color: #111213;
+    color: #FAFAF0;
+  }
+
+  #mbody {
+    display: inline-block;
+  }
+</style>
+
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+  ev.dataTransfer.dropEffect = "copy";
+}
+
+function drop(ev, ev2) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<div id="lnav" class="drag-target">
+  <!--<img src="icon/ic_home_48px.svg" id="drag1" class="draggable" draggable="true" ondragstart="drag(event)" 
+width="336" height="69"/>-->
+
+  <img src="icon/ic_subject_48px.svg" id="menu" class="no-drag" draggable="false" ondragstart="drag(event)" 
+ title="MENU"/>
+
+  <img src="icon/ic_save_48px.svg" id="drag1" class="draggable" " 
+title="SAVE"/>
+
+<h3>Place Widgets</h3>
+  <img src="icon/ic_group_48px.svg" id="group" class="draggable" draggable="true" ondragstart="drag(event)" 
+ title="GROUP"/>
+
+  <img src="icon/ic_short_text_48px.svg" id="drag1" class="draggable" draggable="true" ondragstart="drag(event)" 
+ title="TEXT"/>
+
+ <img src="icon/ic_view_list_48px.svg" id="drag1" class="draggable" draggable="true" ondragstart="drag(event)" 
+ title="TABLE"/>
+
+ <img src="icon/ic_tab_48px.svg" id="drag1" class="draggable" draggable="true" ondragstart="drag(event)" 
+ title="TAB"/>
+
+  <img src="icon/ic_picture_in_picture_alt_48px.svg" id="drag1" class="draggable" draggable="true" ondragstart="drag(event)" Title="Image" 
+/>
+
+
+<h3>Modes</h3>
+<img src="icon/ic_pan_tool_48px.svg" id="drag1" class="draggable" draggable="true" ondragstart="drag(event)" 
+ title="PAN/MOVE" />
+
+
+<img src="icon/ic_mode_edit_48px.svg" id="drag1" class="draggable" draggable="true" ondragstart="drag(event) title="EDIT" 
+/>
+
+<img src="icon/ic_settings_48px.svg" id="drag1" class="draggable" draggable="true" ondragstart="drag(event) title="Settings" 
+/>
+
+
+<h3>Actions</h3>
+  
+  <img src="icon/ic_visibility_48px.svg" id="drag1" class="draggable" draggable="true" ondragstart="drag(event)" 
+/>
+
+  <img src="icon/ic_visibility_off_48px.svg" id="drag1" class="draggable" draggable="true" ondragstart="drag(event)" 
+/>
+
+  <img src="icon/ic_zoom_in_24px.svg" id="drag1" class="draggable" " 
+Title="Zoom In"/>
+
+  <img src="icon/ic_zoom_out_24px.svg" id="drag1" class="draggable"  
+ title="Zoom Out"/>
+
+
+</div>
+
+<div id="mbody">
+
+<div id="div1" class="drag-target"
+  ondrop="drop(event)" 
+  ondragover="allowDrop(event)">Drag Target #1</div>
+
+<div id="div2" class="drag-target"
+  ondrop="drop(event)" 
+  ondragover="allowDrop(event)">Drag Target #2</div>
+
+<div id="div3" class="drag-target"
+  ondrop="drop(event)" 
+  ondragover="allowDrop(event)">
+
+<div id="drag1" class="draggable" draggable="true" ondragstart="drag(event)" 
+width="336" height="69">Dragable</div>
+
+Drag Target #3</div>
+</div>
+</body>
+</html>

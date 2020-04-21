@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100px"
+   height="100px"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg4578"
+   sodipodi:docname="home-outline.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata
+     id="metadata4582">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="716"
+     inkscape:window-height="636"
+     id="namedview4580"
+     showgrid="false"
+     inkscape:zoom="2.36"
+     inkscape:cx="50"
+     inkscape:cy="50"
+     inkscape:window-x="2257"
+     inkscape:window-y="671"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg4578" />
+  <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+  <title
+     id="title4568">48. Home</title>
+  <desc
+     id="desc4570">Created with Sketch.</desc>
+  <defs
+     id="defs4572" />
+  <path
+     style="fill:none;stroke:#e9d4d4;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 46.610169,2.1186441 C 3.3898305,52.118644 3.3898305,52.118644 3.3898305,52.118644 l 16.5254235,0.423729 v 44.491525 l 66.949153,0.423729 V 51.271186 l 11.440678,-0.423728 z"
+     id="path5680"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;stroke:#d2c6c6;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 41.101695,95.762712 40.254237,55.932203 58.474576,55.508475 58.898305,96.610169"
+     id="path5682"
+     inkscape:connector-curvature="0" />
+</svg>
