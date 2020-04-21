@@ -68,6 +68,37 @@
       display: block;
   }
 
+
+  #LeftNavDemoCont {
+      max-width: 100%;
+      min-width: 20em;
+      display: block;
+  }
+
+  #LeftNavDemoHead {
+      width: 100%;
+      display: block;
+      text-align: center;
+  }
+
+  #LeftNavDemo {
+      background-color: aliceblue;
+  }
+
+
+  #LeftNavDemo .inputFrm {
+      display: inline-block;
+  }
+
+  #LeftNavDemo div.tabContent {
+      display: table-cell;
+      width: 90%;
+      xmin-width: 20em;
+      padding-left: 1em;
+  }
+
+
+
   /* For larger screens we can add some spacing
   to make the form pop a little more */
   @media only screen and (min-width : 1025px) {
@@ -104,6 +135,10 @@
           font-size: 14pt;
       }
 
+      #xxxLeftNavDemo div.leftNavCont {
+          min-width: 2em;
+          max-width: 5em;
+      }
 
       #form_div {
           max-width: auto;

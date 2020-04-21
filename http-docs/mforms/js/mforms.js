@@ -18,13 +18,13 @@ function gattr(ele, name) {
     return ele.getAttribute(name);
 }
 
-const safeFiNameExp1 = /[\:\/\\\s\?\@\#\(\)\[\]\<\>\=\|\{\}\%\$\^\+\,\?\"\'\`\~\!]/gi;
-const safeFiNameExp2 = /\._/g;
-const safeFiNameExp3 = /_\./g;
-const safeFiNameExp4 = /_\./g;
-const safeFiNameExp5 = /\.\./g
-const safeFiNameExp6 = /__/g;
-const safeFiNameExp7 = /--/g;
+var safeFiNameExp1 = /[\:\/\\\s\?\@\#\(\)\[\]\<\>\=\|\{\}\%\$\^\+\,\?\"\'\`\~\!]/gi;
+var safeFiNameExp2 = /\._/g;
+var safeFiNameExp3 = /_\./g;
+var safeFiNameExp4 = /_\./g;
+var safeFiNameExp5 = /\.\./g
+var safeFiNameExp6 = /__/g;
+var safeFiNameExp7 = /--/g;
 // Modify a given string so it could be used as a safe
 // component of a FiName or URI. It must be synchronized
 // with makeFiNameSafe() in providers_process_raw.py or
@@ -105,8 +105,6 @@ function widgetLooseFocus(hwidget) {
     var widId = hwidget.id.split("-_")[0];
     var widDef = GTX.widgets[widId];
     // Add some logic to cleanup if needed.
-
-
 
     // Note: Can not put auto suggest hide
     // here because text box  loose focus when 
@@ -279,12 +277,10 @@ function mformFieldChanged(hwidget) {
             // TODO:  If user sets to NULL and the value exists then
             // remove it from the DOM tree all together.
         }
-
         if (saveFlg == true) {
             setNested(dataObj, dataContext, fldVal);
             refreshShowDataObj(context);
         }
-
         // Process Auto Suggest
         if ("suggest" in widDef) {
             var sug = widDef.suggest;
@@ -533,17 +529,13 @@ function mformsColHeadClicked(hwidget) {
     // TODO: Set Sort Specification for this column
     widDef.userSortCol = colId;
     var targetDiv = tblId + "Cont";
-
     // TODO: Set Build The Sort Keys with pointers to data records
-
-
     // TODO: Re-Render the HTML for the Table and replace it in the container
     var b = new String_builder();
     mformsRenderEditableTable(widDef, b, context, {
         "skip_container": true
     });
     b.toDiv(targetDiv);
-
 }
 
 // when table cells change we may need to do 
@@ -585,7 +577,6 @@ function addTableRowButton(hwidget) {
     widDef.userSortCol = colId;
     var targetDiv = tblId + "Cont";
     dataArr.push({});
-
     // TODO: Re-Render the HTML for the Table and replace it in the container
     var b = new String_builder();
     mformsRenderEditableTable(widDef, b, context, {
@@ -1311,10 +1302,7 @@ function mformsRenderTabBar(widDef, b, context, custParms) {
             mformsRenderTabBar(cwid, b, context, custParms);
         }
     }
-
     mformFinishWidget(widDef, b, context, custParms);
-
-
     if ((activeTab != null) && ("form" in activeTab)) {
         var localContext = [];
         for (var akey in context) {
@@ -1327,7 +1315,6 @@ function mformsRenderTabBar(widDef, b, context, custParms) {
         };
         display_form(contentDivId, activeTab.form, localContext, context.gbl);
     }
-
 }
 
 //-------------
@@ -1352,10 +1339,6 @@ function mformsCalcArrTotal(dataArr, data_context) {
     }
     return totVal;
 }
-
-
-
-
 
 function mformsRenderEditableTable(widDef, b, context, custParms) {
     mformFixupWidget(widDef, context);
@@ -1580,7 +1563,6 @@ function mformsRenderEditableTable(widDef, b, context, custParms) {
         }
         b.finish(trEleType);
     }
-
     if (widDef.render_as_div != true) {
         // If rendering as a table then we must 
         // finish the table before rendering the 
@@ -1589,8 +1571,6 @@ function mformsRenderEditableTable(widDef, b, context, custParms) {
         // div.
         b.finish(tableEleType);
     }
-
-
     //----------
     //--- Render the Table Add Row button
     //----------
@@ -1634,7 +1614,6 @@ function mformsRenderEditableTable(widDef, b, context, custParms) {
 // we want preserved while allowing other things to varry
 // in the stack.
 function partialCloneCustParms(custParms) {
-
     if ((custParms == null) || (custParms == undefined)) {
         return {};
     } else {
@@ -1950,8 +1929,6 @@ function mformsRenderSimpleSearchRes(widDef, b, context, custParms) {
     b.finish("table");
     //b.finish("div");
 }
-
-
 
 function mformsClientSideSearchOnData(data, httpObj, parms) {
     var context = parms.context;

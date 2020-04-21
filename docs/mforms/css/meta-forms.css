@@ -9,8 +9,8 @@
     border: none;
     overflow-y: auto;
     overflow-x: hidden;
-    display: flex;
-    flex-wrap: wrap;
+    display: table-cell;
+    xflex-wrap: wrap;
 }
 
 .inputFrmHead {
@@ -20,7 +20,7 @@
     margin: 0px;
     color: #424242;
     padding: 0.1em;
-    display: block;
+    display: table-row;
 }
 
 input,
@@ -547,33 +547,33 @@ div.simpleSearchCont {
     xwidth: 100%;
 }
 
-table.simpleSearchtbl {
+div.simpleSearchCont table {
     font-size: 0.8em;
     border-collapse: collapse;
     width: 100%;
 }
 
-table.simpleSearchtbl th {
+div.simpleSearchCont table th {
     background-color: rgb(60, 60, 60, 0.2);
 }
 
-table.simpleSearchtbl tr:nth-child(even) {
+div.simpleSearchCont table tr:nth-child(even) {
     background: #F7F8FA;
 }
 
-table.simpleSearchtbl tr:nth-child(even):hover {
+div.simpleSearchCont table tr:nth-child(even):hover {
     outline: thin solid grey;
 }
 
-table.simpleSearchtbl tr:nth-child(odd):hover {
+div.simpleSearchCont table tr:nth-child(odd):hover {
     outline: thin solid grey;
 }
 
-table.simpleSearchtbl tr:first-child {
+div.simpleSearchCont table tr:first-child {
     background-color: rgb(60, 60, 60, 0.2);
 }
 
-table.simpleSearchtbl tr:first-child:hover {
+div.simpleSearchCont table tr:first-child:hover {
     outline: thin solid transparent;
 
 }
@@ -682,12 +682,70 @@ ul.subtab li {
 }
 
 div.tabContent {
-    xdisplay: table-row;
-    display: flex;
+    display: table-cell;
+    xdisplay: flex;
     flex-wrap: wrap;
     width: 100%;
     align-items: self;
     margin-bottom: 2em;
     margin-right: 2em;
     xbox-shadow: 5px 10px #888888;
+
+}
+
+div.leftNavCont {
+    display: table-cell;
+    max-width: 8em;
+    text-align: center;
+    vertical-align: top;
+    overflow-x: hidden;
+    color: whitesmoke;
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (max-width : 680px) {
+    div.leftNavCont {
+        width: 3em;
+        min-width: 3em;
+        max-width: 3em;
+    }
+}
+
+ul.leftNav {
+    display: block;
+    background-color: #1f497d;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.leftNav li:hover {
+    background-color: rgb(0, 0, 255, 0.2);
+    border: dimgray 1px solid;
+}
+
+ul.leftNav li.active:hover {
+    background-color: rgb(0, 0, 255, 0.4);
+    border: dimgray 1px solid;
+}
+
+ul.leftNav li {
+    display: block;
+    padding-bottom: 0.3em;
+}
+
+ul.leftNav img.icon {
+    display: block;
+    width: 98%;
+}
+
+ul.leftNav a {
+    padding-top: 0.3em;
+    color: whitesmoke;
+}
+
+ul.leftNav a:hover {
+    padding-top: 0.3em;
+    color: whitesmoke;
+    font-weight: 900;
 }

@@ -14,15 +14,20 @@
     </style>
     </head>
 
-    <body onLoad="display_form('form_div', 'demo/examples/forms/simple-form',
+    <body onLoad="display_form('form_div', 'examples/forms/simple-form',
         null, GTX)">
         <a href="/"><img src="/img/frigate-forms-logo.png" style="z-index:3; top:-2px;
   right: 1px; margin: 1em; position: absolute;" width="65px" ></img></a>
         <h1>Frigate Forms <small><small>- Meta Data Forms Demonstration</small></small></h1>
         <div id="form_div"></div>
         <div id="links">
+            <h3>Navigation</h3> 
+            <li onclick="display_form('form_div', 'examples/forms/left-navigation', '1037', GTX)">
+                Left Nav Bar with Icon
+            </li>
+            
             <h3>Certificate of Need</h3>
-            <li><a href="demo/cert-of-need/index.html">Cert Of Need Page</a></li>
+            
             <li onclick="display_form('form_div',
                 'demo/cert-of-need/forms/cneed', '1037', GTX)">
                 Cert #1037
@@ -40,28 +45,29 @@
             <li onclick="display_form('form_div',
                 'demo/cert-of-need/forms/cneed' , '1086', GTX )">
                 Cert #1086</li>
+            <li><a href="demo/cert-of-need/index.html">Cert Of Need Separate Page</a></li>
 
             <h3>Dental</h3>
-            <li><a href="https://claims.frigateforms.com">Dental Claim
+            <li><a href="https://claim.frigateforms.com">Dental Claim
                     Sample</a></li>
             <li><a href="https://provider.frigateforms.com">Provider</a></li>
 
             <h3>Tutorial</h3>
-            <li><a href="demo/examples/simple-form.html"
+            <li><a href="examples/simple-form.html"
                     target="tutorial">Simple Form page</a></li>
 
             <li onclick="display_form('form_div',
-                'demo/examples/forms/simple-form' , null, GTX )">
+                'examples/forms/simple-form' , null, GTX )">
                 Simple Form Here</li>
 
             <li onclick="display_form('form_div',
-                'demo/examples/forms/field-validator-regex' , null, GTX
+                'examples/forms/field-validator-regex' , null, GTX
                 )">
                 RegEx based field validator</li>
 
             <h3>Experiemental</h3>
             <li onclick="display_form('form_div',
-                'demo/examples/forms/field-validator-regex-multiple'
+                'examples/forms/field-validator-regex-multiple'
                 , null, GTX )">
                 Multi RegEx field validator</li>
 

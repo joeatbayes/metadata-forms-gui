@@ -33,3 +33,4 @@ people.txt
 
 log/*
 data/raw-download/dental/provider/*.err
+documentation/samples/job-site/*
